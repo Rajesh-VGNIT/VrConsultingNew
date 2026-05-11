@@ -1,0 +1,26 @@
+ {
+ "OurProduct": {
+    "title": "",
+    "description": "",
+    "heroImage": "",
+
+    "OurProductcard": [
+      {
+        "title": "Customer Relationship Management",
+        "description": "We at VR Consulting create tailored made best-fit Customer Relationship Management Software (CRM) solution for your enterprise that can enhance the efficiency of your business. In todays ‘world when things are very fast CRM is the most essential facet for every business. While developing CRM for business we ensure it minimize the production cost and maximize efficiency as well as seamlessly integrate with your existing business framework. We adhere to step by step development process enhance performance and security of data.",
+        "image": "/images/product/CustomerRelationshipManagement.png"
+      },
+      {
+        "title": "Multi Level Marketing",
+        "description": "VR Consulting Delivers enterprise-level, fully integrated MLM software that is accomplished all sorts of MLM Business requirements of clients. We provide fully secure MLM Software with great customer support. Our expert Developers and Designers give an eye to every details and make website an incredibly user friendly for your company. All our MLM Software are Fully Responsive and with strong admin Panel with compatible tree view and many more. Being the Best MLM Software Development Company we have successfully developed customized MLM Plans to sell and earn attractive commission.",
+        "image": "/images/product/Multi-Level-Marketing.png"
+      },
+      {
+        "title": "School Management System",
+        "description": "We Design and Deliver fully customized reliable smartest School Management System Software that suites to almost every school or college or educational institution.It has all the advance security, features starting from student admission to student leaving, from fees collection to publishing exam results.Our software has multiple access and Role permission features for (Super Admin, Admin, Accountant, Teacher, Receptionist, Librarian, Parent and Student) panel.",
+        "image": "/images/product/School-Management-System.png"
+      } 
+    ]
+
+  }
+}

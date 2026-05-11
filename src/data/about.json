@@ -1,0 +1,260 @@
+{
+  "aboutData": [
+    {
+      "section": {
+        "title": "Why VR Consulting ?",
+        "background": {
+          "type": "image",
+          "style": "grayscale",
+          "overlay": "dark"
+        },
+        "decorations": {
+          "leftShape": {
+            "type": "polygon",
+            "color": "blue-gradient"
+          },
+          "rightShape": {
+            "type": "polygon",
+            "color": "purple-gradient"
+          }
+        },
+        "content": {
+          "alignment": "center",
+          "textColor": "white"
+        },
+        "layout": {
+          "type": "banner",
+          "height": "medium",
+          "responsive": true
+        }
+      }
+    },
+    {
+      "id": "why-vr",
+      "title": "Why VR Consulting?",
+      "description": "VR Consulting is a Web Design and Development Company specialized in high quality web design and development solutions, custom web development, web based software application, SEO and web marketing services. At VR Consulting we see the customer's requirements, results in creating online business solutions opportunities for the clients. We offer complete web solutions including custom web designing, website development, e-commerce solutions, corporate identity designing, 3d animation, flash designing, SEO, search engine marketing, graphic designing and other rich web application services which are essential for running successful online business presence.",
+      "layout": "two-column",
+      "button": { 
+      "label": "Read More", 
+      "href": "/" 
+    },
+      "images": [
+        {
+          "id": "team",
+          "src": "/images/about/aboutus/teams.jpg",
+          "alt": "Team working together"
+        },
+        {
+          "id": "freelancer",
+          "src": "/images/about/aboutus/about-image2.jpg",
+          "alt": "Person working on laptop"
+        }
+      ],
+      "styles": {
+        "theme": "light",
+        "textAlign": "left",
+        "paddingY": "60px"
+      },
+      "decoration": {
+        "type": "dots",
+        "position": "left"
+      }
+    },
+
+    {
+      "id": 1,
+      "title": "What we do",
+      "icon": "/images/about/aboutus/what-do.png",
+      "description": "We Provide web solutions like website Designing, web hosting, web application development. We are pioneer in Web solutions since many years, based at Noida & Delhi . We also provide redesigning of website and addition of more features like E-commerce, payment gateways, to the existing websites"
+    },
+    {
+      "id": 2,
+      "title": "How we work",
+      "icon": "/images/about/aboutus/how-work.png",
+      "description": "Currently we are the team of specialists with strong customer focus. We assist small, medium and large companies in building their professional web presence. You web site is worked over by:",
+      "points": [
+        "Basic & Advanced Web Design",
+        "Creative web designers",
+        "Responsible project managers",
+        "Experienced quality testers",
+        "Professional marketing team"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Our Vision",
+      "icon": "/images/about/aboutus/OurVision.png",
+      "description": "Building high quality services and Innovative solution in the fields of software design, development, Online Marketing and best corporate trainings. VR Consulting wants to be a world-class organization. We want be successful of every aspect like employee satisfaction and customers satisfaction."
+    },
+
+    {
+      "mission": {
+        "id": "mission_001",
+        "title": "Our Mission",
+         "icon": "/images/about/aboutus/OurMission.png",
+        "description": "We will achieve success by adopting transparent and honest business practices thereby generating immense goodwill with clients, employees, our vendors and society we operate in."
+      }
+    },
+
+    {
+      "why_we_succeed": {
+        "id": "why_001",
+        "title": "Why we succeed",
+         "icon": "/images/about/aboutus/Why-succeed.png",
+        "intro": "Currently we are the team of specialists with strong customer focus. We assist small, medium and large companies in building their professional web presence. You web site is worked over by:",
+        "points": [
+          { "id": "point_001", "text": "Fresh and innovative ideas" },
+          { "id": "point_002", "text": "We design dynamic and interactive websites..." },
+          { "id": "point_003", "text": "Client Base of websites diffrent Countries" },
+          { "id": "point_004", "text": "Established in 2016." },
+          { "id": "point_005", "text": "Our specialists have an eye for detail vital for commercial web sites" }
+        ],
+        "project_management": {
+          "id": "pm_001",
+          "intro": "With an established project management culture...",
+          "points": [
+            { "id": "pm_point_001", "text": "Ability to work with both detailed and indistinct project scope" },
+            { "id": "pm_point_002", "text": "Functional resource allocation to reduce risks" }
+          ]
+        }
+      }
+    },
+
+    {
+    "id": "caseStudies",
+    "label": "CASE STUDIES",
+    "title": "Our Expertise",
+    "description": "VR Consulting has a team of well qualified Project Managers, Project Leaders, System Analysts, Programmers and Consultants. Constant training keeps our skills up-to-date. All our professionals are well qualified engineers from reputed universities. We work with current technologies and have employees with good knowledge to give the best to our customers. A brief of our skill sets has been categorized as under:"
+  },
+  {
+   "categories": [
+    
+  {
+    "id": "database",
+    "title": "DATABASE",
+    "image": "/images/about/our-skills/database.png"
+  },
+  {
+    "id": "languages",
+    "title": "Languages",
+    "image": "/images/about/our-skills/language.png"
+  },
+  {
+    "id": "technology",
+    "title": "Front-end Technology",
+    "image": "/images/about/our-skills/technologies.png"
+  },
+  {
+    "id": "framework",
+    "title": "Framework & CMS",
+    "image": "/images/about/our-skills/framework.png"
+  },
+  {
+    "id": "mobile",
+    "title": "Mobile Technology",
+    "image": "/images/about/our-skills/mobiles.png"
+  },
+  {
+    "id": "multimedia",
+    "title": "Multimedia & Designing",
+    "image": "/images/about/our-skills/multimedia.png"
+  },
+  {
+    "id": "development",
+    "title": "Development Tools",
+    "image": "/images/about/our-skills/development.png"
+  },
+  {
+    "id": "protocols",
+    "title": "Protocols",
+    "image": "/images/about/our-skills/protocols.png"
+  },
+  {
+    "id": "server",
+    "title": "Web Server",
+    "image": "/images/about/our-skills/server.png"
+  }
+]
+  }
+  ],
+
+  
+  "e-commerce-Website": {
+    "title": "",
+    "description": "",
+    "heroImage": "",
+
+    "professionalEcommerce": [
+      {
+        "title": "Consultation and Strategy",
+        "description": "We start by understanding your business objectives, target audience, and brand identity. Our team conducts in-depth consultations to gather insights and develop a strategic roadmap for your custom web design project. We collaborate closely with you to align our creative vision with your goals and expectations.",
+        "image": "/images/services/consultation-strategy.png"
+      },
+      {
+        "title": "User-Centered Design",
+        "description": "Our designers employ user-cantered design principles to create a seamless and enjoyable browsing experience for your visitors. We focus on understanding your users' needs, behaviours, and preferences to craft intuitive interfaces and captivating visual designs. Through iterative design processes and user testing, we ensure that your website delivers an exceptional user experience.",
+        "image": "/images/services/User-Centered-Design1.png"
+      },
+      {
+        "title": "Responsive and Mobile-First Design",
+        "description": "In today's mobile-driven world, a responsive website is essential. We prioritize responsive and mobile-first design, ensuring that your website looks and functions flawlessly on various devices and screen sizes. Our design approach optimizes loading times, navigational elements, and content display to provide a consistent and engaging experience across all devices.",
+        "image": "/images/services/ResponsiveMobile-FirstDesign.png"
+      }
+    ],
+
+   
+    "InventoryandOrderManagement": [
+      {
+        "title": "Custom Development",
+        "description": "Our team of skilled developers brings the design to life through meticulous coding and development. We leverage the latest web technologies, frameworks, and content management systems to build powerful and scalable websites. Our custom development services ensure that your website is efficient, secure, and optimized for performance.",
+        "image": "/images/services/custom-development.png"
+      }
+    ],
+    "SearchEngineOptimization": [
+      {
+        "title": "Ongoing Support and Maintenance",
+        "description": "Our commitment doesn't end with the launch of your website. We offer comprehensive support and maintenance services to ensure that your website remains secure, up-to-date, and functional. Our team is available to assist you with updates, enhancements, and any technical issues that may arise.",
+        "image": "/images/services/Ongoing-Support-Maintenance.png"
+      }
+    ],
+
+   
+    "cta": {
+      "title": "About VR Consulting?",
+      "description": "VR Consulting is a Web Design and Development Company based in India specialized in high quality web design and development solutions, custom web development, web based software application, SEO and web marketing services. At VR Consulting we see the customer's requirements, results in creating online business solutions opportunities for the clients.",
+      "description1": "We offer complete web solutions including custom web designing, website development, e-commerce solutions, corporate identity designing, 3d animation, flash designing, SEO, search engine marketing, graphic designing and other rich web application services which are essential for running successful online business presence." 
+    },
+    
+  "ctalist": {
+    "subtitle": "With an established project management culture, VR Consulting has achieved success project delivery owing to:",
+    "list": [
+      {
+        "id": "01",
+        "point": "Ability to work with both detailed and indistinct project scope"
+      },
+      {
+        "id": "02",
+        "point": "Functional resource allocation to reduce risks"
+      },
+      {
+        "id": "03",
+        "point": "Being qualified to apply various software development methodologies"
+      },
+      {
+        "id": "04",
+        "point": "Indemnify smooth communication with the Customer and 3rd parties"
+      },
+      {
+        "id": "05",
+        "point": "Quality Assurance to surety that the application runs as intended"
+      }
+    ]
+  }
+
+  }
+
+}
+
+
+
+
