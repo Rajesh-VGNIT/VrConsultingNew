@@ -210,13 +210,12 @@ const Header = () => {
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <Link
-                  href="/signin"
+                  href="/contact"
                 >
-                  <button className=" relative text-primary flex items-center justify-center w-30 h-12 overflow-hidden text-sm font-semibold uppercase border-2 rounded-md border-indigo-400 group">
-                    <div className="absolute w-full h-12 transition-all duration-300 bg-indigo-400 right-full group-hover:right-0"></div>
-                    <span className="relative transition-all duration-300 group-hover:text-white">
-                      Sign In
-                    </span>
+                  <button className=" bg-primary text-white cursor-pointer hover:bg-primary-500 flex items-center justify-center w-30 h-12  text-sm font-semibold uppercase  rounded-md border-indigo-400 group">
+                    
+                      Contact Us
+                    
                   </button>
                 </Link>
                 {/* <Link

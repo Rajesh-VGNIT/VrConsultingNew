@@ -286,7 +286,7 @@ const Contact = () => {
                       Submit
                     </button> */}
 
-                    <div className=" fade fade-bottom flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                    <div className=" flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                                       
                                       <div  className="inline-block group">
                                       <button type="submit" className="relative flex items-center justify-center w-40 h-12 overflow-hidden rounded-md border border-indigo-500 text-sm font-semibold uppercase cursor-pointer">

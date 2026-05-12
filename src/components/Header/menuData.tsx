@@ -32,12 +32,7 @@ const menuData: Menu[] = [
     path: "/our-products",
     newTab: false,
   },
-  {
-    id: 6,
-    title: "Contact",
-    path: "/contact",
-    newTab: false,
-  },
+  
   {
   id: 7,
   title: "Services",
@@ -273,6 +268,12 @@ const menuData: Menu[] = [
     },
   ]
 },
+{
+    id: 6,
+    title: "Contact",
+    path: "/contact",
+    newTab: false,
+  },
 
   {
     id: 13,

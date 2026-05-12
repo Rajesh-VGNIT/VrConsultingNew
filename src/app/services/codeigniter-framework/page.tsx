@@ -18,7 +18,7 @@ const Page = () => {
       {/* Breadcrumb */}
       <Breadcrumb
         pageName="Codeigniter Framework Development"
-        description=""
+        description="CodeIgniter is a lightweight PHP framework for building fast, secure, and dynamic web applications efficiently."
       />
 
       <div className="max-w-6xl mx-auto py-12 space-y-16">
@@ -26,7 +26,7 @@ const Page = () => {
         {/* HERO */}
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="text-2xl font-semibold mb-4">
               {section?.title}
             </h1>
             <p className="text-gray-600">
@@ -49,11 +49,11 @@ const Page = () => {
 
         {/* UNIQUE CONTENT CARDS */}
         <div>
-          <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
+          <p className="text-sm mb-3 text-center text-blue-500 font-semibold uppercase">
             What we provide
           </p>
 
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-xl font-semibold mb-8 text-center">
             Here are some key aspects of our unique content development proces
           </h2>
 
@@ -90,7 +90,7 @@ const Page = () => {
           {section?.ClearAndConcise?.map((item: any, i: number) => (
             <div key={i} className="bg-white rounded-2xl shadow-md p-8 flex flex-col md:flex-row items-center gap-6 hover:shadow-lg transition">
 
-              <div className="relative w-40 h-40 flex-shrink-0">
+              <div className="relative w-30 h-30 flex-shrink-0">
                 <Image
                   src={item?.image || "/images/fallback.png"}
                   alt={item?.title}
@@ -100,7 +100,7 @@ const Page = () => {
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold mb-3">
+                <h3 className="text-xl font-semibold mb-3">
                   {item?.title}
                 </h3>
 
@@ -115,7 +115,7 @@ const Page = () => {
 
         {/* CTA */}
         <div className="text-center p-10">
-          <h2 className="text-2xl font-bold mb-3">
+          <h2 className="text-xl font-bold mb-3">
             {section?.cta1?.title}
           </h2>
 

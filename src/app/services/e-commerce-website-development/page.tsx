@@ -32,7 +32,7 @@ const Page = () => {
         {/* HERO */}
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="text-2xl font-semibold mb-4">
               {section.title}
             </h1>
             <p className="text-gray-600">
@@ -56,7 +56,7 @@ const Page = () => {
             What we provide
           </p>
 
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-xl font-semibold mb-8 text-center">
            Why Choose Professional E-commerce Website Development?
           </h2>
 
@@ -94,7 +94,7 @@ const Page = () => {
             What we provide
           </p>
 
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-xl font-semibold mb-8 text-center">
             Our E-commerce Website Development Services
           </h2>
 
@@ -131,7 +131,7 @@ const Page = () => {
           <div className="w-full mx-auto">
             <div className="bg-white rounded-2xl shadow-md p-8 flex flex-col md:flex-row items-center gap-6 hover:shadow-lg transition">
 
-              <div className="relative w-40 h-40 flex-shrink-0">
+              <div className="relative w-30 h-30 flex-shrink-0">
                 <Image
                   src={inventory.image || "/images/fallback.png"}
                   alt={inventory.title || "image"}
@@ -141,7 +141,7 @@ const Page = () => {
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold mb-3">
+                <h3 className="text-xl font-semibold mb-3">
                   {inventory.title}
                 </h3>
 
@@ -159,7 +159,7 @@ const Page = () => {
           <div className="w-full mx-auto">
             <div className="bg-white rounded-2xl shadow-md p-8 flex flex-col md:flex-row items-center gap-6 hover:shadow-lg transition">
 
-              <div className="relative w-40 h-40 flex-shrink-0">
+              <div className="relative w-30 h-30 flex-shrink-0">
                 <Image
                   src={optimization.image || "/images/fallback.png"}
                   alt={optimization.title || "image"}
@@ -169,7 +169,7 @@ const Page = () => {
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold mb-3">
+                <h3 className="text-xl font-semibold mb-3">
                   {optimization.title}
                 </h3>
 
@@ -187,7 +187,7 @@ const Page = () => {
 
         {/* CTA */}
         <div className="text-left ">
-          <h2 className="text-2xl text-center font-bold mb-3">
+          <h2 className="text-xl text-center font-semibold mb-3">
             {section.cta3.title}
           </h2>
 
