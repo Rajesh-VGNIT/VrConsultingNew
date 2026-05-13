@@ -19,7 +19,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/"
+                      href="/crm-software-development-company"
                       className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       CRM
@@ -27,7 +27,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/mlm-software-development-company"
                       className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       MLM
@@ -127,7 +127,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/blog"
+                      href="/about"
                       className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Company Overview
@@ -141,14 +141,16 @@ const Footer = () => {
                       Why VR Consulting
                     </Link>
                   </li>
+
                   <li>
                     <Link
-                      href="/"
+                      href="/our-mission-vision"
                       className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                     Vision & Mission
+                      Vision & Mission
                     </Link>
                   </li>
+                  
                   <li>
                     <Link
                       href="/"
@@ -169,7 +171,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/"
+                      href="/our-products"
                       className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Software Products
@@ -177,7 +179,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/responsive-website-designing-development"
                       className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Web Designing
@@ -185,7 +187,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/web-development-company"
                       className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Web Development
@@ -193,7 +195,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/mobile-applications-development-company"
                       className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Mobile Applications
@@ -201,7 +203,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/seo-services-provider-company"
                       className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                      SEO Service
@@ -209,7 +211,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/services/social-media-marketing"
                       className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Social media marketing

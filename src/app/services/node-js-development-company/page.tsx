@@ -26,7 +26,7 @@ const Page = () => {
         {/* HERO */}
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="text-2xl font-semibold mb-4">
               {section?.title}
             </h1>
             <p className="text-gray-600">
@@ -51,7 +51,7 @@ const Page = () => {
             What we provide
           </p>
 
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-xl font-semibold mb-8 text-center">
             Why Choose Us for Node.js Development?
           </h2>
 
@@ -87,7 +87,7 @@ const Page = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-3">
+          <h2 className="text-xl font-semibold mb-3">
             {section?.cta4?.title}
           </h2>
 

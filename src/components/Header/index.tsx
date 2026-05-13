@@ -111,7 +111,7 @@ const Header = () => {
                             className="flex cursor-pointer items-center gap-2 py-2 lg:py-6"
                           >
                             {menuItem.title}
-                            <span className="pl-3"> <svg width="25" height="24" viewBox="0 0 25 24"> <path fillRule="evenodd" clipRule="evenodd" d="M6.29289 8.8427C6.68342 8.45217 7.31658 8.45217 7.70711 8.8427L12 13.1356L16.2929 8.8427C16.6834 8.45217 17.3166 8.45217 17.7071 8.8427C18.0976 9.23322 18.0976 9.86639 17.7071 10.2569L12 15.964L6.29289 10.2569C5.90237 9.86639 5.90237 9.23322 6.29289 8.8427Z" fill="currentColor" /> </svg> </span>
+                            <span className="pl-0"> <svg width="25" height="24" viewBox="0 0 25 24"> <path fillRule="evenodd" clipRule="evenodd" d="M6.29289 8.8427C6.68342 8.45217 7.31658 8.45217 7.70711 8.8427L12 13.1356L16.2929 8.8427C16.6834 8.45217 17.3166 8.45217 17.7071 8.8427C18.0976 9.23322 18.0976 9.86639 17.7071 10.2569L12 15.964L6.29289 10.2569C5.90237 9.86639 5.90237 9.23322 6.29289 8.8427Z" fill="currentColor" /> </svg> </span>
                           </p>
 
                         )}
@@ -140,7 +140,7 @@ const Header = () => {
                                       <p className="flex items-center justify-between px-4 py-2 text-sm font-medium">
                                         {submenuItem.title}
 
-                                        <span className="pl-3">
+                                        <span className="pl-0">
                                           <svg width="25" height="24" viewBox="0 0 25 24">
                                             <path
                                               fillRule="evenodd"
@@ -212,7 +212,7 @@ const Header = () => {
                 <Link
                   href="/contact"
                 >
-                  <button className=" bg-primary text-white cursor-pointer hover:bg-primary-500 flex items-center justify-center w-30 h-12  text-sm font-semibold uppercase  rounded-md border-indigo-400 group">
+                  <button className="bg-primary text-white cursor-pointer hover:bg-primary-500 flex items-center justify-center px-6 py-3.5  text-sm font-semibold uppercase  rounded-md border-indigo-400 group">
                     
                       Contact Us
                     

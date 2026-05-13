@@ -69,11 +69,11 @@ export default function AboutPage() {
 
               <div className="mt-6">
                 <Link href="/" className="inline-block group">
-                  <span className="relative flex items-center justify-center w-44 h-12 overflow-hidden rounded-md border border-indigo-500 text-sm font-semibold uppercase">
+                  <span className="relative flex items-center justify-center w-44 h-12 overflow-hidden rounded-md border border-primary text-sm font-semibold uppercase">
                     
-                    <span className="absolute inset-0 bg-indigo-500 translate-x-[-100%] group-hover:translate-x-0 transition duration-300"></span>
+                    <span className="absolute inset-0 bg-primary translate-x-[-100%] group-hover:translate-x-0 transition duration-300"></span>
 
-                    <span className="relative z-10 text-indigo-500 group-hover:text-white">
+                    <span className="relative z-10 text-primary group-hover:text-white">
                       Get Started
                     </span>
 

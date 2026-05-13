@@ -22,9 +22,9 @@ const Hero = () => {
                 <div className=" fade fade-bottom flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   
                   <Link href="/" className="inline-block group">
-                  <span className="relative flex items-center justify-center w-40 h-12 overflow-hidden rounded-md border border-indigo-500 text-sm font-semibold uppercase cursor-pointer">
-                    <span className="absolute inset-0 bg-indigo-500 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
-                    <span className="relative z-10 flex items-center gap-2 text-indigo-500 group-hover:text-white transition-colors duration-300">
+                  <span className="relative flex items-center justify-center w-40 h-12 overflow-hidden rounded-md border border-primary text-sm font-semibold uppercase cursor-pointer">
+                    <span className="absolute inset-0 bg-primary translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
+                    <span className="relative z-10 flex items-center gap-2 text-primary group-hover:text-white transition-colors duration-300">
                       About Us
                     </span>
 

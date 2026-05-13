@@ -37,7 +37,7 @@ const AboutPage = () => {
             What we provide
           </p>
 
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-2xl font-semibold mb-8 text-center">
             Our Custom Web Design Services
           </h2>
 
@@ -76,7 +76,7 @@ const AboutPage = () => {
           <div className="w-full mx-auto">
             <div className="bg-white rounded-2xl shadow-md p-8 flex flex-col md:flex-row items-center gap-6 hover:shadow-lg transition">
 
-              <div className="relative w-40 h-40 flex-shrink-0">
+              <div className="relative w-30 h-30 flex-shrink-0">
                 <Image
                   src={inventory.image || "/images/fallback.png"}
                   alt={inventory.title || "image"}
@@ -86,7 +86,7 @@ const AboutPage = () => {
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold mb-3">
+                <h3 className="text-xl font-semibold mb-3">
                   {inventory.title}
                 </h3>
 
@@ -104,7 +104,7 @@ const AboutPage = () => {
           <div className="w-full mx-auto">
             <div className="bg-white rounded-2xl shadow-md p-8 flex flex-col md:flex-row items-center gap-6 hover:shadow-lg transition">
 
-              <div className="relative w-40 h-40 flex-shrink-0">
+              <div className="relative w-30 h-30 flex-shrink-0">
                 <Image
                   src={optimization.image || "/images/fallback.png"}
                   alt={optimization.title || "image"}
@@ -114,7 +114,7 @@ const AboutPage = () => {
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold mb-3">
+                <h3 className="text-xl font-semibold mb-3">
                   {optimization.title}
                 </h3>
 
@@ -130,7 +130,7 @@ const AboutPage = () => {
         
         {/* CTA */}
         <div className=" ">
-          <h2 className="text-2xl font-bold mb-3">
+          <h2 className="text-xl font-semibold mb-3">
             {section.cta.title}
           </h2>
 
@@ -138,7 +138,7 @@ const AboutPage = () => {
             {section.cta.description}
           </p>
           <div className="text-left">
-            <h3 className="text-1xl  font-bold mb-3">
+            <h3 className="text-1xl  font-semibold mb-3">
                {section.ctalist.subtitle}
             </h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 py-5 text-left">

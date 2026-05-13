@@ -20,14 +20,16 @@ const FAQEcommerce = ({ items }: any) => {
 
       <div className="space-y-4">
         {items?.map((item: any, i: number) => (
-          <div key={i} className="bg-white rounded-xl shadow p-6">
+          <div key={i} className="bg-white rounded-md shadow p-6 border-l-2 border-blue-400">
             
             {/* Question */}
             <div
-              className="flex justify-between items-center cursor-pointer"
-              onClick={() => toggle(i)}
-            >
-              <h3 className="font-semibold text-lg">
+                className={`flex justify-between items-center cursor-pointer border-b ${
+                  openIndex === i ? "pb-3 border-b border-gray-300" : "border-transparent"
+                }`}
+                onClick={() => toggle(i)}
+              >
+              <h3 className=" text-xl">
                 Why {item.title}?
               </h3>
 

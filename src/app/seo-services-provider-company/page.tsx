@@ -1,29 +1,30 @@
 
 import Image from "next/image";
-import data from "@/data/services.json";
+import data from "@/data/footer.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
+import FAQ from "@/components/FAQ/FAQ";
 
 export const metadata = {
-  title: "Dot Net Development Services | Dot Net Full Stack Developers",
+  title: "SEO Services Provider Company in Noida, India | VR Consulting",
   description:
-    "VR Consulting is the best place for those who are looking for the best dot net development services in India with full stack developers. Contact us now!",
+    "VR Consulting - One of the best SEO services companies in Noida, India. Apart from that, we also provide other services, i.e, SMO, PPC, Web consulting, etc.",
 };
 
 const Page = () => {
-  const section = data?.["dot-net-development-company"];
+  const section = data?.["SEOServices"];
 
   if (!section) return null;
 
-  const inventory = section?.MigrationServices?.[0];
-  const optimization = section?.TimelyDelivery?.[0];
+  const inventory = section?.LinkBuilding?.[0];
+  const optimization = section?.LocalSEO?.[0];
 
   return (
     <>
       {/* Breadcrumb */}
       <Breadcrumb
-        pageName="DOT NET Development"
-        description=""
+        pageName="SEO Services"
+        description="Improving website visibility on search engines through keyword optimization, content strategy, technical SEO, and link building for higher rankings."
       />
 
       <div className="max-w-6xl mx-auto py-12 space-y-16">
@@ -49,18 +50,18 @@ const Page = () => {
           </div>
         </div>
 
-        {/* .NET for Your Development Needs */}
+        {/*Why Choose Professional SEO Services? */}
         <div>
           <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
             What we provide
           </p>
 
           <h2 className="text-xl font-semibold mb-8 text-center">
-           Why Choose .NET for Your Development Needs?
+           Why Choose Professional SEO Services?
           </h2>
 
           <div className="grid md:grid-cols-3  gap-6">
-            {section.ChooseDotNetYourDevelopment?.map((item: any, i: number) => (
+            {section.ProfessionalSEOServices?.map((item: any, i: number) => (
               <div
                 key={i}
                 className="bg-white rounded-xl shadow p-6  text-left hover:shadow-lg transition"
@@ -87,18 +88,18 @@ const Page = () => {
         </div>
         
 
-        {/* .NET Development Services */}
+        {/* SERVICES */}
         <div>
           <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
             What we provide
           </p>
 
           <h2 className="text-xl font-semibold mb-8 text-center">
-           Our .NET Development Services
+           Our SEO Services
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {section["DotNetDevelopmentServices"]?.map((item: any, i: number) => (
+            {section["OurSEOServices"]?.map((item: any, i: number) => (
               <div
                 key={i}
                 className="flex flex-col gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition"
@@ -125,7 +126,7 @@ const Page = () => {
           </div>
         </div>
 
-        {/* Migration Services */}
+        {/* Link Building */}
         {inventory && (
           <div className="w-full mx-auto">
             <div className="bg-white rounded-2xl shadow-md p-8 flex flex-col md:flex-row items-center gap-6 hover:shadow-lg transition">
@@ -153,43 +154,7 @@ const Page = () => {
           </div>
         )}
 
-         {/* Why Choose VR Web Consulting */}
-          <div>
-          
-          <h2 className="text-xl font-semibold mb-8 text-center">
-           Why Choose VR Web Consulting?
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {section["WhyChooseVRWebConsulting"]?.map((item: any, i: number) => (
-              <div
-                key={i}
-                className="flex flex-col gap-4 p-5 bg-white rounded-xl shadow hover:shadow-md transition"
-              >
-                <div className="relative w-full h-18 flex-shrink-0">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-
-         {/* Timely Delivery */}
+         {/* Local SEO */}
         {optimization && (
           <div className="w-full mx-auto">
             <div className="bg-white rounded-2xl shadow-md p-8 flex flex-col md:flex-row items-center gap-6 hover:shadow-lg transition">
@@ -217,14 +182,26 @@ const Page = () => {
           </div>
         )}
 
+        {/* FAQ */}
+       <div className="faq-wrapper">
+            <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
+               What we provide
+            </p>
+            <h2 className="text-xl text-center font-semibold mb-8">
+                Why Choose VR Web Consulting as Your SEO Services Provider?
+            </h2>
+          <FAQ items={section?.whyChooseUs} />
+        </div>
+
         {/* CTA */}
+
         <div className="text-left ">
           <h2 className="text-xl text-center font-semibold mb-3">
-            {section.cta5.title}
+            {section.cta.title}
           </h2>
 
           <p className="mb-6 text-gray-600">
-            {section.cta5.description}
+            {section.cta.description}
           </p>
         </div>
 

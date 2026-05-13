@@ -28,7 +28,7 @@ const Page = () => {
         {/* HERO */}
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="text-2xl font-semibold mb-4">
               {section.title}
             </h1>
             <p className="text-gray-600">
@@ -52,7 +52,7 @@ const Page = () => {
             <p className="text-sm mb-3 text-center text-blue-600  uppercase">
                What we provide
               </p>
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-xl font-semibold mb-8 text-center">
             Why Choose Flutter for Mobile App Development?
           </h2>
 
@@ -88,7 +88,7 @@ const Page = () => {
            <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
               What we provide
               </p>
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-xl font-semibold mb-8 text-center">
            Our Flutter Application Development Services
           </h2>
 
@@ -127,7 +127,7 @@ const Page = () => {
   <div key={index} className="w-full mx-auto">
     <div className="bg-white rounded-2xl shadow-md p-8 flex flex-col md:flex-row items-center gap-6 hover:shadow-lg transition">
       
-      <div className="relative w-40 h-40 flex-shrink-0">
+      <div className="relative w-30 h-30 flex-shrink-0">
         <Image
           src={legacy?.image || "/images/fallback.png"}
           alt={legacy?.title || "image"}
@@ -137,7 +137,7 @@ const Page = () => {
       </div>
 
       <div>
-        <h3 className="text-2xl font-semibold mb-3">
+        <h3 className="text-xl font-semibold mb-3">
           {legacy?.title}
         </h3>
 
@@ -155,7 +155,7 @@ const Page = () => {
           <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
             What we provide
           </p>
-          <h2 className="text-2xl text-center font-bold mb-8">
+          <h2 className="text-xl text-center font-semibold mb-8">
                Why Choose VR Web Consulting?
           </h2>
           <FAQ items={section?.whyChooseUs} />
@@ -163,7 +163,7 @@ const Page = () => {
 
         {/*  CTA */}
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-3">
+          <h2 className="text-xl font-semibold mb-3">
             {section.cta.title}
           </h2>
           <p className="mb-6">
