@@ -1,4 +1,4 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import Contact from "@/components/Contact";
 
 import { Metadata } from "next";
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const ContactPage = () => {
   return (
     <>
-      <Breadcrumb
+      <Breadcrumb1
         pageName="Contact Page"
         description=""
       />

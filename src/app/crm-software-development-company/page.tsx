@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import data from "@/data/footer.json";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import { Metadata } from "next";
 
 export const metadata = {
@@ -18,7 +18,7 @@ const Page = () => {
   return (
     <>
       {/* Breadcrumb */}
-      <Breadcrumb
+      <Breadcrumb1
         pageName="CRM Software Development Services Company in India"
         description="India-based CRM software development company delivering scalable, secure solutions for efficient customer and business management."
       />

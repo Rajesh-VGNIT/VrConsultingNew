@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import data from "@/data/footer.json";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import { Metadata } from "next";
 
 
@@ -21,7 +21,7 @@ const Page = () => {
   return (
     <>
       {/* Breadcrumb */}
-      <Breadcrumb
+      <Breadcrumb1
         pageName="Best Mobile Application Development"
         description="Building high-performance mobile applications with intuitive design, seamless functionality, and exceptional user experience."
       />

@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import data from "@/data/footer.json";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import { Metadata } from "next";
 
 
@@ -21,7 +21,7 @@ const Page = () => {
   return (
     <>
       {/* Breadcrumb */}
-      <Breadcrumb
+      <Breadcrumb1
         pageName="Our Mission Vision"
         description="Empowering innovation through integrity, collaboration, and sustainable growth to create lasting value for communities worldwide."
       />

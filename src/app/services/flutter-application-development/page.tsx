@@ -166,7 +166,7 @@ const Page = () => {
           <h2 className="text-xl font-semibold mb-3">
             {section.cta.title}
           </h2>
-          <p className="mb-6">
+          <p className="mb-6 text-gray-600">
             {section.cta.description}
           </p>
 

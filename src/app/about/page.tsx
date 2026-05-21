@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import data from "@/data/about.json";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import { Metadata } from "next";
 
 
@@ -22,7 +22,7 @@ const AboutPage = () => {
   return (
     <>
       {/* Breadcrumb */}
-      <Breadcrumb
+      <Breadcrumb1
         pageName="About VR Consulting?"
         description=""
       />

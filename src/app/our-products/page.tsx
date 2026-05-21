@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import data from "@/data/product.json";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ const Page = () => {
   return (
     <>
       {/* Breadcrumb */}
-      <Breadcrumb
+      <Breadcrumb1
         pageName="Products"
         description=""
       />

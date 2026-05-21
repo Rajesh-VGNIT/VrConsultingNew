@@ -36,7 +36,7 @@ const Footer = () => {
 
                   <li>
                     <Link
-                      href="/"
+                      href="/enterprise-resource-planning"
                       className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       ERP
@@ -45,7 +45,7 @@ const Footer = () => {
                   
                     <li>
                     <Link
-                      href="/"
+                      href="/hospital-management-system"
                       className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       HMS
@@ -269,7 +269,7 @@ const Footer = () => {
   <ul className="mb-12 lg:mb-10 w-full flex justify-center items-center gap-4">
   <li>
     <Link
-      href="/"
+      href="/careers"
       className="text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
     >
       Careers
@@ -302,7 +302,7 @@ const Footer = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle opacity="0.8" cx="49.5" cy="49.5" r="49.5" fill="#959CB1" />
+            <circle opacity="0.8" cx="49.5" cy="49.5" r="49.5" fill="#9fb1e7" />
             <mask
               id="mask0_94:899"
               style={{ maskType: "alpha" }}

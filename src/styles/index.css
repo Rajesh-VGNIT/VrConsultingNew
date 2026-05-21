@@ -219,5 +219,19 @@ h1, h2, h3, h4, h5, h6{
   
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.development-section img{
+  position: relative !important;
+  width:100% !important;
+  height: 100% !important;
+}
+
 
 

@@ -255,6 +255,120 @@
       
     ]
 
+  },
+
+
+  "EnterpriseResource": {
+    "title": "Enterprise resource planning (ERP)",
+    "description": "we understand the critical role that an efficient and integrated ERP system plays in the success of modern businesses. With our comprehensive ERP solution, we empower organizations to streamline their operations, enhance productivity, and achieve sustainable growth. Our innovative and customizable ERP software is designed to meet the unique needs of businesses across industries.",
+    "heroImage": "/images/enterprise/Enterprise-resource-planning.png",
+
+    "whyChooseFlutter": [
+      {
+        "title": "Financial Management",
+        "description": "Our ERP system provides robust financial management capabilities, including accounts payable and receivable, general ledger, budgeting, and financial reporting. Gain real-time visibility into your organization's financial health, streamline financial processes, and make informed strategic decisions.",
+        "image": "/images/enterprise/Financial-Management.png"
+      },
+      {
+        "title": "Supply Chain Management",
+        "description": "Optimize your supply chain with our ERP solution. From procurement and inventory management to order fulfillment and logistics, our system enables end-to-end supply chain visibility and control. Reduce costs, improve inventory accuracy, and enhance customer satisfaction.",
+        "image": "/images/enterprise/Supply-Chain-Management.png"
+      },
+      {
+        "title": "Human Resources Management",
+        "description": "Effectively manage your workforce with our HR module. Our ERP system automates employee data management, payroll processing, benefits administration, and performance tracking. Streamline HR processes, improve employee engagement, and ensure compliance with labor regulations.",
+        "image": "/images/enterprise/Human-Resources-Management.png"
+      },
+      {
+        "title": "Customer Relationship Management (CRM)",
+        "description": "Our integrated CRM module enables you to effectively manage customer interactions, track sales leads, and enhance customer satisfaction. Gain a comprehensive view of customer data, streamline sales processes, and improve customer retention and loyalty.",
+        "image": "/images/enterprise/Customer-Relationship-Management.png"
+      },
+      {
+        "title": "Manufacturing and Production Management",
+        "description": "Enhance your manufacturing operations with our ERP system. From planning and scheduling to inventory control and shop floor management, our solution optimizes production processes, improves quality control, and reduces production costs.",
+        "image": "/images/enterprise/Manufacturing-Productio- Management.png"
+      },
+      {
+        "title": "Business Intelligence and Reporting",
+        "description": "Make data-driven decisions with our powerful business intelligence and reporting tools. Our ERP system provides customizable dashboards, analytics, and reporting capabilities to gain insights into key performance indicators, trends, and opportunities for improvement.",
+        "image": "/images/enterprise/Business-Intelligence-Reporting.png"
+      },
+      {
+        "title": "Integration and Scalability",
+        "description": "Our ERP solution seamlessly integrates with existing systems, such as legacy applications and third-party software, ensuring data integrity and reducing redundancy. It is highly scalable, accommodating the evolving needs of your business as it grows.",
+        "image": "/images/enterprise/Integration-Scalability.png"
+      },
+      {
+        "title": "Security and Data Privacy",
+        "description": "We prioritize the security and privacy of your business data. Our ERP system employs robust security measures, including access controls, encryption, and regular data backups, to safeguard sensitive information and ensure compliance with data protection regulations.",
+        "image": "/images/enterprise/Security-Data-Privacy.png"
+      },
+      {
+        "title": "Mobile and Cloud Capabilities",
+        "description": "Access critical business information anytime, anywhere, with our mobile and cloud capabilities. Our ERP system offers mobile apps and cloud-based deployment options, enabling remote access and facilitating collaboration across teams and locations.",
+        "image": "/images/enterprise/Mobile-Cloud-Capabilities.png"
+      }
+    ],
+
+
+    "cta": {
+      "title": "",
+      "description": "we are committed to delivering a comprehensive ERP solution that drives operational efficiency, improves decision-making, and accelerates business growth. Contact us today to learn more about how our ERP system can transform your organization's operations and drive sustainable success."
+    }
+  },
+
+   "HospitalManagementSystem": {
+    "title": "Enterprise resource planning (ERP)",
+    "description": "we understand the critical role that an efficient and integrated ERP system plays in the success of modern businesses. With our comprehensive ERP solution, we empower organizations to streamline their operations, enhance productivity, and achieve sustainable growth. Our innovative and customizable ERP software is designed to meet the unique needs of businesses across industries.",
+    "heroImage": "/images/hospital/Hospital-Management-System1.png"
+  },
+
+
+  "Carrer": {
+    "title": "",
+    "description": "",
+    "heroImage": "",
+
+    "whyChooseFlutter": [
+      {
+          "title": "Sr.PHP Developer",
+          "subtitle": "We are looking for PHP Laravel Developer, expertise in Laravel Framework.",
+          "experience": "2 to 4 years",
+          "role": [
+            "Roles and Responsibilities",
+            "Develop, record and maintain cutting edge web-based PHP applications",
+            "Knowledge of PHP web frameworks including <strong>Laravel, and Codeigniter.</strong>",
+            "Expertise in MySQL",
+            "Knowledge of front-end technologies including CSS3, JavaScript, AJAX and HTML5",
+            "Understanding of object-oriented PHP programming",
+            "Experience with REST API Development using PHP",
+            "Previous experience in creating scalable applications"
+          ],
+          "jobtype": "Full-time",
+          "email": "rashmita@vrwebconsulting.com",
+          "image": "/images/carrer/PHP-Developer.png"
+        },
+      {
+          "title": "PHP Laravel Developer",
+          "subtitle": "We are hiring for Sr.PHP Developer.",
+          "experience": "3 to 4 years",
+          "role": [
+            "Roles and Responsibilities",
+            "Develop, record and maintain cutting edge web-based PHP applications",
+            "WordPress / Woocommerce and Experience in WordPress Plugin development and theme customization.",
+            "Expertise in Core PHP &MySQL",
+            "Knowledge of front-end technologies including CSS3, JavaScript, AJAX and HTML 5",
+            "Understanding of object-oriented PHP programming.",
+            "Experience with Rest API Development using PHP.",
+            "Proficiently manage GIT"
+          ],
+          "jobtype": "Full-time",
+          "email": "rashmita@vrwebconsulting.com",
+          "image": "/images/carrer/PHP-Developer.png"
+        }
+    ]
+
   }
 
 }

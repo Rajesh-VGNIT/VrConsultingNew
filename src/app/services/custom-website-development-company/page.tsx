@@ -35,9 +35,7 @@ const Page = () => {
              <p className="text-gray-600 mt-2">
               {section.description1}
             </p>
-             <p className="text-gray-600 mt-2">
-              {section.description2}
-            </p>
+             
           </div>
 
           <div className="relative ml-auto w-full max-w-[500px]  h-120 rounded-xl overflow-hidden">

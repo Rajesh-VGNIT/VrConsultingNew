@@ -1,176 +1,228 @@
-"use client";
-
-import { useEffect } from "react";
 import aboutJson from "@/data/about.json";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export default function AboutPage() {
+export const metadata: Metadata = {
+  title: "About VR Consulting | Website Development Company",
+  description:
+    "VR Consulting is a Web Design and Development Company based in India, Noida, Delhi NCR specialized in high quality web design and development solutions, custom web development",
+};
+
+const AboutPage = () => {
+
   const aboutData = aboutJson.aboutData;
 
-  const whyVR = aboutData.find((item: any) => item.id === "why-vr");
+  const whyVR = aboutData.find(
+    (item: any) => item.id === "why-vr"
+  );
+
   const cards = aboutData.filter(
     (item: any) =>
       item.title === "What we do" ||
       item.title === "How we work" ||
       item.title === "Our Vision"
   );
-  const mission = aboutData.find((item: any) => item.mission);
-  const whySuccess = aboutData.find((item: any) => item.why_we_succeed);
+
+  const mission = aboutData.find(
+    (item: any) => item.mission
+  );
+
+  const whySuccess = aboutData.find(
+    (item: any) => item.why_we_succeed
+  );
 
   return (
     <>
-      <Breadcrumb
+      <Breadcrumb1
         pageName="About Us"
-        description="VR Consulting is a Web Design and Development Company specialized in high quality web design and development solutions, custom web development, web based software application, SEO and web marketing services. At VR Consulting we see the customer's requirements, results in creating online business solutions opportunities for the clients."
+        description="VR Consulting is a Web Design and Development Company specialized in high quality web design and development solutions, custom web development, web based software application, SEO and web marketing services."
       />
 
-      <div className="max-w-6xl mx-auto px-6 py-12 space-y-8">
+      <div className="mx-auto max-w-6xl space-y-8 px-6 py-12">
 
-        {/* 🔷 TOP SECTION */}
+        {/* Top Section */}
         {whyVR && (
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid items-center gap-16 md:grid-cols-2">
 
-            {/* LEFT IMAGE */}
+            {/* Left Images */}
             <div className="fade fade-left relative flex justify-start">
-              <div className="relative w-72 h-96 rounded-2xl overflow-hidden shadow-xl">
+
+              <div className="relative h-96 w-72 overflow-hidden rounded-2xl shadow-xl">
                 <Image
                   src={whyVR.images?.[0]?.src}
-                  alt={whyVR.images?.[0]?.alt}
+                  alt={whyVR.images?.[0]?.alt || "about image"}
                   fill
                   className="object-cover"
                 />
               </div>
 
-              <div className="absolute -bottom-4 right-[60px] w-[200px] h-[260px] rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+              <div className="absolute -bottom-4 right-[60px] h-[260px] w-[200px] overflow-hidden rounded-2xl border-4 border-white shadow-lg">
                 <Image
                   src={whyVR.images?.[1]?.src}
-                  alt={whyVR.images?.[1]?.alt}
+                  alt={whyVR.images?.[1]?.alt || "about image"}
                   fill
                   className="object-cover"
                 />
               </div>
+
             </div>
 
-            {/* RIGHT TEXT */}
+            {/* Right Content */}
             <div className="fade fade-right max-w-lg">
-              <span className="text-sm text-blue-600 font-semibold uppercase">
+
+              <span className="text-sm font-semibold uppercase text-blue-600">
                 Why Choose Us
               </span>
 
-              <h2 className="text-4xl font-bold mt-2 mb-4">
+              <h2 className="mb-4 mt-2 text-4xl font-bold">
                 {whyVR.title}
               </h2>
 
-              <p className="text-gray-600 text-lg">
+              <p className="text-lg text-gray-600">
                 {whyVR.description}
               </p>
 
               <div className="mt-6">
-                <Link href="/" className="inline-block group">
-                  <span className="relative flex items-center justify-center w-44 h-12 overflow-hidden rounded-md border border-primary text-sm font-semibold uppercase">
-                    
-                    <span className="absolute inset-0 bg-primary translate-x-[-100%] group-hover:translate-x-0 transition duration-300"></span>
+
+                <Link href="/" className="group inline-block">
+
+                  <span className="relative flex h-12 w-44 items-center justify-center overflow-hidden rounded-md border border-primary text-sm font-semibold uppercase">
+
+                    <span className="absolute inset-0 translate-x-[-100%] bg-primary transition duration-300 group-hover:translate-x-0"></span>
 
                     <span className="relative z-10 text-primary group-hover:text-white">
                       Get Started
                     </span>
 
                   </span>
+
                 </Link>
+
               </div>
+
             </div>
 
           </div>
         )}
 
-        {/* 🔷 CARDS */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Cards */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
           {cards.map((item: any, index: number) => (
+
             <div
               key={index}
-              className="fade fade-up bg-white rounded-xl shadow p-6 hover:shadow-lg transition"
-              style={{ transitionDelay: `${index * 0.15}s` }}
+              className="fade fade-up rounded-xl bg-white p-6 shadow transition hover:shadow-lg"
+              style={{
+                transitionDelay: `${index * 0.15}s`,
+              }}
             >
-              <div className="relative bg-primary/10 border border-[#39acf9] mb-6 flex h-[90px] w-[90px] items-center justify-center rounded-full">
+
+              <div className="relative mb-6 flex h-[90px] w-[90px] items-center justify-center rounded-full border border-[#39acf9] bg-primary/10">
+
                 <Image
                   src={item.icon}
                   alt={item.title}
                   fill
                   className="object-contain p-4"
                 />
+
               </div>
 
-              <h3 className="text-lg font-semibold mb-3">
+              <h3 className="mb-3 text-lg font-semibold">
                 {item.title}
               </h3>
 
-              <p className="text-gray-600 text-sm mb-3">
+              <p className="mb-3 text-sm text-gray-600">
                 {item.description}
               </p>
 
               {item.points && (
-                <ul className="text-sm text-gray-600 list-disc pl-5 space-y-1">
-                  {item.points.map((p: string, i: number) => (
-                    <li key={i}>{p}</li>
+                <ul className="list-disc space-y-1 pl-5 text-sm text-gray-600">
+
+                  {item.points.map((point: string, i: number) => (
+                    <li key={i}>{point}</li>
                   ))}
+
                 </ul>
               )}
+
             </div>
           ))}
+
         </div>
 
-        {/* 🔷 BOTTOM */}
-        <div className="fade fade-up grid md:grid-cols-2 gap-6">
+        {/* Bottom Section */}
+        <div className="fade fade-up grid gap-6 md:grid-cols-2">
 
           {/* Mission */}
           {mission && (
-            <div className="fade fade-up bg-white rounded-xl shadow p-6">
-              <div className="relative bg-primary/10 border border-[#39acf9] mb-6 flex h-[90px] w-[90px] items-center justify-center rounded-full">
+            <div className="rounded-xl bg-white p-6 shadow">
+
+              <div className="relative mb-6 flex h-[90px] w-[90px] items-center justify-center rounded-full border border-[#39acf9] bg-primary/10">
+
                 <Image
                   src={mission?.mission?.icon}
-                  alt={mission?.mission?.title}
+                  alt={mission?.mission?.title || "mission icon"}
                   fill
                   className="object-contain p-4"
                 />
+
               </div>
 
-              <h3 className="text-lg font-semibold mb-3">
+              <h3 className="mb-3 text-lg font-semibold">
                 {mission.mission.title}
               </h3>
 
-              <p className="text-gray-600 text-sm">
+              <p className="text-sm text-gray-600">
                 {mission.mission.description}
               </p>
+
             </div>
           )}
 
-          {/* Why Success */}
+          {/* Why We Succeed */}
           {whySuccess && (
-            <div className="fade fade-up bg-white rounded-xl shadow p-6">
-              <div className="relative bg-primary/10 border border-[#39acf9] mb-6 flex h-[90px] w-[90px] items-center justify-center rounded-full">
+            <div className="rounded-xl bg-white p-6 shadow">
+
+              <div className="relative mb-6 flex h-[90px] w-[90px] items-center justify-center rounded-full border border-[#39acf9] bg-primary/10">
+
                 <Image
-                  src={whySuccess?.why_we_succeed?.icon || "/images/default.png"}
-                  alt={whySuccess?.why_we_succeed?.title || "icon"}
+                  src={
+                    whySuccess?.why_we_succeed?.icon ||
+                    "/images/default.png"
+                  }
+                  alt={
+                    whySuccess?.why_we_succeed?.title || "success icon"
+                  }
                   fill
                   className="object-contain p-4"
                 />
+
               </div>
 
-              <h3 className="text-lg font-semibold mb-3">
+              <h3 className="mb-3 text-lg font-semibold">
                 {whySuccess.why_we_succeed.title}
               </h3>
 
-              <p className="text-gray-600 text-sm mb-3">
+              <p className="mb-3 text-sm text-gray-600">
                 {whySuccess.why_we_succeed.intro}
               </p>
 
-              <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
-                {whySuccess.why_we_succeed.points?.map((p: any) => (
-                  <li key={p.id}>{p.text}</li>
-                ))}
+              <ul className="list-disc space-y-1 pl-5 text-sm text-gray-600">
+
+                {whySuccess.why_we_succeed.points?.map(
+                  (point: any) => (
+                    <li key={point.id}>
+                      {point.text}
+                    </li>
+                  )
+                )}
+
               </ul>
+
             </div>
           )}
 
@@ -179,4 +231,6 @@ export default function AboutPage() {
       </div>
     </>
   );
-}
+};
+
+export default AboutPage;

@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import data from "@/data/footer.json";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import { Metadata } from "next";
 import FAQ from "@/components/FAQ/FAQ";
 
@@ -22,7 +22,7 @@ const Page = () => {
   return (
     <>
       {/* Breadcrumb */}
-      <Breadcrumb
+      <Breadcrumb1
         pageName="SEO Services"
         description="Improving website visibility on search engines through keyword optimization, content strategy, technical SEO, and link building for higher rankings."
       />

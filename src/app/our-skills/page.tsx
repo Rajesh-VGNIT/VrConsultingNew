@@ -1,8 +1,14 @@
-"use client";
 
+import type { Metadata } from "next";
 import Image from "next/image";
 import aboutJson from "@/data/about.json";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import Breadcrumb1 from "@/components/Common/Breadcrumb1";
+
+export const metadata: Metadata = {
+  title: "CMS Customization | Iphone Application Development | seo specilaist company",
+  description:
+    "VR Consulting a Web Development Company : India, Noida, Delhi NCR's best Company for Web Development, Iphone Application Development, Cms Web Page Development and seo specilaist company.",
+};
 
 const OurSkills = () => {
 
@@ -20,7 +26,7 @@ const OurSkills = () => {
 
   return (
     <>
-      <Breadcrumb pageName="Our Skills" description="" />
+      <Breadcrumb1 pageName="Our Skills" description="" />
       <div className="max-w-5xl mx-auto px-6 py-12 text-center">
 
         <p className="text-sm text-blue-600 font-semibold uppercase tracking-wide">
@@ -37,7 +43,7 @@ const OurSkills = () => {
 
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 py-12 text-center">
+      <div className="max-w-6xl mx-auto px-6 py-0 text-center">
 
         {categories.length === 0 && (
           <p className="text-red-500">No data found</p>
@@ -47,20 +53,20 @@ const OurSkills = () => {
   {categories.map((category: any) => (
     <div
       key={category.id}
-      className="mb-5 rounded-2xl border-2 border-red-400 bg-white shadow-sm hover:shadow-md transition overflow-hidden"
+      className="mb-5 rounded-2xl  transition overflow-hidden"
     >
-      {/* Reduced py-2 to py-1 and removed mb-2 */}
-      <p className="text-xs font-bold uppercase text-center text-gray-700 py-1">
+     
+      <p className="text-2xl  mb-7 font-bold uppercase text-center  py-1">
         {category.title}
       </p>
 
-      {/* Changed h-screen to a fixed height (e.g., h-40) to constrain the space */}
-      <div className="relative w-full h-150"> 
+     
+      <div className="relative mt-4 development-section"> 
         <Image
           src={category.image}
           alt={category.title}
           fill
-          className="object-contain"
+          className=""
         />
       </div>
     </div>

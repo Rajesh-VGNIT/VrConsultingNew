@@ -1,5 +1,5 @@
 import data from "@/data/footer.json";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import Popup from "@/components/Popup";
 
 export const metadata = {
@@ -16,7 +16,7 @@ const Page = () => {
   return (
     <>
       {/* Breadcrumb */}
-      <Breadcrumb
+      <Breadcrumb1
         pageName="Multi Level Marketing"
         description="India’s leading MLM software development company delivering secure, scalable, and feature-rich direct selling business solutions."
       />

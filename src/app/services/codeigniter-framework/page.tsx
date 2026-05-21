@@ -114,7 +114,7 @@ const Page = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center p-10">
+        <div className="text-center p-0">
           <h2 className="text-xl font-bold mb-3">
             {section?.cta1?.title}
           </h2>
