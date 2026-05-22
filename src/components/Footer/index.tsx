@@ -153,7 +153,7 @@ const Footer = () => {
                   
                   <li>
                     <Link
-                      href="/"
+                      href="/development-method"
                       className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                      Development Method

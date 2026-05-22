@@ -25,13 +25,13 @@ const Page = () => {
         {/* HERO */}
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="text-2xl font-semibold mb-4">
               {section.title}
             </h1>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-sm leading-6">
               {section.description}
             </p>
-            <p className="text-gray-600 mt-2">
+            <p className="text-gray-600 text-sm leading-6 mt-2">
               {section.description1}
             </p>
           </div>

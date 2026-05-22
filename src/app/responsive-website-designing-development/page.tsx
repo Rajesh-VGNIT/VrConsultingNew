@@ -34,21 +34,21 @@ const Page = () => {
             <h1 className="text-2xl font-semibold mb-4">
               {section.title}
             </h1>
-            <p className="text-gray-600">
+            <p className="text-sm text-gray-600 leading-6 ">
               {section.description}
             </p>
-            <p className="text-gray-600 mt-4">
+            <p className="text-sm text-gray-600 mt-4 leading-6">
               {section.description1}
             </p>
-            <p className="text-gray-600 mt-4">
+            <p className="text-sm text-gray-600 mt-4 leading-6">
               {section.description2}
             </p>
-            <p className="text-gray-600 mt-4">
+            <p className="text-sm text-gray-600 mt-4 leading-6">
               {section.description3}
             </p>
           </div>
 
-          <div className="relative w-full max-w-[450px] h-[450px] ml-auto rounded-xl overflow-hidden">
+          <div className="relative w-full max-w-[450px] h-[400px] ml-auto rounded-xl overflow-hidden">
             <Image
               src={section.heroImage}
               alt="hero"

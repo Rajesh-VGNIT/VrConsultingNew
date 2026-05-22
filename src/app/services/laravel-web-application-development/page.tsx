@@ -30,7 +30,7 @@ const Page = () => {
             <h1 className="text-2xl font-semibold mb-4">
               {section?.title}
             </h1>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-sm leading-6">
               {section?.description}
             </p>
             

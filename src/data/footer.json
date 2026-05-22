@@ -2,7 +2,7 @@
 "OurMissionVision": {
     "title": "Our Mission Vision",
     "description": "VR Consulting is a Web Design and Development Company based in India specialized in high quality web design and development solutions, custom web development, web based software application, SEO and web marketing services. At VR Consulting we see the customer's requirements, results in creating online business solutions opportunities for the clients. We offer complete web solutions including custom web designing, website development, e-commerce solutions, corporate identity designing, 3d animation, flash designing, SEO, search engine marketing, graphic designing and other rich web application services which are essential for running successful online business presence.",
-    "heroImage": "/images/our-mission/OurMissionVision.jpg",
+    "heroImage": "/images/our-mission/OurMissionVisionImge.png",
 
 
     "E-commerceWebsite": [
@@ -369,6 +369,81 @@
         }
     ]
 
+  },
+
+  "Development-Methodologies": {
+    "title": "Codeigniter Framework development",
+    "description": "At our CodeIgniter framework development company, we pride ourselves on delivering unique and high-quality content for our clients. We understand the importance of creating engaging and informative content that resonates with your target audience.",
+    "subdescription": "Our team of experienced developers and content creators work closely together to ensure that your CodeIgniter-based projects not only have robust functionality but also feature compelling content that drives user engagement and enhances the user experience.",
+    "heroImage": "/images/development-method/development-method-Photoroom.png",
+
+    "unique-contentcard": [
+      {
+        "title": "Invention",
+         "description": [
+            "Analysis of project hypothesis",
+            "Time line and budget discussion",
+            "Communication determination"
+          ],
+          "image": "/images/development-method/Invention1.png"
+      },
+      {
+        "title": "Design",
+        "description": [
+            "Functional specifications determination",
+            "Business consulting",
+            "Technical specifications",
+            "Contents specifications",
+            "Design approval",
+            "Development Plan"     
+        ],
+        "image": "/images/development-method/Design-Eye.png"
+      },
+      {
+        "title": "Development",
+        "description": [
+            "Interactive evolution",
+            "Capacity and performance validation",
+            "Help definition",
+            "Requirements definition",
+            "Test data gathering",
+            "Development Plan"     
+        ],
+        "image": "/images/development-method/Development.png"
+      },
+      {
+        "title": "Testing",
+        "description": [
+            "Regression Testing",
+            "Integration Testing",
+            "User Acceptance Testing",
+            "Customer or Operational Acceptance Testing",
+            "Forward to delivery"
+         ],
+        "image": "/images/development-method/Testing.png"
+      },
+      {
+        "title": "Delivery",
+        "description": [
+            "Training to End User",
+            "Documentation Handover",
+            "Sign-off system acceptance",
+            "Deployment of system"
+         ],
+        "image": "/images/development-method/Delivery.png"
+      },
+      {
+        "title": "Maintenance",
+        "description": [
+            "Adaptive",
+            "Perfective",
+            "Corrective",
+            "Preventive"
+         ],
+        "image": "/images/development-method/Maintenance.png"
+      }
+
+    ]
   }
 
 }

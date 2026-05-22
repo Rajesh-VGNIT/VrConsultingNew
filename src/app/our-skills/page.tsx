@@ -33,11 +33,11 @@ const OurSkills = () => {
           {caseStudies?.label}
         </p>
 
-        <h2 className="text-4xl font-bold mt-2 mb-6">
+        <h2 className="text-3xl font-bold mt-2 mb-6">
           {caseStudies?.title}
         </h2>
 
-        <p className="text-gray-600 leading-relaxed">
+        <p className="text-sm text-gray-600 leading-relaxed">
           {caseStudies?.description}
         </p>
 

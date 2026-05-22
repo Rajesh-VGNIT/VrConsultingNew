@@ -80,7 +80,7 @@ const AboutPage = () => {
                 {whyVR.title}
               </h2>
 
-              <p className="text-lg text-gray-600">
+              <p className="text-sm text-gray-600 leading-6">
                 {whyVR.description}
               </p>
 
@@ -108,123 +108,212 @@ const AboutPage = () => {
         )}
 
         {/* Cards */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
-          {cards.map((item: any, index: number) => (
-
+        <div className="grid md:grid-cols-3 gap-8">
+          {cards.map((item: any, i: number) => (
             <div
-              key={index}
-              className="fade fade-up rounded-xl bg-white p-6 shadow transition hover:shadow-lg"
-              style={{
-                transitionDelay: `${index * 0.15}s`,
-              }}
+              key={i}
+
+              className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
             >
+              {/* Top Gradient Glow */}
+              <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
+              <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-fuchsia-100 rounded-full blur-3xl opacity-50"></div>
 
-              <div className="relative mb-6 flex h-[90px] w-[90px] items-center justify-center rounded-full border border-[#39acf9] bg-primary/10">
+              {/* Gradient Border Effect */}
+              <div className="absolute inset-0 rounded-[32px] border border-transparent group-hover:border-cyan-300 transition duration-500"></div>
 
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  fill
-                  className="object-contain p-4"
-                />
+              {/* Content */}
+              <div className="relative z-10">
+
+                {/* Icon */}
+                <div className="mb-5">
+                  <div className="flex items-center justify-center w-22 h-22 rounded-[22px] border-2 border-blue-300 shadow-xl group-hover:scale-105 transition duration-500">
+
+                    {/* Inner White Layer */}
+                    <div className="flex items-center justify-center w-[62px] h-[62px] rounded-[18px] bg-white">
+                      <div className="relative w-15 h-15">
+                        <Image
+                          src={item?.icon || "/images/fallback.png"}
+                          alt={item?.title}
+                          fill
+                          className="object-contain"
+                        />
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Title */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-indigo-600 transition">
+                    {item?.title}
+                  </h3>
+
+                  {/* Divider */}
+                  <div className="mt-3 w-16 h-[3px] rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></div>
+                </div>
+
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {item.description}
+                </p>
+
+
+
+                <ul className="space-y-2 mt-4">
+                  {item?.points?.map((point: string, index: number) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-3 leading-0"
+                    >
+                      {/* Check Circle */}
+                      <div className="mt-0 flex items-center justify-center min-w-[20px] h-5 rounded-full bg-gradient-to-r from-cyan-400 to-indigo-500 shadow-md">
+                        <span className="text-white text-xs font-bold">
+                          ✓
+                        </span>
+                      </div>
+
+                      {/* Text */}
+                      <span className="text-sm text-slate-600 ">
+                        {point}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
 
               </div>
 
-              <h3 className="mb-3 text-lg font-semibold">
-                {item.title}
-              </h3>
-
-              <p className="mb-3 text-sm text-gray-600">
-                {item.description}
-              </p>
-
-              {item.points && (
-                <ul className="list-disc space-y-1 pl-5 text-sm text-gray-600">
-
-                  {item.points.map((point: string, i: number) => (
-                    <li key={i}>{point}</li>
-                  ))}
-
-                </ul>
-              )}
-
+              {/* Hover Bottom Line */}
+              <div className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 transition-all duration-500"></div>
             </div>
           ))}
-
         </div>
 
         {/* Bottom Section */}
-        <div className="fade fade-up grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
 
           {/* Mission */}
           {mission && (
-            <div className="rounded-xl bg-white p-6 shadow">
+            <div className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
+              {/* Top Gradient Glow */}
+              <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
+              <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-fuchsia-100 rounded-full blur-3xl opacity-50"></div>
 
-              <div className="relative mb-6 flex h-[90px] w-[90px] items-center justify-center rounded-full border border-[#39acf9] bg-primary/10">
+              {/* Gradient Border Effect */}
+              <div className="absolute inset-0 rounded-[32px] border border-transparent group-hover:border-cyan-300 transition duration-500"></div>
 
-                <Image
-                  src={mission?.mission?.icon}
-                  alt={mission?.mission?.title || "mission icon"}
-                  fill
-                  className="object-contain p-4"
-                />
+              {/* Content */}
 
+
+
+
+              {/* Icon */}
+              <div className="mb-5">
+                <div className="flex items-center justify-center w-22 h-22 rounded-[22px] border-2 border-blue-300 shadow-xl group-hover:scale-105 transition duration-500">
+
+                  {/* Inner White Layer */}
+                  <div className="flex items-center justify-center w-[62px] h-[62px] rounded-[18px] bg-white">
+                    <div className="relative w-15 h-15">
+                      <Image
+                        src={mission?.mission?.icon || "/images/fallback.png"}
+                        alt={mission?.mission?.title}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <h3 className="mb-3 text-lg font-semibold">
-                {mission.mission.title}
-              </h3>
 
-              <p className="text-sm text-gray-600">
+
+              {/* Title */}
+              <div className="mb-6">
+                <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-indigo-600 transition">
+                  {mission.mission.title}
+                </h3>
+
+                {/* Divider */}
+                <div className="mt-3 w-16 h-[3px] rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></div>
+              </div>
+
+              <p className="text-sm text-gray-600 leading-6">
                 {mission.mission.description}
               </p>
-
+              {/* Hover Bottom Line */}
+              <div className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 transition-all duration-500"></div>
             </div>
           )}
 
           {/* Why We Succeed */}
           {whySuccess && (
-            <div className="rounded-xl bg-white p-6 shadow">
+            <div className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
 
-              <div className="relative mb-6 flex h-[90px] w-[90px] items-center justify-center rounded-full border border-[#39acf9] bg-primary/10">
+              {/* Top Gradient Glow */}
+              <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
+              <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-fuchsia-100 rounded-full blur-3xl opacity-50"></div>
 
-                <Image
-                  src={
-                    whySuccess?.why_we_succeed?.icon ||
-                    "/images/default.png"
-                  }
-                  alt={
-                    whySuccess?.why_we_succeed?.title || "success icon"
-                  }
-                  fill
-                  className="object-contain p-4"
-                />
+              {/* Gradient Border Effect */}
+              <div className="absolute inset-0 rounded-[32px] border border-transparent group-hover:border-cyan-300 transition duration-500"></div>
 
+              {/* Icon */}
+              <div className="mb-5">
+                <div className="flex items-center justify-center w-22 h-22 rounded-[22px] border-2 border-blue-300 shadow-xl group-hover:scale-105 transition duration-500">
+
+                  <div className="flex items-center justify-center w-[62px] h-[62px] rounded-[18px] bg-white">
+                    <div className="relative w-15 h-15">
+                      <Image
+                        src={whySuccess?.why_we_succeed?.icon || "/images/fallback.png"}
+                        alt={whySuccess?.why_we_succeed?.title}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+
+                </div>
               </div>
 
-              <h3 className="mb-3 text-lg font-semibold">
-                {whySuccess.why_we_succeed.title}
-              </h3>
+              {/* Title */}
+              <div className="mb-6">
+                <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-indigo-600 transition">
+                  {whySuccess.why_we_succeed.title}
+                </h3>
 
-              <p className="mb-3 text-sm text-gray-600">
+                <div className="mt-3 w-16 h-[3px] rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></div>
+              </div>
+
+              <p className="mb-3 text-sm text-gray-600 leading-6">
                 {whySuccess.why_we_succeed.intro}
               </p>
 
-              <ul className="list-disc space-y-1 pl-5 text-sm text-gray-600">
+              <ul className="space-y-2 mt-4">
+                {whySuccess.why_we_succeed.points?.map((point: any) => (
+                  <li
+                    key={point.id}
+                    className="flex items-start gap-3 leading-0"
+                  >
+                    <div className="mt-0 flex items-center justify-center min-w-[20px] h-5 rounded-full bg-gradient-to-r from-cyan-400 to-indigo-500 shadow-md">
+                      <span className="text-white text-xs font-bold">
+                        ✓
+                      </span>
+                    </div>
 
-                {whySuccess.why_we_succeed.points?.map(
-                  (point: any) => (
-                    <li key={point.id}>
+                    <span className="text-sm text-slate-600">
                       {point.text}
-                    </li>
-                  )
-                )}
-
+                    </span>
+                  </li>
+                ))}
               </ul>
+
+              {/* Hover Bottom Line */}
+              <div className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 transition-all duration-500"></div>
 
             </div>
           )}
+
+
 
         </div>
 

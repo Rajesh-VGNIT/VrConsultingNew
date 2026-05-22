@@ -1,27 +1,26 @@
+// "use client";
 
 import Image from "next/image";
 import data from "@/data/footer.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import { Metadata } from "next";
 
-export const metadata = {
-  title: "CRM Software Development Company in India - VR Consulting",
-  description:
-    "Looking for the best CRM software development service company in India? Visit us now! We offer customer friendly CRM development services at the cheapest price.",
+export const metadata: Metadata = {
+  title: "Development Method | VR Consulting",
+  description: "Web Development Company - web designing, seo services, mobile application development, x-cart customization, magento customization, cakephp",
 };
-
 const Page = () => {
-  const section = data?.["CRMSoftwareDevelopment"];
+  const section = data["Development-Methodologies"];
 
-  if (!section) return null;
 
   return (
     <>
       {/* Breadcrumb */}
       <Breadcrumb1
-        pageName="CRM Software Development Services Company in India"
-        description="India-based CRM software development company delivering scalable, secure solutions for efficient customer and business management."
+        pageName="Development Methodologies"
+        description="Development methodologies are structured approaches guiding software planning, design, coding, testing, and delivery to improve efficiency, collaboration, and quality."
       />
+
 
       {/* HERO */}
       <section className="relative mt-7 overflow-hidden bg-[#0B1120] flex items-center">
@@ -71,22 +70,14 @@ const Page = () => {
               </div>
 
               {/* Description */}
-              <p className="mt-8 text-sm text-gray-300 leading-7 max-w-2xl">
+              <p className="mt-8 text-lg text-gray-300 leading-7 max-w-2xl">
                 {section?.description}
               </p>
-              <div className="flex mt-5 flex-col items-center justify-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 uppercase">
 
-                <div className="inline-block group">
-                  <span className="relative flex items-center justify-center w-40 h-12 overflow-hidden rounded-md border border-white hover:border-primary text-sm font-semibold uppercase cursor-pointer">
-                    <span className="absolute inset-0 bg-primary translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
-                    <span className="relative z-10 flex items-center gap-2 text-white group-hover:text-white transition-colors duration-300">
-                      Live
-                    </span>
+              <p className="mt-5 text-lg text-gray-300 leading-7 max-w-2xl">
+                {section?.subdescription}
+              </p>
 
-                  </span>
-                </div>
-
-              </div>
 
             </div>
 
@@ -114,23 +105,25 @@ const Page = () => {
           </div>
         </div>
       </section>
+
       <div className="max-w-6xl mx-auto py-12 space-y-16">
 
-        {/*Why Choose Professional SEO Services? */}
+        {/* UNIQUE CONTENT CARDS */}
         <div>
-          <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
-
+          <p className="text-sm mb-3 text-center text-blue-500 font-semibold uppercase">
+            What we provide
           </p>
 
+          <h2 className="text-xl font-semibold mb-8 text-center">
+            Development Methodologies
+          </h2>
 
-
-          <div className="grid md:grid-cols-3  gap-6">
-            {section.ProfessionalSEOServices?.map((item: any, i: number) => (
+          <div className="grid md:grid-cols-3 gap-8">
+            {section?.["unique-contentcard"]?.map((item: any, i: number) => (
               <div
                 key={i}
                 className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
-
                 {/* Top Gradient Glow */}
                 <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
                 <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-fuchsia-100 rounded-full blur-3xl opacity-50"></div>
@@ -138,32 +131,62 @@ const Page = () => {
                 {/* Gradient Border Effect */}
                 <div className="absolute inset-0 rounded-[32px] border border-transparent group-hover:border-cyan-300 transition duration-500"></div>
 
-                <div className="relative w-full h-50 mb-4 ">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-content w-full  "
-                  />
-                </div>
+                {/* Content */}
+                <div className="relative z-10">
 
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                  {/* Icon */}
+                  <div className="mb-7">
+                    <div className="flex items-center justify-center w-22 h-22 rounded-[22px] border-2 border-blue-300 shadow-xl group-hover:scale-105 transition duration-500">
 
-                  <div className="inline-block group">
-                    <span className="relative flex items-center justify-center px-8 py-3 overflow-hidden rounded-md border border-primary text-md font-semibold cursor-pointer">
-                      <span className="absolute inset-0 bg-primary translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
-                      <span className="relative z-10 flex items-center gap-2 text-primary group-hover:text-white transition-colors duration-300">
-                        {item.button}
-                      </span>
-
-                    </span>
+                      {/* Inner White Layer */}
+                      <div className="flex items-center justify-center w-[62px] h-[62px] rounded-[18px] bg-white">
+                        <div className="relative w-15 h-15">
+                          <Image
+                            src={item?.image || "/images/fallback.png"}
+                            alt={item?.title}
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
+                  {/* Title */}
+                  <div className="mb-6">
+                    <h3 className="text-2xl font-bold text-slate-800 leading-snug group-hover:text-indigo-600 transition">
+                      {item?.title}
+                    </h3>
+
+                    {/* Divider */}
+                    <div className="mt-4 w-16 h-[4px] rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></div>
+                  </div>
+
+                  {/* Description */}
+                  <ul className="space-y-5">
+                    {item?.description?.map((desc: string, index: number) => (
+                      <li
+                        key={index}
+                        className="flex items-start gap-3"
+                      >
+                        {/* Check Circle */}
+                        <div className="mt-0 flex items-center justify-center min-w-[20px] h-5 rounded-full bg-gradient-to-r from-cyan-400 to-indigo-500 shadow-md">
+                          <span className="text-white text-xs font-bold">
+                            ✓
+                          </span>
+                        </div>
+
+                        {/* Text */}
+                        <span className="text-sm text-slate-600 leading-5">
+                          {desc}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
+                {/* Hover Bottom Line */}
                 <div className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 transition-all duration-500"></div>
-
-
               </div>
             ))}
           </div>

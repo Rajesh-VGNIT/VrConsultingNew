@@ -29,16 +29,16 @@ const Page = () => {
             <h1 className="text-4xl font-bold mb-4">
               {section.title}
             </h1>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-sm leading-6">
               {section.description}
             </p>
-             <p className="text-gray-600 mt-2">
+             <p className="text-gray-600 mt-2 text-sm leading-6">
               {section.description1}
             </p>
-             <p className="text-gray-600 mt-2">
+             <p className="text-gray-600 mt-2 text-sm leading-6">
               {section.description2}
             </p>
-             <p className="text-gray-600 mt-2">
+             <p className="text-gray-600 mt-2 text-sm leading-6">
               {section.description3}
             </p>
           </div>
