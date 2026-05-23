@@ -2,7 +2,7 @@
   "phpWebApplication": {
     "title": "Top Web Development Company in Delhi NCR: Expert PHP Web Solutions in the region.",
     "description": "At VR Web consulting, we are a leading PHP web application development company, dedicated to delivering robust and scalable web solutions tailored to meet your business objectives. With our team of skilled PHP developers, we harness the power of PHP to create dynamic, interactive, and high-performing web applications that drive your digital success.",
-    "heroImage": "/images/services/PHP-Web-Application.png",
+    "heroImage": "/images/services/content-structure-animate.svg",
 
     "whyChoosePHP": [
       {
@@ -741,7 +741,7 @@
   "UIUXDesignCompany": {
     "title": "UI/UX Design company",
     "description": "At our UI/UX Design company, we are dedicated to providing unique and exceptional content that enhances the user experience and promotes effective communication between your brand and your audience. We understand the critical role that UI/UX design plays in creating intuitive and engaging digital experiences.",
-    "heroImage": "/images/services/UI-UX-DesignCompany.jpg",
+    "heroImage": "/images/services/UI-UX-DesignCompany.svg",
 
     "UIUXDevelopmentcard": [
       {

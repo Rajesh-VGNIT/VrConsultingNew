@@ -45,7 +45,7 @@ const AboutPage = () => {
             {section.professionalEcommerce?.map((item: any, i: number) => (
               <div
                 key={i}
-                
+
                 className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
                 {/* Top Gradient Glow */}
@@ -105,7 +105,7 @@ const AboutPage = () => {
         {/* INVENTORY */}
         {inventory && (
           <div className="w-full mx-auto">
-            <div className="bg-white rounded-2xl border  p-8 flex flex-col md:flex-row items-center gap-6 hover:shadow-lg transition">
+            <div className="p-8 flex flex-col md:flex-row items-center gap-6 group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
 
               <div className="relative w-30 h-30 flex-shrink-0">
                 <Image
@@ -121,9 +121,11 @@ const AboutPage = () => {
                   {inventory.title}
                 </h3>
 
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-sm text-gray-600 leading-6">
                   {inventory.description}
                 </p>
+                {/* Hover Bottom Line */}
+                <div className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 transition-all duration-500"></div>
               </div>
 
             </div>
@@ -133,7 +135,7 @@ const AboutPage = () => {
         {/* Search Engine Optimization */}
         {optimization && (
           <div className="w-full mx-auto">
-            <div className="bg-white rounded-2xl border p-8 flex flex-col md:flex-row items-center gap-6 hover:shadow-lg transition">
+            <div className="p-8 flex flex-col md:flex-row items-center gap-6 group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
 
               <div className="relative w-30 h-30 flex-shrink-0">
                 <Image
@@ -149,9 +151,11 @@ const AboutPage = () => {
                   {optimization.title}
                 </h3>
 
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-sm text-gray-600 leading-6">
                   {optimization.description}
                 </p>
+                {/* Hover Bottom Line */}
+                <div className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 transition-all duration-500"></div>
               </div>
 
             </div>
@@ -174,23 +178,23 @@ const AboutPage = () => {
             </h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 py-5 text-left">
               {list.map((item) => (
-                
-                <li
-                        key={item.id}
-                        className="flex items-start gap-3"
-                      >
-                        {/* Check Circle */}
-                        <div className="mt-0 ml-4 flex items-center justify-center min-w-[20px] h-5 rounded-full bg-gradient-to-r from-cyan-400 to-indigo-500 shadow-md">
-                          <span className="text-white text-xs font-bold">
-                            ✓
-                          </span>
-                        </div>
 
-                        {/* Text */}
-                        <span className="text-sm text-slate-600 leading-5">
-                          {item.point}
-                        </span>
-                      </li>
+                <li
+                  key={item.id}
+                  className="flex items-start gap-3"
+                >
+                  {/* Check Circle */}
+                  <div className="mt-0 ml-4 flex items-center justify-center min-w-[20px] h-5 rounded-full bg-gradient-to-r from-cyan-400 to-indigo-500 shadow-md">
+                    <span className="text-white text-xs font-bold">
+                      ✓
+                    </span>
+                  </div>
+
+                  {/* Text */}
+                  <span className="text-sm text-slate-600 leading-5">
+                    {item.point}
+                  </span>
+                </li>
               ))}
             </ul>
 

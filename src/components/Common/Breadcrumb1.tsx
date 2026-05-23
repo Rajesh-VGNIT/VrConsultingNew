@@ -12,7 +12,7 @@ const Breadcrumb = ({
       <section className="relative z-10 overflow-hidden pt-28 lg:pt-[25px] services-bg">
         <div className="container">
 
-          <div className="w-full mb-4 md:w-4/12 lg:w-5/12 ">
+          <div className="w-full mb-4 md:w-4/16 lg:w-5/12 ">
               <div className="text-end">
                 <ul className="flex items-center md:justify-start">
                   <li className="flex items-center">

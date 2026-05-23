@@ -232,6 +232,13 @@ h1, h2, h3, h4, h5, h6{
   width:100% !important;
   height: 100% !important;
 }
-
+@media screen and (max-width: 768px) {
+  .max-w-6xl {
+    padding: 15px 15px;
+  }
+  .pt-28 {
+    padding-top: calc(var(--spacing) * 4);
+  }
+}
 
 

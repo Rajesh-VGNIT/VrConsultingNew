@@ -29,7 +29,7 @@ export default function RootLayout({
 
       <head />
 
-      <body className={`bg-[#FCFCFC] dark:bg-black ${varela?.className ?? ""}`}>
+      <body className={`${varela?.className ?? ""}`}>
         
         <Providers>
           <div className="isolate">
