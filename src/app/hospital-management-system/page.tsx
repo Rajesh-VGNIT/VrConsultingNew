@@ -4,14 +4,9 @@ import Image from "next/image";
 import data from "@/data/footer.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 
-import { Metadata } from "next";
+import pageMetadata from "@/data/metadata.json";
 
-
-
-export const metadata: Metadata = {
-  title: "Web Consulting Services Providers in India - VR Consulting",
-  description: "VR Consulting - The best web consulting services provider that helps you to meet your business needs. We also provide various services such as SEO, SMO, PPC, etc.",
-};
+export const metadata = pageMetadata["hospital-management-system"];
 const Page = () => {
   const section = data.HospitalManagementSystem;
 
@@ -23,18 +18,15 @@ const Page = () => {
         description="Hospital Management System streamlines patient records, appointments, billing, staff management, and healthcare operations for improved efficiency and care." />
 
       {/* HERO */}
-            <section className="relative mt-7 mb-7 overflow-hidden bg-[#0B1120] flex items-center">
+            <section className="relative mt-7 mb-7 overflow-hidden  flex items-center">
       
-              {/* Background Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0B1120] via-[#111827] to-[#1E1B4B]"></div>
+             
       
-              {/* Glow Effects */}
-              <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-fuchsia-500/20 rounded-full blur-3xl"></div>
+              
       
               {/* SVG Background */}
               <svg
-                className="absolute inset-0 w-full h-full opacity-[0.05]"
+                className="absolute inset-0 w-full h-full"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <defs>
@@ -59,18 +51,18 @@ const Page = () => {
                   <div>
       
                     {/* Heading */}
-                    <h1 className="text-3xl md:text-3xl font-black leading-tight text-white">
+                    <h1 className="text-2xl md:text-3xl font-semibold leading-tight text-black">
                       {section?.title}
                     </h1>
       
                     {/* Gradient Divider */}
-                    <div className="mt-8 flex items-center gap-3">
+                    <div className="mt-4 flex items-center gap-3">
                       <div className="w-20 h-[5px] rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></div>
                       <div className="w-4 h-4 rounded-full border-2 border-blue-800 bg-blue-500"></div>
                     </div>
       
                     {/* Description */}
-                    <p className="mt-8 text-sm text-gray-300 leading-7 max-w-2xl">
+                    <p className="mt-8 text-sm text-gray-600 leading-6 ">
                       {section?.description}
                     </p>
       
@@ -82,7 +74,7 @@ const Page = () => {
                   <div className="relative flex justify-center lg:justify-end">
       
                     {/* Gradient Border */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-indigo-500 to-fuchsia-500 rounded-[40px] blur-2xl opacity-30 scale-95"></div>
+                    <div className="absolute inset-0   rounded-[40px] blur-2xl opacity-30 scale-95"></div>
       
                     {/* Image Card */}
                     <div className="relative w-full max-w-[450px] h-[400px] rounded-[40px] overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">

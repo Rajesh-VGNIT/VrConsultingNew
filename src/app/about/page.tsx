@@ -2,13 +2,13 @@
 import Image from "next/image";
 import data from "@/data/about.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
-import { Metadata } from "next";
+// import { Metadata } from "next";
 
 
-export const metadata = {
-  title: "Web Consulting Services Providers in India - VR Consulting",
-  description: "VR Consulting - The best web consulting services provider that helps you to meet your business needs. We also provide various services such as SEO, SMO, PPC, etc.",
-};
+import pageMetadata from "@/data/metadata.json";
+
+export const metadata = pageMetadata.about;
+
 
 const AboutPage = () => {
   const section = data?.["e-commerce-Website"];

@@ -3,15 +3,12 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-
-import { Metadata } from "next";
 import FAQ from "../../../components/FAQ/FAQ";
+import pageMetadata from "@/data/metadata.json";
+
+export const metadata = pageMetadata["wordpress-development-services"];
 
 
-export const metadata: Metadata = {
-  title: "Best WordPress development company, India | VR Consulting",
-  description: "One of the best WordPress development company in India, VR Consulting has the well-experienced web developers to provide optimum solutions. Contact now!",
-};
 const Page = () => {
   const section = data.WordPressDevelopment;
   const legacy = section["legacy-application"]?.[0];

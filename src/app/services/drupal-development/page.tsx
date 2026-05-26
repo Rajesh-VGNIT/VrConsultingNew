@@ -3,15 +3,11 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-
-import { Metadata } from "next";
 import FAQ from "../../../components/FAQ/FAQ";
 
+import pageMetadata from "@/data/metadata.json";
 
-export const metadata: Metadata = {
-  title: "Web Consulting Services Providers in India - VR Consulting",
-  description: "VR Consulting - The best web consulting services provider that helps you to meet your business needs. We also provide various services such as SEO, SMO, PPC, etc.",
-};
+export const metadata = pageMetadata["drupal-development"];
 const Page = () => {
   const section = data.DrupalDevelopmentCompany;
   const legacy = section["legacy-application"]?.[0];

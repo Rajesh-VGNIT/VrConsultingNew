@@ -4,14 +4,11 @@ import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
-import { Metadata } from "next";
 import FAQ from "../../../components/FAQ/FAQ";
+import pageMetadata from "@/data/metadata.json";
 
+export const metadata = pageMetadata["custom-web-design"];
 
-export const metadata: Metadata = {
-  title: "Web Designing Companies in Delhi, India | VR Consulting",
-  description: "VR Consulting - One of the best Web designing companies in Delhi, India. Contact us now to get the best Web designing & consulting services at affordable price.",
-};
 const Page = () => {
   const section = data.CustomWebDesignServices;
   return (

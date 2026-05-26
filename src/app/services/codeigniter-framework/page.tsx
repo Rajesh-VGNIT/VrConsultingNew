@@ -3,12 +3,9 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import { Metadata } from "next";
+import pageMetadata from "@/data/metadata.json";
 
-export const metadata: Metadata = {
-  title: "Codeigniter Framework Development | Vr Consulting",
-  description: "This is Codeigniter Framework Development",
-};
+export const metadata = pageMetadata["codeigniter-framework"];
 const Page = () => {
   const section = data["codeigniter-framework"];
 

@@ -3,14 +3,9 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import pageMetadata from "@/data/metadata.json";
 
-import { Metadata } from "next";
-
-
-export const metadata: Metadata = {
-  title: "Custom Website Development Services Company in India - VR Consulting",
-  description: "One of the best custom web development company in India that offers custom website design & development services. Get a free quote for your business website design now!.",
-};
+export const metadata = pageMetadata["custom-website-development-company"];
 const Page = () => {
   const section = data.WebDevelopmentServices;
 

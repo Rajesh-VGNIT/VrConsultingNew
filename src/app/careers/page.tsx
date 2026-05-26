@@ -1,15 +1,13 @@
-import type { Metadata } from "next";
+
 import Image from "next/image";
 
 import data from "@/data/footer.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import PopupCarrer from "@/components/PopupCarrer";
+import pageMetadata from "@/data/metadata.json";
 
-export const metadata: Metadata = {
-  title: "Careers | VR Consulting",
-  description:
-    "Explore rewarding career opportunities, enhance your skills, grow professionally, and build a successful future with our dynamic team.",
-};
+export const metadata = pageMetadata["careers"];
+
 
 const Page = () => {
   

@@ -1,14 +1,12 @@
 
-import type { Metadata } from "next";
+
 import Image from "next/image";
 import aboutJson from "@/data/about.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 
-export const metadata: Metadata = {
-  title: "CMS Customization | Iphone Application Development | seo specilaist company",
-  description:
-    "VR Consulting a Web Development Company : India, Noida, Delhi NCR's best Company for Web Development, Iphone Application Development, Cms Web Page Development and seo specilaist company.",
-};
+import pageMetadata from "@/data/metadata.json";
+
+export const metadata = pageMetadata["our-skills"];
 
 const OurSkills = () => {
 

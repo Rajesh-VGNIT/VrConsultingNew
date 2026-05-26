@@ -2,13 +2,9 @@
 import Image from "next/image";
 import data from "@/data/footer.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
-import { Metadata } from "next";
+import pageMetadata from "@/data/metadata.json";
 
-export const metadata = {
-  title: "CRM Software Development Company in India - VR Consulting",
-  description:
-    "Looking for the best CRM software development service company in India? Visit us now! We offer customer friendly CRM development services at the cheapest price.",
-};
+export const metadata = pageMetadata["crm-software-development-company"];
 
 const Page = () => {
   const section = data?.["CRMSoftwareDevelopment"];

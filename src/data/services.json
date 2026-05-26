@@ -77,7 +77,7 @@
     "title": "Codeigniter Framework development",
     "description": "At our CodeIgniter framework development company, we pride ourselves on delivering unique and high-quality content for our clients. We understand the importance of creating engaging and informative content that resonates with your target audience.",
     "subdescription": "Our team of experienced developers and content creators work closely together to ensure that your CodeIgniter-based projects not only have robust functionality but also feature compelling content that drives user engagement and enhances the user experience.",
-    "heroImage": "/images/services/codeigniter-framework.png",
+    "heroImage": "/images/services/codeigniter-framework.svg",
 
     "unique-contentcard": [
       {
@@ -113,7 +113,7 @@
   "laravel-web-application": {
     "title": "Laravel Web Application Development",
     "description": "We are a leading Laravel development company with a team of experts that builds exceptional web applications using the Laravel PHP framework. Laravel is a highly sought-after PHP framework known for its development speed and extensibility, making it an attractive choice for web app development. Our Laravel development services encompass various aspects, including Laravel web development, customization, extension development and integration, RESTful applications, website migration, and Laravel extension development.",
-    "heroImage": "/images/services/laravel-web-application-development.png",
+    "heroImage": "/images/services/laravel-web-application-development.svg",
 
     "cta2": {
       "title": "",
@@ -123,7 +123,7 @@
   "e-commerce-Website": {
     "title": "Leading Ecommerce Website Development Company: Expert Services for Your Online Success",
     "description": "As an esteemed e-commerce website development company, VR Web Consulting specializes in creating robust and user-friendly online stores that maximize your potential for success in the digital marketplace. Our team of skilled developers and designers combine creativity and technical expertise to deliver customized e-commerce solutions that enhance your brand, attract customers, and drive conversions.",
-    "heroImage": "/images/services/e-commerce-website-development.jpeg",
+    "heroImage": "/images/services/e-commerce-website-development.svg",
 
     "professionalEcommerce": [
       {
@@ -203,7 +203,7 @@
   "node-js-development-company": {
     "title": "Empower Your Projects with the Best Node.js Development Company",
     "description": "Vrwebconsulting specialize in delivering cutting-edge Node.js development solutions to help businesses harness the power of this powerful runtime environment. With our team of skilled Node.js developers and deep expertise in the latest web technologies, we can create scalable, high-performance applications that meet your unique business requirements.",
-    "heroImage": "/images/services/Best-Node.js-Development-Company.jpg",
+    "heroImage": "/images/services/Best-Node.js-Development-Company.svg",
 
     "NodejsDevelopmentcard": [
       {
@@ -259,7 +259,7 @@
   "dot-net-development-company": {
     "title": "Elevate Your Projects with Expert Dot Net Development Services and Full Stack Developers",
     "description": "we specialize in delivering high-quality .NET development services tailored to meet your specific business needs. With our team of experienced .NET developers, we can transform your ideas into robust, scalable, and secure applications.",
-    "heroImage": "/images/services/dot-net-development-company.jpg",
+    "heroImage": "/images/services/dot-net-development-company.svg",
 
     "ChooseDotNetYourDevelopment": [
       {
@@ -339,13 +339,13 @@
   "IOSApplicationDevelopment": {
     "title": "IOS Application Development",
     "description": "Having successfully delivered and designed numerous iOS app projects, we are among the leading application development companies. Our team excels in developing and designing applications for iPhone models , iPhone 5, iPhone 5s, 4, iPhone 4s, iPhone 5c, iPhone 6 and iPhone 6 Plus.. We have also optimized several apps for iOS 7, iOS 8, and iOS 9 Beta 2",
-    "heroImage": "/images/services/IOSapplication-development.jpeg"
+    "heroImage": "/images/services/IOSapplication-development.svg"
   },
 
   "FlutterApplicationDevelopment": {
     "title": "Unlock Innovation: Best Flutter Development Company in Noida, Delhi NCR",
     "description": "our specialization in Flutter application development, empowering businesses to create high-performance, visually appealing, and feature-rich mobile applications for both iOS and Android platforms. Our team of skilled Flutter developers is passionate about building innovative solutions that meet your specific requirements.",
-    "heroImage": "/images/services/mobile-apps with-flutter.png",
+    "heroImage": "/images/services/flutter-application-development.svg",
 
     "whyChooseFlutter": [
       {
@@ -420,7 +420,7 @@
   "AndroidAppDevelopmentServices": {
     "title": "Top & Best Android App Development Company: Excellence in Noida",
     "description": "We are a leading Android app development company dedicated to transforming your innovative ideas into functional and user-friendly mobile applications. Our team of skilled developers, designers, and testers leverages the latest technologies and industry best practices to deliver exceptional Android apps tailored to your specific business needs.",
-    "heroImage": "/images/services/top-best-android-app.png",
+    "heroImage": "/images/services/android-app-development-company.svg",
 
     "whyChooseFlutter": [
       {
@@ -607,7 +607,7 @@
   "DrupalDevelopmentCompany": {
     "title": "Drupal Development Company",
     "description": "As a Drupal development company, we pride ourselves on delivering unique and compelling content that enhances the functionality and user experience of your Drupal-based website. We understand the importance of high-quality content in engaging users, driving conversions, and establishing your brand identity.",
-    "heroImage": "/images/services/drupal-development-company.jpeg",
+    "heroImage": "/images/services/drupal-development.svg",
 
     "DrupalDevelopmentService": [
       {
@@ -651,7 +651,7 @@
   "CustomWebDesignServices": {
     "title": "Discover Excellence: Best Web Designing Companies in Delhi, Noida",
     "description": "we are a leading custom web design company dedicated to creating captivating and innovative websites that reflect your brand identity and engage your target audience. Our team of skilled designers and developers combines creativity, technical expertise, and user-centered design principles to deliver tailor-made solutions that set your business apart.",
-    "heroImage": "/images/services/custom-web-design-services.jpg",
+    "heroImage": "/images/services/custom-web-design.svg",
 
     "WhyChooseCustomWebDesign": [
       {
@@ -735,7 +735,7 @@
     "description1": "Take visitors the moment they get to your site. Responsive design provides the optimal viewing experience across a multitude of devices, from laptops to mobiles and everything in between. The right design is the difference between converting casual visitors and letting them click away.",
     "description2": "We got into responsive web design, not to look or be trendy, but because we truly believe it's the way websites should be made. This is an opportunity for us to finally embrace the dynamic medium now available out there.",
      "description3": "We got into responsive web design, not to look or be trendy, but because we truly believe it's the way websites should be made. This is an opportunity for us to finally embrace the dynamic medium now available out there.",
-    "heroImage": "/images/services/responsive-website-designing.jpeg"  
+    "heroImage": "/images/services/responsive-website-designing-development.svg"  
   },
 
   "UIUXDesignCompany": {
@@ -781,7 +781,7 @@
     "title": "Best Web Development Services",
     "description": "Each business whose main business depends on the quality of their software product and info, VR Consulting is a principal Software Development Company that provides custom software development services that solve key issues in Product Quality and Rapid Time to Market.",
     "description1": "We have a team of technical savvy, proficient, pragmatic mobile app developers who deliver on demand feature, easy-to-use app which best for your business. Choosing VR Consulting means opting with the most worthy and cost effective mobile apps Development Company, known around the world for its achievements. We have developed apps for Black berry, iPhone, Android, and Nokia platforms. Choose your platform and hire our expert folks of mobile developer and get your work done.",
-    "heroImage": "/images/services/best-web-development-dervices1.png"  
+    "heroImage": "/images/services/custom-website-development-company.svg"  
   },
 
   "MobileApplicationDevelopment": {
@@ -839,7 +839,7 @@
   "SEOServices": {
     "title": "Affordable SEO Services: Noida's Top SEO Provider Company",
     "description": "We are a leading SEO services provider company committed to helping businesses enhance their online presence, increase organic traffic, and achieve higher rankings on search engine results pages (SERPs). With our team of experienced SEO experts, we deliver comprehensive and customized solutions to drive measurable results for your business.",
-    "heroImage": "/images/services/seo-img.png",
+    "heroImage": "/images/services/seo-image.svg",
 
     "whyChooseSEOServices": [
       {
@@ -922,7 +922,7 @@
     "title": "Pay per Click Software Development",
     "description": "PPC (Pay per Click) is part of e-marketing, used to tour traffic to websites but not organically. In PPC, advertisers pay a fee to the search engine every time their ads get clicked. This method of online marketing has become quite desired and every business, whatever of their industry can benefit from it. This is a better idea to expand your visibility in search engines as well as drive qualified and well-informed traffic.",
     "description1": "PPC is one of the most satisfying methods of e-marketing, enabling you to reach out to the possible customers. It is a more superior over other techniques because it promise.",
-    "heroImage": "/images/services/PayperClickSoftwareDevelopment.jpg"
+    "heroImage": "/images/services/PayperClickSoftwareDevelopment.svg"
     
   },
 
@@ -931,7 +931,7 @@
     "description": "As a well-known and reputable web and mobile application development company, VR Consulting boasts a core team of dedicated professionals committed to delivering projects within the agreed timeline with a genuine approach. We have achieved numerous milestones as a web development company, offering an innovative spectrum of services for developing social websites, dating platforms, adult webcam chat, and swingers dating websites, similar to LinkedIn, Facebook, LiveJasmin, BlackSingles, Cam4, MyFreeCams, and many more.",
     "description1": "VR Consulting is committed to grip productivity for businesses and organizations by utilizing the social networking idea. With our web standards, we make use of social networking development to transform community platform into a successful business model for running huge business benefits.",
      "description2": "Nowadays, organizations are exploring numerous ways to get the merits of social networking platform. Our innovative social networking web development services enable the clients to get the edge of networking for higher revenue returns.",
-    "heroImage": "/images/services/SocialNetworking.jpg"
+    "heroImage": "/images/services/social-networking.svg"
     
   },
   "SocialMediaMarketing": {
@@ -939,7 +939,7 @@
     "description": "\"Social Media\" has created a murmur in the world wide. It has developed into a vital platform for promoting any brand. Social Media platforms offer the perfect means to meet an overall view of opinions of your targeted customers. This spares the need for guessing the mindset of your mode visitor. Some famous social media websites include Facebook, Twitter and LinkedIn.",
     "description1": "Social Media Marketing makes possible lead generation, leading to top conversions. Along with helping the SEO aspect of the website by making the user feel he is a part of the company, it also provides greater inbound traffic; not to mention maintaining brand regularity. Since a brand is the picture of the company, social media improve visibility through social revelation by targeting current market trends to find out user's views and opinions.",
     
-    "heroImage": "/images/services/social-media-marketing.png"  
+    "heroImage": "/images/services/social-media-marketing.svg"  
   },
 
   "FunctionalTesting": {
@@ -1004,7 +1004,7 @@
   "PerformanceTesting": {
     "title": "Performance Testing",
     "description": "we understand the critical role that performance plays in ensuring the success of software applications. Our comprehensive performance testing services are designed to evaluate and optimize the performance, scalability, and responsiveness of your applications under different workloads and conditions. With our expertise and advanced tools, we help you identify performance bottlenecks, enhance user experience, and ensure the reliability of your software.",
-    "heroImage": "/images/services/Performance-Testing.png",
+    "heroImage": "/images/services/Performance-Testing.svg",
 
     "PerformanceTestingcard": [
       {
@@ -1071,7 +1071,7 @@
   "AWSDockerServer": {
     "title": "AWS /Azure/Docker Server",
     "description": "we specialize in providing cutting-edge cloud and containerization solutions to meet the diverse needs of businesses. Whether you're looking to leverage the power of Amazon Web Services (AWS), Microsoft Azure, or Docker servers, we have the expertise and experience to help you succeed in your digital transformation journey. Our comprehensive range of services ensures seamless deployment, scalability, security, and performance for your applications and infrastructure.",
-    "heroImage": "/images/services/domain-hosting.png",
+    "heroImage": "/images/services/AWSDockerServer.svg",
   
     "AWSSolutions": [
       {

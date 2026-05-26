@@ -2,14 +2,9 @@
 import Image from "next/image";
 import data from "@/data/footer.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
-import { Metadata } from "next";
+import pageMetadata from "@/data/metadata.json";
 
-
-export const metadata = {
-  title: "Responsive Website Design & Development Services in Delhi, India",
-  description:
-    "How to recognize the best & cheapest responsive website designing & development service provider India? We are here to help you to find the best solutions.",
-};
+export const metadata = pageMetadata["responsive-website-designing-development"];
 
 const Page = () => {
   const section = data?.["ResponsiveWebsiteDesigning"];

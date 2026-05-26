@@ -2,13 +2,9 @@ import aboutJson from "@/data/about.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import pageMetadata from "@/data/metadata.json";
 
-export const metadata: Metadata = {
-  title: "About VR Consulting | Website Development Company",
-  description:
-    "VR Consulting is a Web Design and Development Company based in India, Noida, Delhi NCR specialized in high quality web design and development solutions, custom web development",
-};
+export const metadata = pageMetadata["why-vr-consultings"];
 
 const AboutPage = () => {
 
@@ -47,7 +43,7 @@ const AboutPage = () => {
           <div className="grid items-center gap-16 md:grid-cols-2">
 
             {/* Left Images */}
-            <div className="fade fade-left relative flex justify-start">
+            <div className="relative flex justify-start">
 
               <div className="relative h-96 w-72 overflow-hidden rounded-2xl shadow-xl">
                 <Image
@@ -70,7 +66,7 @@ const AboutPage = () => {
             </div>
 
             {/* Right Content */}
-            <div className="fade fade-right max-w-lg">
+            <div className="max-w-lg">
 
               <span className="text-sm font-semibold uppercase text-blue-600">
                 Why Choose Us

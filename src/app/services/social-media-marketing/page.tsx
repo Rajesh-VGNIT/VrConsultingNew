@@ -4,12 +4,9 @@ import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
-import { Metadata } from "next";
+import pageMetadata from "@/data/metadata.json";
 
-export const metadata: Metadata = {
-  title: "Social Media Marketing | VR Consulting",
-  description: "Social Media Marketing in Noida, India, Delhi NCR | VR Consulting",
-};
+export const metadata = pageMetadata["social-media-marketing"];
 const Page = () => {
   const section = data.SocialMediaMarketing;
 

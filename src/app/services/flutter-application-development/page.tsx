@@ -3,15 +3,13 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-
-import { Metadata } from "next";
 import FAQ from "../../../components/FAQ/FAQ";
+import pageMetadata from "@/data/metadata.json";
+
+export const metadata = pageMetadata["flutter-application-development"];
 
 
-export const metadata: Metadata = {
-  title: "Flutter Development Company in Noida, India | VR Consulting",
-  description: "Looking for the best Flutter development company in Noida, India? VR Consulting is the right choice for you that yield the best solutions at very affordable price.",
-};
+
 const Page = () => {
   const section = data.FlutterApplicationDevelopment;
   const legacy = section["legacy-application"]?.[0];

@@ -3,14 +3,11 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import pageMetadata from "@/data/metadata.json";
 
-import { Metadata } from "next";
+export const metadata = pageMetadata["magento-development"];
 
 
-export const metadata: Metadata = {
-  title: "Web Consulting Services Providers in India - VR Consulting",
-  description: "VR Consulting - The best web consulting services provider that helps you to meet your business needs. We also provide various services such as SEO, SMO, PPC, etc.",
-};
 const Page = () => {
   const section = data.MagentoDevelopmentCompany;
 

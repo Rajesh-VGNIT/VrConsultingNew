@@ -3,15 +3,11 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-
-import { Metadata } from "next";
 import FAQ from "../../../components/FAQ/FAQ";
+import pageMetadata from "@/data/metadata.json";
 
+export const metadata = pageMetadata["android-app-development-company"];
 
-export const metadata: Metadata = {
-  title: "Android App Development Company in India | VR Consulting",
-  description: "Looking for the best android app development company in Noida, India? VR Consulting is the right place where you will get various services apart from that.",
-};
 const Page = () => {
   const section = data.AndroidAppDevelopmentServices;
   const legacy = section["legacy-application"]?.[0];

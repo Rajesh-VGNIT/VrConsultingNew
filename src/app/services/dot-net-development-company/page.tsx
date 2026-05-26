@@ -2,13 +2,9 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import { Metadata } from "next";
+import pageMetadata from "@/data/metadata.json";
 
-export const metadata = {
-  title: "Dot Net Development Services | Dot Net Full Stack Developers",
-  description:
-    "VR Consulting is the best place for those who are looking for the best dot net development services in India with full stack developers. Contact us now!",
-};
+export const metadata = pageMetadata["dot-net-development-company"];
 
 const Page = () => {
   const section = data?.["dot-net-development-company"];

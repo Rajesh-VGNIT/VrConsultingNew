@@ -5,12 +5,9 @@ import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
+import pageMetadata from "@/data/metadata.json";
 
-
-export const metadata: Metadata = {
-  title: "Web Consulting Services Providers in India - VR Consulting",
-  description: "VR Consulting - The best web consulting services provider that helps you to meet your business needs. We also provide various services such as SEO, SMO, PPC, etc.",
-};
+export const metadata = pageMetadata["ios-application-development"];
 const Page = () => {
   const section = data["IOSApplicationDevelopment"];
 
@@ -36,12 +33,12 @@ const Page = () => {
             
           </div>
 
-          <div className="relative w-full max-w-[500px] h-110 ml-auto">
+          <div className="relative w-full max-w-[450px] h-110 p-6 ml-auto">
             <Image
               src={section?.heroImage || "/images/fallback.png"}
               alt="hero"
               fill
-              className="object-cover rounded-xl"
+              className="object-cover rounded-xl "
             />
           </div>
         </div>

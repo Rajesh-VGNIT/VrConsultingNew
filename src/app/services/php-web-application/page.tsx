@@ -3,15 +3,12 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-
-import { Metadata } from "next";
 import FAQ from "../../../components/FAQ/FAQ";
 
+import pageMetadata from "@/data/metadata.json";
 
-export const metadata: Metadata = {
-  title: "PHP Web Application | Vr web consulting",
-  description: "This is PHP Web Application",
-};
+export const metadata = pageMetadata["php-web-application"];
+
 const Page = () => {
   const section = data.phpWebApplication;
   const legacy = section["legacy-application"]?.[0];

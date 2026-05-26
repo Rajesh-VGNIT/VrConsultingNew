@@ -3,12 +3,10 @@
 import Image from "next/image";
 import data from "@/data/footer.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
-import { Metadata } from "next";
+import pageMetadata from "@/data/metadata.json";
 
-export const metadata: Metadata = {
-  title: "Development Method | VR Consulting",
-  description: "Web Development Company - web designing, seo services, mobile application development, x-cart customization, magento customization, cakephp",
-};
+export const metadata = pageMetadata["development-method"];
+
 const Page = () => {
   const section = data["Development-Methodologies"];
 

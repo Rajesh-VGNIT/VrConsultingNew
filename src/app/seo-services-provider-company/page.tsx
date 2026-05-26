@@ -2,14 +2,11 @@
 import Image from "next/image";
 import data from "@/data/footer.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
-import { Metadata } from "next";
 import FAQ from "@/components/FAQ/FAQ";
 
-export const metadata = {
-  title: "SEO Services Provider Company in Noida, India | VR Consulting",
-  description:
-    "VR Consulting - One of the best SEO services companies in Noida, India. Apart from that, we also provide other services, i.e, SMO, PPC, Web consulting, etc.",
-};
+import pageMetadata from "@/data/metadata.json";
+
+export const metadata = pageMetadata["seo-services-provider-company"];
 
 const Page = () => {
   const section = data?.["SEOServices"];

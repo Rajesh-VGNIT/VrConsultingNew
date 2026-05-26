@@ -1,12 +1,11 @@
 import data from "@/data/footer.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import Popup from "@/components/Popup";
+import Image from "next/image";
 
-export const metadata = {
-  title: "MLM Software Development Company in India - VR Consulting",
-  description:
-    "VR Consulting is one of the leading MLM Software development service company in India who keeps yielding optimum services at an optimum price. Contact now!",
-};
+import pageMetadata from "@/data/metadata.json";
+
+export const metadata = pageMetadata["mlm-software-development-company"];
 
 const Page = () => {
   const section = data?.["MLMSoftwareDevelopment"];
@@ -83,19 +82,33 @@ const Page = () => {
             <div className="relative">
 
               {/* Gradient Glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-indigo-500 to-fuchsia-500 rounded-[35px] blur-2xl opacity-25 scale-95"></div>
+              <div className="absolute inset-0 rounded-[35px] blur-2xl opacity-25 scale-95"></div>
 
-              {/* Main Card */}
-              <div className="relative rounded-[35px] overflow-hidden border border-white/40 bg-white/40 backdrop-blur-xl shadow-[0_25px_80px_rgba(0,0,0,0.15)] p-3">
+             
 
                 {/* Inner Media */}
-                <div className="relative w-full h-[450px] rounded-[28px] overflow-hidden">
-                  <Popup item={section} type="hero" />
-                </div>
+               <div className="relative flex justify-center lg:justify-end">
+              
+                          
+              
+                            {/* Image Card */}
+                            <div className="relative w-full max-w-[450px] h-[400px] rounded-[40px] overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+              
+                              
+              
+                              <Image
+                                src={section?.heroImage || "/images/fallback.png"}
+                                alt="hero"
+                                fill
+                                className="object-cover"
+                              />
+                            </div>
+              
+                          </div>
 
               </div>
             </div>
-          </div>
+          
         </div>
       </section>
 

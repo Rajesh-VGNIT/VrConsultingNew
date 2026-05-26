@@ -4,14 +4,11 @@ import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
-import { Metadata } from "next";
 import FAQ from "../../../components/FAQ/FAQ";
 
+import pageMetadata from "@/data/metadata.json";
 
-export const metadata: Metadata = {
-  title: "SEO Services Provider Company in Noida, India | VR Consulting",
-  description: "VR Consulting - One of the best SEO services companies in Noida, India. Apart from that, we also provide other services, i.e, SMO, PPC, Web consulting, etc.",
-};
+export const metadata = pageMetadata["seo-services-provider-company"];
 const Page = () => {
   const section = data.SEOServices;
   const legacy = section["legacy-application"]?.[0];

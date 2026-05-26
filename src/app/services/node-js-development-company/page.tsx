@@ -3,12 +3,9 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import { Metadata } from "next";
+import pageMetadata from "@/data/metadata.json";
 
-export const metadata: Metadata = {
-  title: "Node Js Development | Best Node Js Development Company",
-  description: "VR Consulting - An optimum place for Node Js development & one of the best Node Js development Companies in India where you will find best solutions.",
-};
+export const metadata = pageMetadata["node-js-development-company"];
 const Page = () => {
   const section = data["node-js-development-company"];
 

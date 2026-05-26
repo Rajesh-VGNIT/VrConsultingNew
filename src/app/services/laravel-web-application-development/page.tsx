@@ -3,14 +3,9 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import { Metadata } from "next";
+import pageMetadata from "@/data/metadata.json";
 
-
-
-export const metadata: Metadata = {
-  title: "Laravel Web Application Development | Vr consulting",
-  description: "This is Laravel Web Application Development",
-};
+export const metadata = pageMetadata["laravel-web-application-development"];
 const Page = () => {
   const section = data["laravel-web-application"];
 
@@ -54,7 +49,7 @@ const Page = () => {
             {section?.cta2?.title}
           </h2>
 
-          <p className="mb-6 text-gray-600">
+          <p className="mb-6 text-sm leading-6 text-gray-600">
             {section?.cta2?.description}
           </p>
         </div>

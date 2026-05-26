@@ -3,14 +3,9 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import pageMetadata from "@/data/metadata.json";
 
-import { Metadata } from "next";
-
-
-export const metadata: Metadata = {
-  title: "Mobile Application Development Services Company in Delhi, India",
-  description: "VR Consulting - Mobile app development company in India offers the best mobile applications services at an optimum price as compare to market. Contact us now!",
-};
+export const metadata = pageMetadata["mobile-applications-development-company"];
 const Page = () => {
   const section = data.MobileApplicationDevelopment;
 

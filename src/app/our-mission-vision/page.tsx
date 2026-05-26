@@ -2,14 +2,9 @@
 import Image from "next/image";
 import data from "@/data/footer.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
-import { Metadata } from "next";
+import pageMetadata from "@/data/metadata.json";
 
-
-export const metadata = {
-  title: "CMS Web Page | Iphone development | SEO Specilaist Company",
-  description:
-    "Software Expertise: VR Consulting is a software expert & SEO Specialist Company in India. Software Expertise fields: HTML, Php , java , Dot Net and SEO etc.",
-};
+export const metadata = pageMetadata["our-mission-vision"];
 
 const Page = () => {
   const section = data?.["OurMissionVision"];
