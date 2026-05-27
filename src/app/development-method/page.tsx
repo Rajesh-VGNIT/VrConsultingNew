@@ -3,9 +3,19 @@
 import Image from "next/image";
 import data from "@/data/footer.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
-import pageMetadata from "@/data/metadata.json";
 
-export const metadata = pageMetadata["development-method"];
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+
+  const pageMetadata = await response.json();
+
+  return pageMetadata["development-method"];
+}
 
 const Page = () => {
   const section = data["Development-Methodologies"];
@@ -68,11 +78,11 @@ const Page = () => {
               </div>
 
               {/* Description */}
-              <p className="mt-8 text-lg text-gray-300 leading-7 max-w-2xl">
+              <p className="mt-8 text-sm text-gray-300 leading-6 max-w-2xl">
                 {section?.description}
               </p>
 
-              <p className="mt-5 text-lg text-gray-300 leading-7 max-w-2xl">
+              <p className="mt-5 text-sm text-gray-300 leading-6 max-w-2xl">
                 {section?.subdescription}
               </p>
 
@@ -116,7 +126,7 @@ const Page = () => {
             Development Methodologies
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {section?.["unique-contentcard"]?.map((item: any, i: number) => (
               <div
                 key={i}
@@ -161,7 +171,7 @@ const Page = () => {
                   </div>
 
                   {/* Description */}
-                  <ul className="space-y-5">
+                  <ul className="space-y-3">
                     {item?.description?.map((desc: string, index: number) => (
                       <li
                         key={index}

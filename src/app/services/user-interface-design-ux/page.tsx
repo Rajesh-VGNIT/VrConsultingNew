@@ -3,9 +3,18 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import pageMetadata from "@/data/metadata.json";
 
-export const metadata = pageMetadata["user-interface-design-ux"];
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["user-interface-design-ux"];
+}
+
 const Page = () => {
   const section = data["UIUXDesignCompany"];
 
@@ -52,7 +61,7 @@ const Page = () => {
            Here are the key aspects of our content development process for UI/UX design
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section?.["UIUXDevelopmentcard"]?.map((item: any, i: number) => (
               <div
                 key={i}

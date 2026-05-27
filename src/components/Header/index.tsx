@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import ThemeToggler from "./ThemeToggler";
+
 import menuData from "./menuData";
 
 const Header = () => {
@@ -127,9 +127,9 @@ const Header = () => {
                           <Link
                             href={menuItem.path}
                             onClick={closeAllMenus}
-                            className={`block py-2 lg:py-6 ${pathname === menuItem.path
+                            className={`block py-2 lg:py-6 hover:text-primary ${pathname === menuItem.path
                                 ? "text-primary"
-                                : "text-dark dark:text-white"
+                                : "text-[#000] "
                               }`}
                           >
                             {menuItem.title}
@@ -137,7 +137,7 @@ const Header = () => {
                         ) : (
                           <button
                             onClick={() => handleSubmenu(index)}
-                            className="flex w-full cursor-pointer items-center justify-between py-2 text-left lg:w-auto lg:gap-2 lg:py-6"
+                            className="flex w-full cursor-pointer items-center justify-between py-2 text-left lg:w-auto lg:gap-2 lg:py-6 hover:text-primary"
                           >
                             {menuItem.title}
 
@@ -183,7 +183,7 @@ const Header = () => {
                                         onClick={() =>
                                           handleThirdMenu(subIndex)
                                         }
-                                        className="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium hover:text-primary "
+                                        className="flex w-full items-center justify-between px-4 py-3 text-left text-md font-medium hover:text-primary "
                                       >
                                         {submenuItem.title}
 
@@ -221,7 +221,7 @@ const Header = () => {
                                             key={child.id}
                                             href={child.path || "#"}
                                             onClick={closeAllMenus}
-                                            className="flex items-center gap-2 px-4 py-3 text-sm hover:text-primary"
+                                            className="flex items-center gap-2 px-4 py-3 text-md hover:text-primary"
                                           >
                                             <span>
                                               <svg
@@ -247,12 +247,12 @@ const Header = () => {
                                     <Link
                                       href={submenuItem.path}
                                       onClick={closeAllMenus}
-                                      className="block px-4 py-3 text-sm hover:text-primary"
+                                      className="block px-4 py-3 text-md hover:text-primary"
                                     >
                                       {submenuItem.title}
                                     </Link>
                                   ) : (
-                                    <span className="block px-4 py-3 text-sm text-gray-400">
+                                    <span className="block px-4 py-3 text-md text-gray-400">
                                       {submenuItem.title}
                                     </span>
                                   )}
@@ -276,13 +276,13 @@ const Header = () => {
     onClick={closeAllMenus}
     className="hidden md:block"
   >
-    <button className="bg-primary hover:bg-primary-500 flex items-center justify-center rounded-md px-6 py-3.5 text-sm font-semibold uppercase text-white cursor-pointer">
+    <button className="bg-primary hover:bg-blue-700 flex items-center justify-center rounded-md px-6 py-3.5 text-md font-semibold uppercase text-white cursor-pointer">
       Contact Us
     </button>
   </Link>
 
   <div>
-    {/* <ThemeToggler /> */}
+
   </div>
 
 </div>

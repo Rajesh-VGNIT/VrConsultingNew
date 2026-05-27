@@ -87,9 +87,9 @@ const Contact = () => {
 
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
-            <div className="mb-12 rounded-xs bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
-              <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-xl xl:text-2xl">
+          <div className="w-full px-4 lg:w-7/12 xl:w-7/12">
+            <div className="mb-12 rounded-xs bg-white px-8 py-11 shadow-three  sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[25px]">
+              <h2 className="mb-3 text-2xl font-bold text-black  sm:text-3xl lg:text-xl xl:text-2xl">
                 Connect With VR Consulting Support
               </h2>
 
@@ -300,15 +300,6 @@ const Contact = () => {
                                       
                                     </div>
 
-                  {/* <button
-                      type="submit"
-                      className="inline-block group w-40 h-12 overflow-hidden rounded-md border border-primary text-sm font-semibold uppercase cursor-pointer"
-                    >
-                      <span className="absolute inset-0 bg-primary -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
-                      <span className="relative z-10 flex items-center justify-center w-full h-full text-primary group-hover:text-white transition-colors duration-300">
-                        Submit
-                      </span>
-                  </button> */}
                     
                   </div>
 
@@ -317,7 +308,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
+          <div className="w-full px-4 lg:w-5/12 xl:w-5/12">
             <NewsLatterBox />
           </div>
         </div>

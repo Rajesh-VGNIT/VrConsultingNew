@@ -3,9 +3,17 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import pageMetadata from "@/data/metadata.json";
 
-export const metadata = pageMetadata["performance-testing"];
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["performance-testing"];
+}
 const Page = () => {
   const section = data["PerformanceTesting"];
 
@@ -48,11 +56,11 @@ const Page = () => {
             What we provide
           </p>
 
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-xl font-semibold mb-8 text-center">
             Key Aspects of Our Functional Testing Services
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section?.["PerformanceTestingcard"]?.map((item: any, i: number) => (
               <div
                 key={i}
@@ -99,7 +107,7 @@ const Page = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-3">
+          <h2 className="text-xl font-semibold mb-3">
             {section?.cta?.title}
           </h2>
 

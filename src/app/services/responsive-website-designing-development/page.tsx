@@ -4,9 +4,17 @@ import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
-import pageMetadata from "@/data/metadata.json";
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["responsive-website-designing-development"];
+}
 
-export const metadata = pageMetadata["responsive-website-designing-development"];
 const Page = () => {
   const section = data.ResponsiveWebsiteDesigning;
 
@@ -22,7 +30,7 @@ const Page = () => {
         {/* HERO */}
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="text-2xl font-semibold mb-4">
               {section.title}
             </h1>
             <p className="text-gray-600 text-sm leading-6">
@@ -39,7 +47,7 @@ const Page = () => {
             </p>
           </div>
 
-          <div className="relative ml-auto w-full max-w-[500px]  h-120 rounded-xl overflow-hidden">
+          <div className="relative ml-auto w-full max-w-[500px]  h-110 rounded-xl overflow-hidden">
             <Image
               src={section.heroImage}
               alt="hero"

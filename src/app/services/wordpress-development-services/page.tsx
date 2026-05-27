@@ -4,10 +4,17 @@ import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import FAQ from "../../../components/FAQ/FAQ";
-import pageMetadata from "@/data/metadata.json";
 
-export const metadata = pageMetadata["wordpress-development-services"];
-
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["wordpress-development-services"];
+}
 
 const Page = () => {
   const section = data.WordPressDevelopment;
@@ -53,7 +60,7 @@ const Page = () => {
            Why Choose WordPress for Your Website?
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.whyChooseWordPress.map((item: any, i: number) => (
               <div
                 key={i}
@@ -112,7 +119,7 @@ const Page = () => {
            Our WordPress Development Services
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.WordPressDevelopmentService.map((item: any, i: number) => (
               <div
                 key={i}

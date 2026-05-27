@@ -3,9 +3,18 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import pageMetadata from "@/data/metadata.json";
 
-export const metadata = pageMetadata["aws-server"];
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["aws-server"];
+}
+
 const Page = () => {
   const section = data.AWSDockerServer;
 
@@ -29,7 +38,7 @@ const Page = () => {
             </p>
           </div>
 
-          <div className="relative ml-auto w-full max-w-[500px]  h-100 rounded-xl overflow-hidden">
+          <div className="relative ml-auto w-full max-w-[500px]  h-110 rounded-xl overflow-hidden">
             <Image
               src={section.heroImage}
               alt="hero"
@@ -49,7 +58,7 @@ const Page = () => {
             Why Choose Flutter for Mobile App Development?
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.AWSSolutions.map((item: any, i: number) => (
               <div
                 key={i}
@@ -140,7 +149,7 @@ const Page = () => {
             Our Flutter Application Development Services
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.AzureSolutions.map((item: any, i: number) => (
               <div
                 key={i}
@@ -235,7 +244,7 @@ const Page = () => {
             Our Flutter Application Development Services
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.DockerSolutions.map((item: any, i: number) => (
               <div
                 key={i}

@@ -3,9 +3,18 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import pageMetadata from "@/data/metadata.json";
 
-export const metadata = pageMetadata["laravel-web-application-development"];
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["laravel-web-application-development"];
+}
+
 const Page = () => {
   const section = data["laravel-web-application"];
 

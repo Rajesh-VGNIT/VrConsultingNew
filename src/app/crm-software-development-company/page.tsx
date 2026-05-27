@@ -2,11 +2,21 @@
 import Image from "next/image";
 import data from "@/data/footer.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
-import pageMetadata from "@/data/metadata.json";
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
 
-export const metadata = pageMetadata["crm-software-development-company"];
+  const pageMetadata = await response.json();
+
+  return pageMetadata["crm-software-development-company"];
+}
 
 const Page = () => {
+  
   const section = data?.["CRMSoftwareDevelopment"];
 
   if (!section) return null;
@@ -93,7 +103,7 @@ const Page = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-indigo-500 to-fuchsia-500 rounded-[40px] blur-2xl opacity-30 scale-95"></div>
 
               {/* Image Card */}
-              <div className="relative w-full max-w-[450px] h-[400px] rounded-[40px] overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+              <div className="relative w-full max-w-[450px] h-110 rounded-[40px] overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-cyan-500/10 z-10"></div>
@@ -120,7 +130,7 @@ const Page = () => {
 
 
 
-          <div className="grid md:grid-cols-3  gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3  gap-6">
             {section.ProfessionalSEOServices?.map((item: any, i: number) => (
               <div
                 key={i}

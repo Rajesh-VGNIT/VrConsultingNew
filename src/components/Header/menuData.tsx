@@ -251,21 +251,7 @@ const menuData: Menu[] = [
           newTab: false,
         }
       ]
-    },
-
-    {
-      id: 11,
-      title: "Blog Sidebar Page",
-      path: "/blog-sidebar",
-      newTab: false,
-    },
-
-    {
-      id: 12,
-      title: "Blog Details Page",
-      path: "/blog-details",
-      newTab: false,
-    },
+    }
   ]
 },
 {
@@ -273,62 +259,13 @@ const menuData: Menu[] = [
     title: "Contact",
     path: "/contact",
     newTab: false,
-  },
-
-  {
-    id: 13,
-    title: "Pages",
+  }
+  ,
+{
+    id: 70,
+    title: "Portfolio",
+    path: "/portfolio",
     newTab: false,
-    submenu: [
-      {
-        id: 14,
-        title: "About Page",
-        path: "/about",
-        newTab: false,
-      },
-      {
-        id: 15,
-        title: "Contact Page",
-        path: "/contact",
-        newTab: false,
-      },
-      {
-        id: 16,
-        title: "Blog Grid Page",
-        path: "/blog",
-        newTab: false,
-      },
-      {
-        id: 17,
-        title: "Blog Sidebar Page",
-        path: "/blog-sidebar",
-        newTab: false,
-      },
-      {
-        id: 18,
-        title: "Blog Details Page",
-        path: "/blog-details",
-        newTab: false,
-      },
-      {
-        id: 19,
-        title: "Sign In Page",
-        path: "/signin",
-        newTab: false,
-      },
-      {
-        id: 20,
-        title: "Sign Up Page",
-        path: "/signup",
-        newTab: false,
-      },
-      {
-        id: 21,
-        title: "Error Page",
-        path: "/error",
-        newTab: false,
-      },
-    ],
-  },
+  }
 ];
 export default menuData;

@@ -3,9 +3,18 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import pageMetadata from "@/data/metadata.json";
 
-export const metadata = pageMetadata["custom-website-development-company"];
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["custom-website-development-company"];
+}
+
 const Page = () => {
   const section = data.WebDevelopmentServices;
 
@@ -33,7 +42,7 @@ const Page = () => {
              
           </div>
 
-          <div className="relative ml-auto w-full max-w-[500px]  h-120 rounded-xl overflow-hidden">
+          <div className="relative ml-auto w-full max-w-[500px]  h-110 rounded-xl overflow-hidden">
             <Image
               src={section.heroImage}
               alt="hero"

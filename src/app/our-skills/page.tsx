@@ -4,9 +4,18 @@ import Image from "next/image";
 import aboutJson from "@/data/about.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 
-import pageMetadata from "@/data/metadata.json";
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
 
-export const metadata = pageMetadata["our-skills"];
+  const pageMetadata = await response.json();
+
+  return pageMetadata["our-skills"];
+}
 
 const OurSkills = () => {
 
@@ -54,7 +63,7 @@ const OurSkills = () => {
       className="mb-5 rounded-2xl  transition overflow-hidden"
     >
      
-      <p className="text-2xl  mb-7 font-bold uppercase text-center  py-1">
+      <p className="text-lg sm:text-xl md:text-2xl mb-7 font-bold uppercase text-center py-1">
         {category.title}
       </p>
 

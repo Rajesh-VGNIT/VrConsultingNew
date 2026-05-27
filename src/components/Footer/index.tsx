@@ -1,491 +1,219 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone,faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+import Link from "next/link";
+import footerData from "./footerData";
 
 const Footer = () => {
+  const {
+    ourProducts,
+    companyProfile,
+    ourServices,
+    footerLinks,
+    socialLinks,
+    contactInfo,
+    Copyright,
+  } = footerData;
+
   return (
-    <>
-      <footer className="relative z-10 bg-[#363d74] text-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 md:w-1/2 lg:w-2/12 xl:w-3/12">
-              <div className="mb-12 lg:mb-10">
-                <h2 className="mb-6 text-xl font-bold text-white dark:text-white">
-                 Our Products
-                </h2>
-                <ul>
-                  <li>
-                    <Link
-                      href="/crm-software-development-company"
-                      className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      CRM
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/mlm-software-development-company"
-                      className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      MLM
-                    </Link>
-                  </li>
+    <footer className="relative z-10 overflow-hidden bg-[#363d74] pt-16 text-white md:pt-20 lg:pt-24">
+      <div className="container">
+        <div className="-mx-4 flex flex-wrap">
+          
+          {/* Our Products */}
+          <div className="w-full px-4 md:w-1/2 lg:w-3/12">
+            <div className="mb-12">
+              <h2 className="mb-6 text-xl font-bold">
+                {ourProducts.heading}
+              </h2>
 
-                  <li>
+              <ul>
+                {ourProducts.links.map((item, index) => (
+                  <li key={index}>
                     <Link
-                      href="/enterprise-resource-planning"
-                      className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      href={item.link}
+                      className="mb-3 inline-block duration-300 hover:text-blue-300"
                     >
-                      ERP
+                      {item.title}
                     </Link>
                   </li>
-                  
-                    <li>
-                    <Link
-                      href="/hospital-management-system"
-                      className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      HMS
-                    </Link>
-                  </li>
-                 </ul>
-                <div className="flex items-center mt-4">
+                ))}
+              </ul>
+
+              {/* Social Links */}
+              <div className="mt-5 flex items-center gap-4">
+                {socialLinks.map((social, index) => (
                   <Link
-                    href="https://www.facebook.com/vrwebconsulting/?modal=admin_todo_tour"
-                    aria-label="social-link"
+                    key={index}
+                    href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition-all duration-300 hover:bg-white hover:text-[#363d74]"
                   >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="text-white"
-                    >
-                      <path
-                        d="M12.1 10.4939V7.42705C12.1 6.23984 13.085 5.27741 14.3 5.27741H16.5V2.05296L13.5135 1.84452C10.9664 1.66676 8.8 3.63781 8.8 6.13287V10.4939H5.5V13.7183H8.8V20.1667H12.1V13.7183H15.4L16.5 10.4939H12.1Z"
+                    {social.title === "Facebook" && (
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 22 22"
                         fill="currentColor"
-                      />
-                    </svg>
-                  </Link>
-                  <Link
-                    href="https://twitter.com/vrwebconsulting"
-                    aria-label="social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                  >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="text-white"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M13.9831 19.25L9.82094 13.3176L4.61058 19.25H2.40625L8.843 11.9233L2.40625 2.75H8.06572L11.9884 8.34127L16.9034 2.75H19.1077L12.9697 9.73737L19.6425 19.25H13.9831ZM16.4378 17.5775H14.9538L5.56249 4.42252H7.04674L10.808 9.6899L11.4584 10.6039L16.4378 17.5775Z"
+                      >
+                        <path d="M12.1 10.4939V7.42705C12.1 6.23984 13.085 5.27741 14.3 5.27741H16.5V2.05296L13.5135 1.84452C10.9664 1.66676 8.8 3.63781 8.8 6.13287V10.4939H5.5V13.7183H8.8V20.1667H12.1V13.7183H15.4L16.5 10.4939H12.1Z" />
+                      </svg>
+                    )}
+
+                    {social.title === "Twitter" && (
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 22 22"
                         fill="currentColor"
-                      />
-                    </svg>
+                      >
+                        <path d="M13.9831 19.25L9.82094 13.3176L4.61058 19.25H2.40625L8.843 11.9233L2.40625 2.75H8.06572L11.9884 8.34127L16.9034 2.75H19.1077L12.9697 9.73737L19.6425 19.25H13.9831Z" />
+                      </svg>
+                    )}
+
+                    {social.title === "LinkedIn" && (
+                      <svg width="18" height="18" viewBox="0 0 17 16" fill="currentColor" className="fill-current" > <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z" /> </svg>
+                    )}
                   </Link>
-                  
-                  <Link
-                    href="https://www.linkedin.com/company/vrconsulting-webdevelopment/?viewAsMember=true"
-                    aria-label="social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                  >
-                    <svg
-                      width="17"
-                      height="16"
-                      viewBox="0 0 17 16"
-                      className="fill-current text-white"
-
-                    >
-                      <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-3/12">
-              <div className="mb-12 lg:mb-10">
-                <h2 className="mb-6 text-xl font-bold text-white dark:text-white">
-                  Company Profile
-                </h2>
-                <ul>
-                  <li>
-                    <Link
-                      href="/about"
-                      className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Company Overview
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/why-vr-consultings"
-                      className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Why VR Consulting
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      href="/our-mission-vision"
-                      className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Vision & Mission
-                    </Link>
-                  </li>
-                  
-                  <li>
-                    <Link
-                      href="/development-method"
-                      className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                     Development Method
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-3/12">
-              <div className="mb-12 lg:mb-10">
-                <h2 className="mb-6 text-xl font-semibold text-white dark:text-white">
-                  Our Services
-                </h2>
-                <ul>
-                  <li>
-                    <Link
-                      href="/our-products"
-                      className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Software Products
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/responsive-website-designing-development"
-                      className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Web Designing
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/web-development-company"
-                      className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Web Development
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/mobile-applications-development-company"
-                      className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Mobile Applications
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/seo-services-provider-company"
-                      className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                     SEO Service
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/services/social-media-marketing"
-                      className="mb-3 inline-block text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Social media marketing
-                    </Link>
-                  </li>
-                  
-                </ul>
-              </div>
-            </div>
-
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
-              <div className="mb-12 lg:mb-10">
-                <h2 className="mb-6 text-xl font-bold text-white dark:text-white">
-                 Contact Information
-                </h2>
-                
-                <ul>
-                  <li className="mb-3 flex items-start gap-3">
-                    <FontAwesomeIcon icon={faPhone} className="mt-1 text-white" />
-                    <div
-                     
-                      className="text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      <Link href="tel:+917982616770">+91 7982616770</Link> <br />
-                      <Link href="tel:+919968222665">+91 9968222665</Link>
-                    </div>
-                  </li>
-
-                  <li className="mb-3 flex items-start gap-3">
-                    <FontAwesomeIcon icon={faEnvelope} className="mt-1 text-white" />
-                    <Link
-                      href="mailto:info@vrwebconsulting.com"
-                      className="text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      info@vrwebconsulting.com
-                    </Link>
-                  </li>
-
-                  <li className="mb-3 flex items-start gap-3">
-                    <FontAwesomeIcon icon={faLocationDot} className="mt-1 ml-1 text-white" />
-                    <Link
-                      href="/"
-                      className="text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Moolchand Tower, Sector 22, Noida, Uttar Pradesh 201301
-                    </Link>
-                  </li>
-                </ul>
+                ))}
               </div>
             </div>
           </div>
-          
-          <div>
-         
-  <ul className="mb-12 lg:mb-10 w-full flex justify-center items-center gap-4">
-  <li>
-    <Link
-      href="/careers"
-      className="text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-    >
-      Careers
-    </Link>
-  </li>
 
-  <li>
-    <Link
-      href="/contact"
-      className="text-white duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-    >
-      Contact Us
-    </Link>
-  </li>
-</ul>
-        </div>
+          {/* Company Profile */}
+          <div className="w-full px-4 sm:w-1/2 lg:w-3/12">
+            <div className="mb-12">
+              <h2 className="mb-6 text-xl font-bold">
+                {companyProfile.heading}
+              </h2>
 
-          <div className="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
-            <div className="py-8">
-              <p className="text-center text-white dark:text-white">
-                VR Consulting - Copyright © 2026. All Rights Reserved.
-              </p>
+              <ul>
+                {companyProfile.links.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.link}
+                      className="mb-3 inline-block duration-300 hover:text-blue-300"
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
+          </div>
+
+          {/* Our Services */}
+          <div className="w-full px-4 sm:w-1/2 lg:w-3/12">
+            <div className="mb-12">
+              <h2 className="mb-6 text-xl font-bold">
+                {ourServices.heading}
+              </h2>
+
+              <ul>
+                {ourServices.links.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.link}
+                      className="mb-3 inline-block duration-300 hover:text-blue-300"
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Contact Info */}
+          <div className="w-full px-4 lg:w-3/12">
+            <div className="mb-12">
+              <h2 className="mb-6 text-xl font-bold">
+                {contactInfo.heading}
+              </h2>
+
+              <ul>
+                {/* Phone */}
+                <li className="mb-4 flex items-start gap-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    fill="currentColor"
+                    className="mt-1 h-5 w-5"
+                  >
+                    <path d="M391.1 351.1c-24.6 0-48.5-4-71-11.7-11.1-3.7-23.4-.9-31.9 7.5l-44.7 33.7c-51.8-27.6-94.4-70.2-122-122l33.7-44.7c8.4-8.5 11.2-20.8 7.5-31.9-7.7-22.5-11.7-46.4-11.7-71C151 93.1 137.9 80 121.9 80H48C21.5 80 0 101.5 0 128c0 212.1 171.9 384 384 384 26.5 0 48-21.5 48-48v-73.9c0-16-13.1-29.1-29.1-29.1z" />
+                  </svg>
+
+                  <div>
+                    <Link href={`tel:${contactInfo.phone1}`}>
+                      {contactInfo.phone1}
+                    </Link>
+
+                    <br />
+
+                    <Link href={`tel:${contactInfo.phone2}`}>
+                      {contactInfo.phone2}
+                    </Link>
+                  </div>
+                </li>
+
+                {/* Email */}
+                <li className="mb-4 flex items-start gap-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    fill="currentColor"
+                    className="mt-1 h-5 w-5"
+                  >
+                    <path d="M502.3 190.8 327.4 338c-15.4 12.9-37.5 12.9-52.9 0L9.7 190.8C3.9 186 0 178.9 0 171.2V112c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v59.2c0 7.7-3.9 14.8-9.7 19.6zM0 214.8v185.2c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V214.8L346.6 353.4c-27.7 23.2-67.5 23.2-95.2 0L0 214.8z" />
+                  </svg>
+
+                  <Link href={`mailto:${contactInfo.email}`}>
+                    {contactInfo.email}
+                  </Link>
+                </li>
+
+                {/* Address */}
+                <li className="mb-4 flex items-start gap-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    fill="currentColor"
+                    className="mt-1 h-5 w-5"
+                  >
+                    <path d="M172.3 501.7C26.97 291 0 269.4 0 192C0 85.96 85.96 0 192 0S384 85.96 384 192c0 77.4-26.97 99-172.3 309.7-9.5 13.8-29.9 13.8-39.4 0zM192 272c44.18 0 80-35.82 80-80S236.2 112 192 112s-80 35.82-80 80 35.82 80 80 80z" />
+                  </svg>
+
+                  <p>{contactInfo.address}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div className="absolute right-0 top-14 z-[-1]">
-          <svg
-            width="55"
-            height="99"
-            viewBox="0 0 55 99"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle opacity="0.8" cx="49.5" cy="49.5" r="49.5" fill="#9fb1e7" />
-            <mask
-              id="mask0_94:899"
-              style={{ maskType: "alpha" }}
-              maskUnits="userSpaceOnUse"
-              x="0"
-              y="0"
-              width="99"
-              height="99"
+
+        {/* Footer Links */}
+        <div className="mb-10 flex justify-center gap-6">
+          {footerLinks.map((item, index) => (
+            <Link
+              key={index}
+              href={item.link}
+              className="transition-all duration-300 hover:text-blue-300"
             >
-              <circle
-                opacity="0.8"
-                cx="49.5"
-                cy="49.5"
-                r="49.5"
-                fill="#4A6CF7"
-              />
-            </mask>
-            <g mask="url(#mask0_94:899)">
-              <circle
-                opacity="0.8"
-                cx="49.5"
-                cy="49.5"
-                r="49.5"
-                fill="url(#paint0_radial_94:899)"
-              />
-              <g opacity="0.8" filter="url(#filter0_f_94:899)">
-                <circle cx="53.8676" cy="26.2061" r="20.3824" fill="white" />
-              </g>
-            </g>
-            <defs>
-              <filter
-                id="filter0_f_94:899"
-                x="12.4852"
-                y="-15.1763"
-                width="82.7646"
-                height="82.7646"
-                filterUnits="userSpaceOnUse"
-                colorInterpolationFilters="sRGB"
-              >
-                <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="BackgroundImageFix"
-                  result="shape"
-                />
-                <feGaussianBlur
-                  stdDeviation="10.5"
-                  result="effect1_foregroundBlur_94:899"
-                />
-              </filter>
-              <radialGradient
-                id="paint0_radial_94:899"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(49.5 49.5) rotate(90) scale(53.1397)"
-              >
-                <stop stopOpacity="0.47" />
-                <stop offset="1" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-          </svg>
+              {item.title}
+            </Link>
+          ))}
         </div>
-        <div className="absolute bottom-24 left-0 z-[-1]">
-          <svg
-            width="79"
-            height="94"
-            viewBox="0 0 79 94"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              opacity="0.3"
-              x="-41"
-              y="26.9426"
-              width="66.6675"
-              height="66.6675"
-              transform="rotate(-22.9007 -41 26.9426)"
-              fill="url(#paint0_linear_94:889)"
-            />
-            <rect
-              x="-41"
-              y="26.9426"
-              width="66.6675"
-              height="66.6675"
-              transform="rotate(-22.9007 -41 26.9426)"
-              stroke="url(#paint1_linear_94:889)"
-              strokeWidth="0.7"
-            />
-            <path
-              opacity="0.3"
-              d="M50.5215 7.42229L20.325 1.14771L46.2077 62.3249L77.1885 68.2073L50.5215 7.42229Z"
-              fill="url(#paint2_linear_94:889)"
-            />
-            <path
-              d="M50.5215 7.42229L20.325 1.14771L46.2077 62.3249L76.7963 68.2073L50.5215 7.42229Z"
-              stroke="url(#paint3_linear_94:889)"
-              strokeWidth="0.7"
-            />
-            <path
-              opacity="0.3"
-              d="M17.9721 93.3057L-14.9695 88.2076L46.2077 62.325L77.1885 68.2074L17.9721 93.3057Z"
-              fill="url(#paint4_linear_94:889)"
-            />
-            <path
-              d="M17.972 93.3057L-14.1852 88.2076L46.2077 62.325L77.1884 68.2074L17.972 93.3057Z"
-              stroke="url(#paint5_linear_94:889)"
-              strokeWidth="0.7"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_94:889"
-                x1="-41"
-                y1="21.8445"
-                x2="36.9671"
-                y2="59.8878"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_94:889"
-                x1="25.6675"
-                y1="95.9631"
-                x2="-42.9608"
-                y2="20.668"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.51" />
-              </linearGradient>
-              <linearGradient
-                id="paint2_linear_94:889"
-                x1="20.325"
-                y1="-3.98039"
-                x2="90.6248"
-                y2="25.1062"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint3_linear_94:889"
-                x1="18.3642"
-                y1="-1.59742"
-                x2="113.9"
-                y2="80.6826"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.51" />
-              </linearGradient>
-              <linearGradient
-                id="paint4_linear_94:889"
-                x1="61.1098"
-                y1="62.3249"
-                x2="-8.82468"
-                y2="58.2156"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint5_linear_94:889"
-                x1="65.4236"
-                y1="65.0701"
-                x2="24.0178"
-                y2="41.6598"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.51" />
-              </linearGradient>
-            </defs>
-          </svg>
+
+        {/* Divider */}
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+
+        {/* Copyright */}
+        <div className="py-8">
+          <p className="text-center">
+            {Copyright.text}
+          </p>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 };
 

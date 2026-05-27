@@ -4,9 +4,19 @@ import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import FAQ from "../../../components/FAQ/FAQ";
-import pageMetadata from "@/data/metadata.json";
 
-export const metadata = pageMetadata["android-app-development-company"];
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+
+  const pageMetadata = await response.json();
+
+  return pageMetadata["android-app-development-company"];
+}
 
 const Page = () => {
   const section = data.AndroidAppDevelopmentServices;
@@ -48,11 +58,11 @@ const Page = () => {
             <p className="text-sm mb-3 text-center text-blue-600  uppercase">
                What we provide
               </p>
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-xl font-semibold mb-8 text-center">
             Why Choose Android App Development?
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.whyChooseFlutter.map((item: any, i: number) => (
               <div
                 key={i}
@@ -109,11 +119,11 @@ const Page = () => {
            <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
               What we provide
               </p>
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-xl font-semibold mb-8 text-center">
            Our Android App Development Services
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.FlutterApplicationService.map((item: any, i: number) => (
               <div
                 key={i}
@@ -184,7 +194,7 @@ const Page = () => {
       </div>
 
       <div>
-        <h3 className="text-2xl font-semibold mb-3">
+        <h3 className="text-xl font-semibold mb-3">
           {legacy?.title}
         </h3>
 
@@ -204,7 +214,7 @@ const Page = () => {
           <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
             What we provide
           </p>
-          <h2 className="text-2xl text-center font-bold mb-8">
+          <h2 className="text-xl text-center font-semibold mb-8">
                Why Choose VR Web Consulting as Your SEO Services Provider?
           </h2>
           <FAQ items={section?.whyChooseUs} />
@@ -212,10 +222,10 @@ const Page = () => {
 
         {/*  CTA */}
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-3">
+          <h2 className="text-xl font-semibold mb-3">
             {section.cta.title}
           </h2>
-          <p className="mb-6">
+          <p className="mb-6 text-sm text-gray-600">
             {section.cta.description}
           </p>
 

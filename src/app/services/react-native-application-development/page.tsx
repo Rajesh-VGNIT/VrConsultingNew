@@ -3,9 +3,18 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import pageMetadata from "@/data/metadata.json";
 
-export const metadata = pageMetadata["react-native-application-development"];
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["react-native-application-development"];
+}
+
 const Page = () => {
   const section = data["ReactNativeApplicationDevelopment"];
 
@@ -52,7 +61,7 @@ const Page = () => {
             Here are the key aspects of our unique content development process for React Native application development
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section?.["ReactNativeApplicationcard"]?.map((item: any, i: number) => (
               <div
                 key={i}

@@ -3,9 +3,18 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import pageMetadata from "@/data/metadata.json";
 
-export const metadata = pageMetadata["node-js-development-company"];
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["aws-server"];
+}
+
 const Page = () => {
   const section = data["node-js-development-company"];
 
@@ -52,7 +61,7 @@ const Page = () => {
             Why Choose Us for Node.js Development?
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section?.["NodejsDevelopmentcard"]?.map((item: any, i: number) => (
               <div
                 key={i}

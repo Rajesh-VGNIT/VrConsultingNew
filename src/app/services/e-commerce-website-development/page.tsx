@@ -2,14 +2,18 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import { Metadata } from "next";
 import FAQEcommerce from "@/components/FAQ/FAQ-Ecommerce";
 
-export const metadata = {
-  title: "Ecommerce Development Services Company | VR Consulting",
-  description:
-    "Looking for the best ecommerce development services company in Noida? VR Consulting is here for you having the well-experienced team of web developers.",
-};
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["e-commerce-website-development"];
+}
 
 const Page = () => {
   const section = data?.["e-commerce-Website"];
@@ -40,7 +44,7 @@ const Page = () => {
             </p>
           </div>
 
-          <div className="relative w-full max-w-[450px] h-[450px] ml-auto rounded-xl overflow-hidden">
+          <div className="relative w-full max-w-[450px] h-110 ml-auto rounded-xl overflow-hidden">
             <Image
               src={section.heroImage}
               alt="hero"
@@ -123,7 +127,7 @@ const Page = () => {
             Our E-commerce Website Development Services
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section["E-commerceWebsite"]?.map((item: any, i: number) => (
               <div
                 key={i}

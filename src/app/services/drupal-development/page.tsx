@@ -3,11 +3,17 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import FAQ from "../../../components/FAQ/FAQ";
 
-import pageMetadata from "@/data/metadata.json";
-
-export const metadata = pageMetadata["drupal-development"];
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["drupal-development"];
+}
 const Page = () => {
   const section = data.DrupalDevelopmentCompany;
   const legacy = section["legacy-application"]?.[0];
@@ -52,7 +58,7 @@ const Page = () => {
             Here are the key aspects of our unique content development process for Drupal development
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.DrupalDevelopmentService.map((item: any, i: number) => (
               <div
                 key={i}

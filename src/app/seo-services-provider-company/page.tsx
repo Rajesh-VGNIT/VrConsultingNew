@@ -4,9 +4,18 @@ import data from "@/data/footer.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import FAQ from "@/components/FAQ/FAQ";
 
-import pageMetadata from "@/data/metadata.json";
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
 
-export const metadata = pageMetadata["seo-services-provider-company"];
+  const pageMetadata = await response.json();
+
+  return pageMetadata["seo-services-provider-company"];
+}
 
 const Page = () => {
   const section = data?.["SEOServices"];
@@ -37,7 +46,7 @@ const Page = () => {
             </p>
           </div>
 
-          <div className="relative w-full max-w-[450px] h-[400px] ml-auto rounded-xl overflow-hidden">
+          <div className="relative w-full max-w-[450px] h-110 ml-auto rounded-xl overflow-hidden">
             <Image
               src={section.heroImage}
               alt="hero"
@@ -57,7 +66,7 @@ const Page = () => {
             Why Choose Professional SEO Services?
           </h2>
 
-          <div className="grid md:grid-cols-3  gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3  gap-6">
             {section.ProfessionalSEOServices?.map((item: any, i: number) => (
               <div
                 key={i}
@@ -124,7 +133,7 @@ const Page = () => {
             Our SEO Services
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section["OurSEOServices"]?.map((item: any, i: number) => (
               <div
                 key={i}

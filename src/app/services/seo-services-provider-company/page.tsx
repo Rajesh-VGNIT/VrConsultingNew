@@ -3,12 +3,19 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-
 import FAQ from "../../../components/FAQ/FAQ";
 
-import pageMetadata from "@/data/metadata.json";
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["seo-services-provider-company"];
+}
 
-export const metadata = pageMetadata["seo-services-provider-company"];
 const Page = () => {
   const section = data.SEOServices;
   const legacy = section["legacy-application"]?.[0];
@@ -53,7 +60,7 @@ const Page = () => {
            Why Choose Professional SEO Services?
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.whyChooseSEOServices.map((item: any, i: number) => (
               <div
                 key={i}
@@ -114,7 +121,7 @@ const Page = () => {
            Our SEO Services
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.OurSEOServices.map((item: any, i: number) => (
               <div
                 key={i}

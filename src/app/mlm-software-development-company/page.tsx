@@ -3,10 +3,18 @@ import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import Popup from "@/components/Popup";
 import Image from "next/image";
 
-import pageMetadata from "@/data/metadata.json";
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
 
-export const metadata = pageMetadata["mlm-software-development-company"];
+  const pageMetadata = await response.json();
 
+  return pageMetadata["mlm-software-development-company"];
+}
 const Page = () => {
   const section = data?.["MLMSoftwareDevelopment"];
 
@@ -92,7 +100,7 @@ const Page = () => {
                           
               
                             {/* Image Card */}
-                            <div className="relative w-full max-w-[450px] h-[400px] rounded-[40px] overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+                            <div className="relative w-full max-w-[450px] h-110 rounded-[40px] overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
               
                               
               
@@ -123,7 +131,7 @@ const Page = () => {
             Best MLM Software Development Services Company in India
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 gap-6">
             {section.ProfessionalSEOServices?.map((item: any, i: number) => (
               <div
                 key={i}

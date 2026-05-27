@@ -2,9 +2,17 @@
 import Image from "next/image";
 import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import pageMetadata from "@/data/metadata.json";
 
-export const metadata = pageMetadata["dot-net-development-company"];
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["dot-net-development-company"];
+}
 
 const Page = () => {
   const section = data?.["dot-net-development-company"];
@@ -35,7 +43,7 @@ const Page = () => {
             </p>
           </div>
 
-          <div className="relative w-full max-w-[450px] h-[400px] ml-auto rounded-xl overflow-hidden">
+          <div className="relative w-full max-w-[450px] h-110 ml-auto rounded-xl overflow-hidden">
             <Image
               src={section.heroImage}
               alt="hero"
@@ -118,7 +126,7 @@ const Page = () => {
             Our .NET Development Services
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section["DotNetDevelopmentServices"]?.map((item: any, i: number) => (
               <div
                 key={i}
@@ -208,7 +216,7 @@ const Page = () => {
             Why Choose VR Web Consulting?
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section["WhyChooseVRWebConsulting"]?.map((item: any, i: number) => (
               <div
                 key={i}

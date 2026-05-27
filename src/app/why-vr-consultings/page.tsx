@@ -2,9 +2,17 @@ import aboutJson from "@/data/about.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import Image from "next/image";
 import Link from "next/link";
-import pageMetadata from "@/data/metadata.json";
 
-export const metadata = pageMetadata["why-vr-consultings"];
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["why-vr-consultings"];
+}
 
 const AboutPage = () => {
 
@@ -72,7 +80,7 @@ const AboutPage = () => {
                 Why Choose Us
               </span>
 
-              <h2 className="mb-4 mt-2 text-4xl font-bold">
+              <h2 className="mb-4 mt-2 text-2xl font-semibold">
                 {whyVR.title}
               </h2>
 
@@ -105,7 +113,7 @@ const AboutPage = () => {
 
         {/* Cards */}
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cards.map((item: any, i: number) => (
             <div
               key={i}

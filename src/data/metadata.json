@@ -197,6 +197,33 @@
 },
   "contact": {
     "title": "Contact | My Website",
-    "description": "Get in touch with us"
+    "description": "Contacts for Software Development in VR Consulting",
+    "keywords": "Contacts in npw software technologies"
+  },
+  "portfolio": {
+    "title": "Portfolio | VR Consulting",
+  "description": "View our Customer, Copmany, client Portfolio | VR Consulting",
+  "keywords": "Portfolio NPW"
+  },
+  "our-website": {
+    "title": "Web Consulting Services Providers in India - VR Consulting",
+  "description": "VR Consulting - The best web consulting services provider that helps you to meet your business needs. We also provide various services such as SEO, SMO, PPC, etc.",
+  "keywords": "Web Consulting Services, Web Consulting Services Provider, wordpress web design company, custom web design services, logo design"
+  },
+  "mobile-apps": {
+    "title": "Web Consulting Services Providers in India - VR Consulting",
+  "description": "VR Consulting - The best web consulting services provider that helps you to meet your business needs. We also provide various services such as SEO, SMO, PPC, etc.",
+  "keywords": "Web Consulting Services, Web Consulting Services Provider, wordpress web design company, custom web design services, logo design"
+  },
+  "digital-marketing": {
+    "title": "Web Consulting Services Providers in India - VR Consulting",
+  "description": "VR Consulting - The best web consulting services provider that helps you to meet your business needs. We also provide various services such as SEO, SMO, PPC, etc.",
+  "keywords": "Web Consulting Services, Web Consulting Services Provider, wordpress web design company, custom web design services, logo design"
+  },
+  "smo": {
+   "title": "Web Consulting Services Providers in India - VR Consulting",
+  "description": "VR Consulting - The best web consulting services provider that helps you to meet your business needs. We also provide various services such as SEO, SMO, PPC, etc.",
+  "keywords": "Web Consulting Services, Web Consulting Services Provider, wordpress web design company, custom web design services, logo design"
   }
+
 }

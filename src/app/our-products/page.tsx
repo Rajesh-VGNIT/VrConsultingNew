@@ -3,9 +3,20 @@
 import Image from "next/image";
 import data from "@/data/product.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
-import pageMetadata from "@/data/metadata.json";
 
-export const metadata = pageMetadata["our-products"];
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+
+  const pageMetadata = await response.json();
+
+  return pageMetadata["our-products"];
+}
+
 const Page = () => {
   const section = data["OurProduct"];
 
@@ -31,7 +42,7 @@ const Page = () => {
             Products
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section?.["OurProductcard"]?.map((item: any, i: number) => (
               <div
                 key={i}

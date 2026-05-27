@@ -5,9 +5,16 @@ import data from "@/data/services.json";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import FAQ from "../../../components/FAQ/FAQ";
 
-import pageMetadata from "@/data/metadata.json";
-
-export const metadata = pageMetadata["php-web-application"];
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "no-store",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["php-web-application"];
+}
 
 const Page = () => {
   const section = data.phpWebApplication;
@@ -59,7 +66,7 @@ const Page = () => {
             Why Choose PHP for Web Application Development?
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.whyChoosePHP.map((item: any, i: number) => (
               <div
                 key={i}
@@ -120,7 +127,7 @@ const Page = () => {
             Our PHP Web Application Development Services:
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.services.map((item: any, i: number) => (
               <div
                 key={i}
