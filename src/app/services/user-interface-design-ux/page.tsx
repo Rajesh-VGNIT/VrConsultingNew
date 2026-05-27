@@ -38,7 +38,7 @@ const Page = () => {
             <p className="text-gray-600 text-sm leading-6">
               {section?.description}
             </p>
-            
+
           </div>
 
           <div className="relative w-full max-w-[500px] h-110 ml-auto">
@@ -58,7 +58,7 @@ const Page = () => {
           </p>
 
           <h2 className="text-xl font-semibold mb-8 text-center">
-           Here are the key aspects of our content development process for UI/UX design
+            Here are the key aspects of our content development process for UI/UX design
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -67,15 +67,16 @@ const Page = () => {
                 key={i}
                 className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
-                 {/* Top Gradient Glow */}
+                {/* Top Gradient Glow */}
                 <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
                 <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-fuchsia-100 rounded-full blur-3xl opacity-50"></div>
 
                 {/* Gradient Border Effect */}
                 <div className="absolute inset-0 rounded-[32px] border border-transparent group-hover:border-cyan-300 transition duration-500"></div>
 
-                {/* Content */}
-               {/* Icon */}
+                {/* Content Wrapper */}
+                <div className="relative z-10">
+                  {/* Icon */}
                   <div className="mb-5">
                     <div className="flex items-center justify-center w-22 h-22 rounded-[22px] border-2 border-blue-300 shadow-xl group-hover:scale-105 transition duration-500">
 
@@ -93,28 +94,29 @@ const Page = () => {
                     </div>
                   </div>
 
-                 {/* Title */}
-                          <div className="mb-6">
-                            <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-indigo-600 transition">
-                              {item?.title}
-                            </h3>
-        
-                            {/* Divider */}
-                            <div className="mt-3 w-16 h-[3px] rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></div>
-                          </div>
+                  {/* Title */}
+                  <div className="mb-6">
+                    <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-indigo-600 transition">
+                      {item?.title}
+                    </h3>
 
-                <p className="text-sm text-gray-600 leading-6">
-                  {item?.description}
-                </p>
+                    {/* Divider */}
+                    <div className="mt-3 w-16 h-[3px] rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></div>
+                  </div>
+
+                  <p className="text-sm text-gray-600 leading-6">
+                    {item?.description}
+                  </p>
+                </div>
                 {/* Hover Bottom Line */}
-                        <div className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 transition-all duration-500"></div>
+                <div className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 transition-all duration-500"></div>
               </div>
             ))}
           </div>
         </div>
 
-       
-        
+
+
 
         {/* CTA */}
         <div className="text-center">
@@ -125,7 +127,7 @@ const Page = () => {
           <p className="mb-6 text-gray-600 text-sm leading-6">
             {section?.cta?.description}
           </p>
-          
+
         </div>
 
       </div>

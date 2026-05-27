@@ -81,7 +81,8 @@ const Page = () => {
                 {/* Gradient Border Effect */}
                 <div className="absolute inset-0 rounded-[32px] border border-transparent group-hover:border-cyan-300 transition duration-500"></div>
 
-                {/* Content */}
+               {/* Content Wrapper */}
+                <div className="relative z-10">
 
 
                 <div className="mb-5">
@@ -120,6 +121,7 @@ const Page = () => {
                   <p className="text-sm text-gray-600">
                     {item.description2}
                   </p>
+                </div>
                 </div>
 
 

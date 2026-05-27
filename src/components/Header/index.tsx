@@ -64,8 +64,8 @@ const Header = () => {
     <>
       <header
         className={`header top-0 left-0 z-40 flex w-full items-center ${sticky
-            ? "dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky fixed z-[9999] bg-white/80 backdrop-blur-md transition"
-            : "absolute bg-transparent"
+          ? "dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky fixed z-[9999] bg-white/80 backdrop-blur-md transition"
+          : "absolute bg-transparent"
           }`}
       >
         <div className="container">
@@ -115,8 +115,8 @@ const Header = () => {
                 <nav
                   id="navbarCollapse"
                   className={`navbar overflow-y-auto overflow-x-hidden border-body-color/50 dark:border-body-color/20 dark:bg-dark absolute right-0 z-30 max-h-[80vh] w-full rounded border bg-white px-6 py-4 duration-300 lg:visible lg:static lg:max-h-full lg:w-auto lg:overflow-visible lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${navbarOpen
-                      ? "visible top-full opacity-100"
-                      : "invisible top-[120%] opacity-0"
+                    ? "visible top-full opacity-100"
+                    : "invisible top-[120%] opacity-0"
                     }`}
                 >
                   <ul className="block lg:flex lg:space-x-10">
@@ -128,8 +128,8 @@ const Header = () => {
                             href={menuItem.path}
                             onClick={closeAllMenus}
                             className={`block py-2 lg:py-6 hover:text-primary ${pathname === menuItem.path
-                                ? "text-primary"
-                                : "text-[#000] "
+                              ? "text-primary"
+                              : "text-[#000] "
                               }`}
                           >
                             {menuItem.title}
@@ -166,8 +166,8 @@ const Header = () => {
                         {menuItem.submenu && (
                           <div
                             className={`relative z-50 mt-2 w-full rounded bg-white pl-4 shadow-lg transition-all duration-300 dark:bg-dark lg:absolute lg:left-0 lg:top-full lg:mt-0 lg:w-[300px] lg:pl-0 ${openIndex === index
-                                ? "block opacity-100"
-                                : "hidden opacity-0"
+                              ? "block opacity-100"
+                              : "hidden opacity-0"
                               }`}
                           >
                             {menuItem.submenu.map(
@@ -189,8 +189,8 @@ const Header = () => {
 
                                         <span
                                           className={`transition-transform duration-300 ${openSubIndex === subIndex
-                                              ? "rotate-180"
-                                              : ""
+                                            ? "rotate-180"
+                                            : ""
                                             }`}
                                         >
                                           <svg
@@ -212,8 +212,8 @@ const Header = () => {
                                       {/* LEVEL 3 */}
                                       <div
                                         className={`ml-4 border-l border-gray-200 lg:absolute lg:left-full lg:top-0 lg:ml-0 lg:w-[280px] lg:border-none lg:bg-white lg:shadow-lg dark:lg:bg-dark ${openSubIndex === subIndex
-                                            ? "block"
-                                            : "hidden"
+                                          ? "block"
+                                          : "hidden"
                                           }`}
                                       >
                                         {submenuItem.submenu.map((child) => (
@@ -269,23 +269,23 @@ const Header = () => {
 
               {/* RIGHT SIDE */}
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-  
-  {/* HIDE ON MOBILE */}
-  <Link
-    href="/contact"
-    onClick={closeAllMenus}
-    className="hidden md:block"
-  >
-    <button className="bg-primary hover:bg-blue-700 flex items-center justify-center rounded-md px-6 py-3.5 text-md font-semibold uppercase text-white cursor-pointer">
-      Contact Us
-    </button>
-  </Link>
 
-  <div>
+                {/* HIDE ON MOBILE */}
+                <Link
+                  href="/contact"
+                  onClick={closeAllMenus}
+                  className="hidden md:block"
+                >
+                  <button className="bg-primary hover:bg-blue-700 flex items-center justify-center rounded-md px-6 py-3.5 text-sm font-semibold uppercase text-white cursor-pointer">
+                    Contact Us
+                  </button>
+                </Link>
 
-  </div>
+                <div>
 
-</div>
+                </div>
+
+              </div>
             </div>
           </div>
         </div>

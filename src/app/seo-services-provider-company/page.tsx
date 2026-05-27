@@ -80,41 +80,44 @@ const Page = () => {
                 {/* Gradient Border Effect */}
                 <div className="absolute inset-0 rounded-[32px] border border-transparent group-hover:border-cyan-300 transition duration-500"></div>
 
-                {/* Content */}
 
-                {/* Icon */}
-                <div className="mb-5">
-                  <div className="flex items-center justify-center w-22 h-22 rounded-[22px] border-2 border-blue-300 shadow-xl group-hover:scale-105 transition duration-500">
+                {/* Content Wrapper */}
+                <div className="relative z-10">
+                  {/* Icon */}
 
-                    {/* Inner White Layer */}
-                    <div className="flex items-center justify-center w-[62px] h-[62px] rounded-[18px] bg-white">
-                      <div className="relative w-15 h-15">
-                        <Image
-                          src={item?.image || "/images/fallback.png"}
-                          alt={item?.title}
-                          fill
-                          className="object-contain"
-                        />
+                  <div className="mb-5">
+                    <div className="flex items-center justify-center w-22 h-22 rounded-[22px] border-2 border-blue-300 shadow-xl group-hover:scale-105 transition duration-500">
+
+                      {/* Inner White Layer */}
+                      <div className="flex items-center justify-center w-[62px] h-[62px] rounded-[18px] bg-white">
+                        <div className="relative w-15 h-15">
+                          <Image
+                            src={item?.image || "/images/fallback.png"}
+                            alt={item?.title}
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
+
+
+
+                  {/* Title */}
+                  <div className="mb-6">
+                    <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-indigo-600 transition">
+                      {item?.title}
+                    </h3>
+
+                    {/* Divider */}
+                    <div className="mt-3 w-16 h-[3px] rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></div>
+                  </div>
+
+                  <p className="text-sm text-gray-600 leading-6">
+                    {item.description}
+                  </p>
                 </div>
-
-
-
-                {/* Title */}
-                <div className="mb-6">
-                  <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-indigo-600 transition">
-                    {item?.title}
-                  </h3>
-
-                  {/* Divider */}
-                  <div className="mt-3 w-16 h-[3px] rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></div>
-                </div>
-
-                <p className="text-sm text-gray-600 leading-6">
-                  {item.description}
-                </p>
                 {/* Hover Bottom Line */}
                 <div className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 transition-all duration-500"></div>
               </div>
@@ -146,7 +149,8 @@ const Page = () => {
                 {/* Gradient Border Effect */}
                 <div className="absolute inset-0 rounded-[32px] border border-transparent group-hover:border-cyan-300 transition duration-500"></div>
 
-                {/* Content */}
+                {/* Content Wrapper */}
+
                 {/* Icon */}
                 <div className="relative mb-4 flex  w-full flex-shrink-0 items-center justify-center">
                   <div className="flex items-center justify-center w-22 h-22 rounded-[22px] border-2 border-blue-300 shadow-xl group-hover:scale-105 transition duration-500">
@@ -166,18 +170,22 @@ const Page = () => {
                 </div>
 
                 <div>
-                  {/* Title */}
-                  <div className="mb-6">
-                    <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-indigo-600 transition">
-                      {item?.title}
-                    </h3>
 
-                    {/* Divider */}
-                    <div className="mt-3 w-16 h-[3px] rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></div>
+                  <div className="relative z-10">
+                    {/* Title */}
+                    <div className="mb-6">
+                      <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-indigo-600 transition">
+                        {item?.title}
+                      </h3>
+
+                      {/* Divider */}
+                      <div className="mt-3 w-16 h-[3px] rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></div>
+                    </div>
+                    <p className="text-sm text-gray-600 leading-6">
+                      {item.description}
+                    </p>
                   </div>
-                  <p className="text-sm text-gray-600 leading-6">
-                    {item.description}
-                  </p>
+
                   {/* Hover Bottom Line */}
                   <div className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 transition-all duration-500"></div>
                 </div>
@@ -198,6 +206,7 @@ const Page = () => {
               <div className="absolute inset-0 rounded-[32px] border border-transparent group-hover:border-cyan-300 transition duration-500"></div>
 
               {/* Content */}
+
               <div className="relative w-30 h-30 flex-shrink-0">
                 <Image
                   src={inventory.image || "/images/fallback.png"}
@@ -208,13 +217,16 @@ const Page = () => {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-3">
-                  {inventory.title}
-                </h3>
 
-                <p className="text-sm text-gray-600 leading-6">
-                  {inventory.description}
-                </p>
+                <div className="relative z-10">
+                  <h3 className="text-xl font-semibold mb-3">
+                    {inventory.title}
+                  </h3>
+
+                  <p className="text-sm text-gray-600 leading-6">
+                    {inventory.description}
+                  </p>
+                </div>
                 {/* Hover Bottom Line */}
                 <div className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 transition-all duration-500"></div>
               </div>
@@ -235,6 +247,7 @@ const Page = () => {
               <div className="absolute inset-0 rounded-[32px] border border-transparent group-hover:border-cyan-300 transition duration-500"></div>
 
               {/* Content */}
+
               <div className="relative w-30 h-30 flex-shrink-0">
                 <Image
                   src={optimization.image || "/images/fallback.png"}
@@ -247,15 +260,16 @@ const Page = () => {
               <div>
 
                 {/* Title */}
+                <div className="relative z-10">
+                  <h3 className="text-xl font-semibold mb-3">
+                    {optimization.title}
+                  </h3>
 
-                <h3 className="text-xl font-semibold mb-3">
-                  {optimization.title}
-                </h3>
 
-
-                <p className="text-sm text-gray-600 leading-6">
-                  {optimization.description}
-                </p>
+                  <p className="text-sm text-gray-600 leading-6">
+                    {optimization.description}
+                  </p>
+                </div>
                 {/* Hover Bottom Line */}
                 <div className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 transition-all duration-500"></div>
               </div>

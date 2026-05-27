@@ -66,37 +66,42 @@ const Page = () => {
                 key={i}
                 className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
-                {/* Icon */}
-                <div className="mb-5">
-                  <div className="flex items-center justify-center w-22 h-22 rounded-[22px] border-2 border-blue-300 shadow-xl group-hover:scale-105 transition duration-500">
+                {/* Content Wrapper */}
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className="mb-5">
+                    <div className="flex items-center justify-center w-22 h-22 rounded-[22px] border-2 border-blue-300 shadow-xl group-hover:scale-105 transition duration-500">
 
-                    {/* Inner White Layer */}
-                    <div className="flex items-center justify-center w-[62px] h-[62px] rounded-[18px] bg-white">
-                      <div className="relative w-15 h-15">
-                        <Image
-                          src={item?.image || "/images/fallback.png"}
-                          alt={item?.title}
-                          fill
-                          className="object-contain"
-                        />
+                      {/* Inner White Layer */}
+                      <div className="flex items-center justify-center w-[62px] h-[62px] rounded-[18px] bg-white">
+                        <div className="relative w-15 h-15">
+                          <Image
+                            src={item?.image || "/images/fallback.png"}
+                            alt={item?.title}
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
+
+                  {/* Title */}
+                  <div className="mb-6">
+                    <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-indigo-600 transition">
+                      {item?.title}
+                    </h3>
+
+                    {/* Divider */}
+                    <div className="mt-3 w-16 h-[3px] rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></div>
+                  </div>
+
+                  <p className="text-sm text-gray-600 leading-6">
+                    {item?.description}
+                  </p>
                 </div>
-
-                {/* Title */}
-                <div className="mb-6">
-                  <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-indigo-600 transition">
-                    {item?.title}
-                  </h3>
-
-                  {/* Divider */}
-                  <div className="mt-3 w-16 h-[3px] rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></div>
-                </div>
-
-                <p className="text-sm text-gray-600 leading-6">
-                  {item?.description}
-                </p>
+                {/* Hover Bottom Line */}
+                <div className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 transition-all duration-500"></div>
               </div>
             ))}
           </div>
