@@ -23,7 +23,7 @@ const ErrorPage = () => {
       </div>
 
       
-      <div className="relative z-10 max-w-6xl w-full mt-7">
+      <div className="relative z-10 container w-full mt-7">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
          

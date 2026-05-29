@@ -5,51 +5,51 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, title, paragraph, button } = feature;
 
   return (
-    <div className=" w-full border p-4 rounded-md hover:bg-primary/3 flex flex-col h-full">
-      <div className="wow fade fade-top flex flex-col h-full" data-wow-delay=".15s">
-
-        <div className="bg-primary/10 hover:bg-primary/15 border-1 border-[#39acf9] text-primary mb-6 flex h-[90px] w-[90px] items-center justify-center rounded-full transition-colors duration-300">
-          <img
-            src={icon}
-            alt="icon"
-            className="w-15 h-15 object-contain"
-          />
-        </div>
-
-        <h3 className="mb-4 text-xl font-medium text-black sm:text-2xl lg:text-xl xl:text-xl dark:text-white">
-          {title}
-        </h3>
-
-        <p className="text-body-color pr-[10px] text-base leading-relaxed font-medium">
-          {paragraph}
-        </p>
-
-         {/* {button && (
-          <Link
-            href={button.href}
-            className="inline-block mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
-         >
-             {button.label} →
-           </Link>
-         )} */}
 
 
-      
-        <div className="mt-auto pt-4">
-          {button && (
-            <Link href={button.href}>
-              <button className="relative flex items-center justify-center w-40 h-12 overflow-hidden text-sm font-semibold uppercase border-1 rounded-md border-indigo-400 group cursor-pointer">
-                <div className="absolute w-full h-12 transition-all duration-300 bg-indigo-400 right-full group-hover:right-0"></div>
-                <span className="relative transition-all duration-300 group-hover:text-white">
-                  {button.label} →
-                </span>
-              </button>
-            </Link>
-          )}
-        </div>
+<div className="w-full h-full">
+  <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
 
-      </div>
+    <div className="absolute -top-20 -right-20 h-56 w-56 rounded-full bg-blue-100/40 blur-3xl"></div>
+
+    <div className="absolute right-4 top-4 flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-600 shadow-sm">
+      <span className="h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
+      Trusted
     </div>
+
+  
+    <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-xl border border-blue-200 bg-white shadow-sm group-hover:scale-110 transition">
+      <img
+        src={icon}
+        alt="icon"
+        className="h-12 w-12 object-contain"
+      />
+    </div>
+
+    
+    <h3 className="mb-2 text-lg font-semibold text-gray-900">
+      {title}
+    </h3>
+
+  
+    <p className="text-sm leading-6 text-gray-600">
+      {paragraph}
+    </p>
+
+    {/* CTA */}
+    {button && (
+      <div className="mt-auto pt-6">
+        <Link href={button.href}>
+          <div className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 transition hover:gap-3">
+            {button.label}
+            <span className="transition group-hover:translate-x-1">→</span>
+          </div>
+        </Link>
+      </div>
+    )}
+
+  </div>
+</div>
   );
 };
 

@@ -34,7 +34,7 @@ const OurSkills = () => {
   return (
     <>
       <Breadcrumb1 pageName="Our Skills" description="" />
-      <div className="max-w-5xl mx-auto px-6 py-12 text-center">
+      <div className="container mx-auto py-12 text-center">
 
         <p className="text-sm text-blue-600 font-semibold uppercase tracking-wide">
           {caseStudies?.label}
@@ -50,7 +50,7 @@ const OurSkills = () => {
 
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 py-0 text-center">
+      <div className="container mx-auto px-6 py-0 text-center">
 
         {categories.length === 0 && (
           <p className="text-red-500">No data found</p>

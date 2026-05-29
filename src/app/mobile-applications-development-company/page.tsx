@@ -32,7 +32,7 @@ const Page = () => {
         description="Building high-performance mobile applications with intuitive design, seamless functionality, and exceptional user experience."
       />
 
-      <div className="max-w-6xl mx-auto py-12 space-y-16">
+      <div className="container mx-auto py-12 space-y-16">
 
         {/* HERO */}
         <div className="grid md:grid-cols-2 gap-10 items-center">

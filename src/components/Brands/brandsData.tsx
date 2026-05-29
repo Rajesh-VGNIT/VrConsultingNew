@@ -68,6 +68,78 @@ const brandsData: Brand[] = [
     href: "",
     image: "/images/brands/meeshoLogo-removebg-preview.png",
   },
+  {
+    id: 12,
+    name: "Jio",
+    href: "",
+    image: "/images/brands/jio1.png",
+  },
+  {
+    id: 13,
+    name: "logo-crm",
+    href: "",
+    image: "/images/brands/logo-crm.png",
+  },
+  {
+    id: 14,
+    name: "spy-foxx",
+    href: "",
+    image: "/images/brands/spy-foxx.png",
+  },
+  {
+    id: 15,
+    name: "Backupp",
+    href: "",
+    image: "/images/brands/backupp.png",
+  },
+  {
+    id: 16,
+    name: "Plan Journey",
+    href: "",
+    image: "/images/brands/plan-journey.png",
+  },
+  {
+    id: 17,
+    name: "Play-simple",
+    href: "",
+    image: "/images/brands/play-simple.png",
+  },
+  {
+    id: 18,
+    name: "Jiffygo logo",
+    href: "",
+    image: "/images/brands/jiffygo-logo.png",
+  },
+  {
+    id: 19,
+    name: "EverX",
+    href: "",
+    image: "/images/brands/EverX_logo-1536x511.webp",
+  },
+  {
+    id: 20,
+    name: "bhartiya sikhsha",
+    href: "",
+    image: "/images/brands/bhartiya sikhsha.webp",
+  },
+  {
+    id: 21,
+    name: "east-coast-railway",
+    href: "",
+    image: "/images/brands/east-coast-railway.png",
+  },
+  {
+    id: 22,
+    name: "Travbulls",
+    href: "",
+    image: "/images/brands/Travbulls.webp",
+  },
+  {
+    id: 23,
+    name: "tb",
+    href: "",
+    image: "/images/brands/tb.webp",
+  }
   
 ];
 

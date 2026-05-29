@@ -1,12 +1,16 @@
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import Contact from "@/components/Contact";
 
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Contact Us | VR Consulting",
-  description: "Contacts for Software Development in VR Consulting",
-};
+// export async function generateMetadata() {
+//   const response = await fetch(
+//     "https://vrwebconsulting.com/metadata.json",
+//     {
+//       cache: "no-store",
+//     }
+//   );
+//   const pageMetadata = await response.json();
+//   return pageMetadata["contact"];
+// }
 
 const ContactPage = () => {
   return (

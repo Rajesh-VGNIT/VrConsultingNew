@@ -3,55 +3,104 @@ import Image from "next/image";
 import Link from "next/link";
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
-  const { title, image, paragraph, author, tags, publishDate } = blog;
+ const {
+  title,
+  image,
+  paragraph,
+  author,
+  tags,
+  publishDate,
+  link,
+  button,
+} = blog;
+
   return (
-    <>
-      <div className="group shadow-one hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark relative overflow-hidden rounded-xs bg-white duration-300">
+    <div className="group relative overflow-hidden rounded-[32px] p-[1px] ">
+      
+      {/* Top Gradient Glow */}
+              <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
+              <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-fuchsia-100 rounded-full blur-3xl opacity-50"></div>
+
+              {/* Gradient Border Effect */}
+              <div className="absolute inset-0 rounded-[32px] border border-transparent group-hover:border-cyan-300 transition duration-500"></div>
+
+
+      {/* Main Card */}
+      <div className="relative z-10 overflow-hidden rounded-[32px] bg-white shadow-xl">
+        
+        {/* Image Section */}
         <Link
-          href="/"
-          className="relative block aspect-37/22 w-full"
+          href={link}
+          className="relative block h-[320px] overflow-hidden"
         >
-          <span className="bg-primary absolute top-6 right-6 z-20 inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold text-white capitalize">
+          {/* Main Image */}
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+
+          {/* Floating Decorative Blur */}
+          <div className="absolute -left-10 -top-10 h-40 w-40 rounded-full bg-cyan-400/30 blur-3xl" />
+          <div className="absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-purple-500/20 blur-3xl" />
+
+          {/* Tag */}
+          <span className="absolute left-5 top-5 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md">
             {tags[0]}
           </span>
-          <Image src={image} alt="image" fill />
+
+          {/* Title Content */}
+          <div className="absolute bottom-0 z-20 p-6">
+            <p className="mb-2 text-sm font-medium text-cyan-200">
+              {publishDate}
+            </p>
+
+            <h3>
+              <Link
+                href="/"
+                className="block text-2xl font-semibold leading-tight text-white transition-all duration-300 group-hover:text-blue-500"
+              >
+                {title}
+              </Link>
+            </h3>
+          </div>
         </Link>
-        <div className="p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
-          <h3>
-            <Link
-              href="/"
-              className="hover:text-primary dark:hover:text-primary mb-4 block text-xl font-bold text-black sm:text-2xl dark:text-white"
-            >
-              {title}
-            </Link>
-          </h3>
-          <p className="border-body-color/10 text-body-color  pb-6 text-base font-medium dark:border-white/10">
+
+        {/* Bottom Content */}
+        <div className="relative p-6">
+          
+          {/* Paragraph */}
+          <p className="mb-6 line-clamp-3 text-base leading-relaxed text-gray-600">
             {paragraph}
           </p>
-          {/* <div className="flex items-center">
-            <div className="border-body-color/10 mr-5 flex items-center border-r pr-5 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5 dark:border-white/10">
-              <div className="mr-4">
-                <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                  <Image src={author.image} alt="author" fill />
-                </div>
-              </div>
-              <div className="w-full">
-                <h4 className="text-dark mb-1 text-sm font-medium dark:text-white">
-                  By {author.name}
-                </h4>
-                <p className="text-body-color text-xs">{author.designation}</p>
-              </div>
-            </div>
-            <div className="inline-block">
-              <h4 className="text-dark mb-1 text-sm font-medium dark:text-white">
-                Date
-              </h4>
-              <p className="text-body-color text-xs">{publishDate}</p>
-            </div>
-          </div> */}
+
+          {/* Divider */}
+          <div className="mb-5 h-[1px] w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+
+          {/* Footer */}
+          <div className="flex items-center justify-between">
+            
+            
+
+            {/* Button */}
+            <Link
+              href={link}
+              className="inline-flex items-center gap-2 rounded-md bg-primary  px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-blue-500/40"
+            >
+             {button}
+
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

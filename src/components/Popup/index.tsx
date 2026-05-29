@@ -21,7 +21,7 @@ export default function ImagePopup({ item, type = "service" }: any) {
           src={imageSrc}
           alt={item.title || "image"}
           fill
-          className="object-contain"
+          className=""
         />
       </div>
 
@@ -38,7 +38,7 @@ export default function ImagePopup({ item, type = "service" }: any) {
           </button>
 
           {/* Image Wrapper */}
-          <div className="relative w-[90%] max-w-5xl h-[80vh] z-[9999]">
+          <div className="relative w-[60%] max-w-5xl h-[90vh] z-[9999]">
             <Image
               src={imageSrc}
               alt="popup image"

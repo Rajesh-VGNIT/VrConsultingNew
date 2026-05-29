@@ -5,10 +5,10 @@
       "type": "hero",
       "data": {
         "title": "Let us help you transform your online presence and drive real, measurable growth.",
-        "subtitle": "",
+        "subtitle": "VR Consulting is a Web Design and Development Company specialized in high quality web design and development solutions, custom web development, web based software application, SEO and web marketing services.",
         "cta": {
           "label": "Read More",
-          "link": "#"
+          "link": "/about"
         },
         "images": [
           

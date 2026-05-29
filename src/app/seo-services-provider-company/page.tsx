@@ -33,7 +33,7 @@ const Page = () => {
         description="Improving website visibility on search engines through keyword optimization, content strategy, technical SEO, and link building for higher rankings."
       />
 
-      <div className="max-w-6xl mx-auto py-12 space-y-16">
+      <div className="container mx-auto py-12 space-y-16">
 
         {/* HERO */}
         <div className="grid md:grid-cols-2 gap-10 items-center">

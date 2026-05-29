@@ -28,7 +28,7 @@ export default function SmoPage() {
         {/* PORTFOLIO SECTION */}
         <section className="py-12 px-6">
 
-          <div className="max-w-7xl mx-auto">
+          <div className="container mx-auto">
 
             {/* TITLE */}
             <div className="text-center mb-14">

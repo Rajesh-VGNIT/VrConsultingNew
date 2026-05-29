@@ -9,7 +9,7 @@ const featuresData: Feature[] = [
       "You Need a website to gain world wide value with your stakeholders? Imagine to design and develop....",
       button: { 
       label: "Read More", 
-      href: "/about" 
+      href: "/services/php-web-application" 
     }
   },
   {
@@ -20,7 +20,7 @@ const featuresData: Feature[] = [
       " We are developing software products and web applications according to your need. It's a best way to convert in mobile applications. ....",
    button: { 
       label: "Read More", 
-      href: "/" 
+      href: "/services/android-app-development-company" 
     }
     },
   {
@@ -31,7 +31,7 @@ const featuresData: Feature[] = [
       "We are dedicated in developing software products and web applications according to your need. Currently, we have attendance sotware....",
      button: { 
       label: "Read More", 
-      href: "/about" 
+      href: "/crm-software-development-company" 
     }
     },
   {
@@ -42,7 +42,7 @@ const featuresData: Feature[] = [
       "The world is acquiring online and so are the ways to make a plan difference for their online existence.....",
     button: { 
       label: "Read More", 
-      href: "/about" 
+      href: "/services/e-commerce-website-development" 
     }
     },
   {
@@ -53,7 +53,7 @@ const featuresData: Feature[] = [
       " We are dedicated in developing software products and web applications according....",
       button: { 
       label: "Read More", 
-      href: "/about" 
+      href: "/services/wordpress-development-services" 
     }
   },
   {
@@ -64,7 +64,7 @@ const featuresData: Feature[] = [
       "We work unique and cleanly designed, meticulously developed, content-rich websites that function on the....",
   button: { 
       label: "Read More", 
-      href: "/about" 
+      href: "/services/custom-web-design" 
     }
     },
     {
@@ -75,7 +75,7 @@ const featuresData: Feature[] = [
       "PPC (Pay per Click) is part of e-marketing, used to tour traffic to websites but not organically. In PPC, advertisers pay a fee to the search engine every time ....",
   button: { 
       label: "Read More", 
-      href: "/about" 
+      href: "/services/seo-services-provider-company" 
     }
     },
     {
@@ -86,7 +86,7 @@ const featuresData: Feature[] = [
       "We are developing software products and web applications according to your need. It's a best way to convert in mobile applications.....",
   button: { 
       label: "Read More", 
-      href: "/about" 
+      href: "/services/domain-hosting" 
     }
     },
 ];

@@ -27,7 +27,7 @@ export default function MobileAppPage() {
         {/* PORTFOLIO SECTION */}
         <section className="py-12 px-6">
 
-          <div className="max-w-7xl mx-auto">
+          <div className="container mx-auto">
 
             {/* TITLE */}
             <div className="text-center mb-14">
@@ -42,7 +42,7 @@ export default function MobileAppPage() {
                   <Link
                     key={index}
                     href={item.url}
-                    className="bg-blue-500 hover:bg-blue-600 transition duration-300 text-white px-10 py-3 rounded-md text-xl  shadow-md"
+                    className="bg-blue-500 hover:bg-blue-600 transition duration-300 text-white px-12 py-3 rounded-md text-xl  shadow-md"
                   >
                     {item.name}
                   </Link>

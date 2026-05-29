@@ -2,6 +2,7 @@ import data from "@/data/footer.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import Popup from "@/components/Popup";
 import Image from "next/image";
+import Link from "next/link";
 
 export async function generateMetadata() {
   const response = await fetch(
@@ -84,6 +85,19 @@ const Page = () => {
                   </div>
                 ))}
               </div>
+
+             <Link href="/livedemo">
+              <div className="inline-block group mt-10">
+                <span className="relative flex items-center justify-center w-40 h-12 overflow-hidden rounded-md border border-primary hover:border-primary text-sm font-semibold uppercase cursor-pointer">
+                  <span className="absolute inset-0 bg-primary translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
+                  <span className="relative z-10 flex items-center gap-2 text-primary group-hover:text-white transition-colors duration-300">
+                    Live Demo
+                  </span>
+
+                </span>
+              </div>
+              </Link>
+
             </div>
 
             {/* Right Video/Image Card */}
@@ -92,35 +106,35 @@ const Page = () => {
               {/* Gradient Glow */}
               <div className="absolute inset-0 rounded-[35px] blur-2xl opacity-25 scale-95"></div>
 
-             
 
-                {/* Inner Media */}
-               <div className="relative flex justify-center lg:justify-end">
-              
-                          
-              
-                            {/* Image Card */}
-                            <div className="relative w-full max-w-[450px] h-110 rounded-[40px] overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
-              
-                              
-              
-                              <Image
-                                src={section?.heroImage || "/images/fallback.png"}
-                                alt="hero"
-                                fill
-                                className="object-cover"
-                              />
-                            </div>
-              
-                          </div>
+
+              {/* Inner Media */}
+              <div className="relative flex justify-center lg:justify-end">
+
+
+
+                {/* Image Card */}
+                <div className="relative w-full max-w-[450px] h-110 rounded-[40px] overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+
+
+
+                  <Image
+                    src={section?.heroImage || "/images/fallback.png"}
+                    alt="hero"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
 
               </div>
+
             </div>
-          
+          </div>
+
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto py-12 space-y-16">
+      <div className="container mx-auto py-12 space-y-16">
 
         {/* HERO */}
 

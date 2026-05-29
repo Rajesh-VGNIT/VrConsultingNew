@@ -64,7 +64,7 @@ function AnimatedCounter({ value, suffix, inView }) {
   }, [inView, value]);
 
   return (
-    <h2 className="text-3xl font-bold mb-2 text-blue-900">
+    <h2 className="mb-2 font-bold text-blue-900 sm:text-2xl md:text-2xl lg:text-3xl">
       {count}
       {suffix}
     </h2>
@@ -94,42 +94,46 @@ export default function CounterDashboard() {
 
   return (
     
-    <div className="py-16 md:py-20 lg:py-10 flex w-full justify-center items-center bg-gray-100 ">
-      <div className="container">
+    <div className="flex w-full items-center justify-center bg-gray-100 py-16 md:py-10 lg:py-10">
+  <div className="container px-4">
+    
+    <div
+      ref={sectionRef}
+      className="grid overflow-hidden rounded-2xl bg-white shadow-xl 
+      grid-cols-2 divide-y divide-gray-200 
+      sm:grid-cols-2 sm:divide-y-0 sm:divide-x 
+      lg:grid-cols-4"
+    >
+      {statsData.map((item) => (
         <div
-          ref={sectionRef}
-          className="bg-white shadow-xl rounded-md flex divide-x divide-gray-200 w-full overflow-hidden"
+          key={item.key}
+          className="flex items-center gap-4 p-6 sm:p-8"
         >
-          {statsData.map((item) => (
-            <div
-              key={item.key}
-              className="flex items-center gap-4 p-8 w-1/4"
-            >
-              {/* Icon Image */}
-              <div className="w-14 h-14 flex items-center justify-center bg-blue-50 rounded-full shadow-md">
-                <img
-                  src={item.icon}
-                  alt={item.label}
-                  className="w-10 h-10 object-contain"
-                />
-              </div>
+          {/* Icon */}
+          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-50 shadow-md shrink-0">
+            <img
+              src={item.icon}
+              alt={item.label}
+              className="h-10 w-10 object-contain"
+            />
+          </div>
 
-              {/* Content */}
-              <div className="flex-1">
-                <AnimatedCounter
-                  value={item.value}
-                  suffix={item.suffix}
-                  inView={inView}
-                />
+          {/* Content */}
+          <div className="flex-1">
+            <AnimatedCounter
+              value={item.value}
+              suffix={item.suffix}
+              inView={inView}
+            />
 
-                <p className="text-xs text-gray-500 font-medium tracking-wide">
-                  {item.label}
-                </p>
-              </div>
-            </div>
-          ))}
+            <p className="mt-1 text-xs font-medium tracking-wide text-gray-500 sm:text-sm">
+              {item.label}
+            </p>
+          </div>
         </div>
-      </div>
+      ))}
     </div>
+  </div>
+</div>
   );
 }

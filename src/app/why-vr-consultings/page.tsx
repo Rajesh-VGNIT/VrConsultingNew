@@ -44,7 +44,7 @@ const AboutPage = () => {
         description="VR Consulting is a Web Design and Development Company specialized in high quality web design and development solutions, custom web development, web based software application, SEO and web marketing services."
       />
 
-      <div className="mx-auto max-w-6xl space-y-8 px-6 py-12">
+      <div className="mx-auto container space-y-8 py-12">
 
         {/* Top Section */}
         {whyVR && (
@@ -232,19 +232,21 @@ const AboutPage = () => {
 
 
 
-              {/* Title */}
-              <div className="mb-6">
-                <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-indigo-600 transition">
-                  {mission.mission.title}
-                </h3>
+              <div className="relative z-10">
+                {/* Title */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-indigo-600 transition">
+                    {mission.mission.title}
+                  </h3>
 
-                {/* Divider */}
-                <div className="mt-3 w-16 h-[3px] rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></div>
+                  {/* Divider */}
+                  <div className="mt-3 w-16 h-[3px] rounded-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"></div>
+                </div>
+
+                <p className="text-sm text-gray-600 leading-6">
+                  {mission.mission.description}
+                </p>
               </div>
-
-              <p className="text-sm text-gray-600 leading-6">
-                {mission.mission.description}
-              </p>
               {/* Hover Bottom Line */}
               <div className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 transition-all duration-500"></div>
             </div>

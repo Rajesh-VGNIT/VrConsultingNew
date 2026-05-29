@@ -1,81 +1,110 @@
+
 "use client";
 
 import NewsLatterBox from "./NewsLatterBox";
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
-
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
-  
-  const [captcha, setCaptcha] = useState("");
-  const [userCaptcha, setUserCaptcha] = useState("");
+  /* ================= FORM STATE ================= */
 
   const [formData, setFormData] = useState({
-    name: "",
+    fullname: "",
     email: "",
-    phone: "",
-    city: "",
+    contact: "",
+    address: "",
     budget: "",
     requirement: "",
     message: "",
   });
 
-  // Generate captcha
-  const generateCaptcha = () => {
-    const chars =
-      "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789";
-    let code = "";
+  /* ================= RECAPTCHA ================= */
 
-    for (let i = 0; i < 6; i++) {
-      code += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
+  const [captchaValue, setCaptchaValue] = useState(null);
 
-    setCaptcha(code);
-  };
+  const recaptchaRef = useRef(null);
 
-  useEffect(() => {
-    generateCaptcha();
-  }, []);
+  /* ================= HANDLE CHANGE ================= */
 
-  // Handle input change
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
-  // Submit form
-  const handleSubmit = (e) => {
+  /* ================= HANDLE SUBMIT ================= */
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Captcha validation
-    if (userCaptcha !== captcha) {
-      toast.error("Invalid verification code!");
+    // Check reCAPTCHA
+    if (!captchaValue) {
+      toast.error("Please verify Google reCAPTCHA!");
       return;
     }
 
-    // Success message
-    toast.success("Form submitted successfully!", {
-    toastId: "form-success", // unique ID
-    autoClose: 2000,             
-    pauseOnHover: true,
-    closeOnClick: true
-  });
+    try {
+      const response = await fetch(
+        "https://www.vrwebconsulting.com/save-contact",
+        {
+          method: "POST",
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      city: "",
-      budget: "",
-      requirement: "",
-      message: "",
-    });
+          headers: {
+            "Content-Type": "application/json",
+          },
 
-    setUserCaptcha("");
-    generateCaptcha();
+          body: JSON.stringify({
+            fullname: formData.fullname,
+            email: formData.email,
+            contact: formData.contact,
+            address: formData.address,
+            budget: formData.budget,
+            requirement: formData.requirement,
+            message: formData.message,
+          }),
+        }
+      );
+
+      const result = await response.json();
+
+      console.log(result);
+
+      if (response.ok && result.success) {
+        toast.success("Form submitted successfully!", {
+          toastId: "form-success",
+          autoClose: 2000,
+        });
+
+        // Reset Form
+        setFormData({
+          fullname: "",
+          email: "",
+          contact: "",
+          address: "",
+          budget: "",
+          requirement: "",
+          message: "",
+        });
+
+        // Reset Captcha
+        setCaptchaValue(null);
+
+        if (recaptchaRef.current) {
+          recaptchaRef.current.reset();
+        }
+      } else {
+        toast.error(result.message || "Something went wrong!");
+      }
+    } catch (error) {
+      console.error(error);
+
+      toast.error("Server error. Please try again!");
+    }
   };
-
-  
 
   return (
     <section
@@ -83,13 +112,15 @@ const Contact = () => {
       className="overflow-hidden md:py-10 lg:py-18"
     >
       {/* Toast container */}
-        <ToastContainer position="top-right" autoClose={2000} />
+      <ToastContainer position="top-right" autoClose={2000} />
 
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
+          {/* LEFT SIDE */}
           <div className="w-full px-4 lg:w-7/12 xl:w-7/12">
-            <div className="mb-12 rounded-xs bg-white px-8 py-11 shadow-three  sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[25px]">
-              <h2 className="mb-3 text-2xl font-bold text-black  sm:text-3xl lg:text-xl xl:text-2xl">
+            <div className="mb-12 rounded-xs bg-white px-8 py-11 shadow-three sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[25px]">
+              
+              <h2 className="mb-3 text-2xl font-bold text-black sm:text-3xl lg:text-xl xl:text-2xl">
                 Connect With VR Consulting Support
               </h2>
 
@@ -101,29 +132,29 @@ const Contact = () => {
               <form onSubmit={handleSubmit}>
                 <div className="-mx-4 flex flex-wrap">
 
-                  {/* Name */}
+                  {/* NAME */}
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
-                      <label className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                      <label className="mb-3 block text-sm font-medium text-dark">
                         Your Name*
                       </label>
 
                       <input
                         type="text"
                         placeholder="Enter your name"
-                        name="name"
-                        value={formData.name}
+                        name="fullname"
+                        value={formData.fullname}
                         onChange={handleChange}
                         required
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B]"
+                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden focus:border-primary"
                       />
                     </div>
                   </div>
 
-                  {/* Email */}
+                  {/* EMAIL */}
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
-                      <label className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                      <label className="mb-3 block text-sm font-medium text-dark">
                         Your Email*
                       </label>
 
@@ -134,71 +165,71 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B]"
+                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden focus:border-primary"
                       />
                     </div>
                   </div>
 
-                  {/* Phone */}
+                  {/* PHONE */}
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
-                      <label className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                      <label className="mb-3 block text-sm font-medium text-dark">
                         Your Phone*
                       </label>
 
                       <input
-                        type="number"
+                        type="tel"
                         placeholder="Enter your phone"
-                        name="phone"
-                        value={formData.phone}
+                        name="contact"
+                        value={formData.contact}
                         onChange={handleChange}
                         required
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B]"
+                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden focus:border-primary"
                       />
                     </div>
                   </div>
 
-                  {/* City */}
+                  {/* CITY */}
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
-                      <label className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                      <label className="mb-3 block text-sm font-medium text-dark">
                         Your City*
                       </label>
 
                       <input
                         type="text"
                         placeholder="Enter your city"
-                        name="city"
-                        value={formData.city}
+                        name="address"
+                        value={formData.address}
                         onChange={handleChange}
                         required
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B]"
+                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden focus:border-primary"
                       />
                     </div>
                   </div>
 
-                  {/* Budget */}
+                  {/* BUDGET */}
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
-                      <label className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                      <label className="mb-3 block text-sm font-medium text-dark">
                         Your Budget
                       </label>
 
                       <input
                         type="text"
-                         name="budget"
-                         value={formData.budget}
-                         onChange={handleChange}
+                        name="budget"
+                        value={formData.budget}
+                        onChange={handleChange}
                         placeholder="Enter your budget"
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B]"
+                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden focus:border-primary"
                       />
                     </div>
                   </div>
 
-                  {/* Requirement */}
+                  {/* REQUIREMENT */}
                   <div className="w-full px-4 md:w-1/2">
                     <div className="mb-8">
-                      <label className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                      <label className="mb-3 block text-sm font-medium text-dark">
                         Your Requirement*
                       </label>
 
@@ -207,100 +238,108 @@ const Contact = () => {
                         name="requirement"
                         value={formData.requirement}
                         onChange={handleChange}
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary"
                       >
                         <option value="" disabled>
                           Select Requirement
                         </option>
 
-                        <option>Create a New Website</option>
-                        <option>Redesign my Website</option>
-                        <option>Website Maintenance</option>
-                        <option>Mobile App (Android/iOS)</option>
-                        <option>Hybrid Mobile App</option>
-                        <option>SEO</option>
-                        <option>SMO</option>
-                        <option>PPC / Adwords</option>
-                        <option>E-commerce Solution</option>
-                        <option>Software Dev (CRM/MLM/PMS)</option>
+                        <option value="Create a New Website">
+                          Create a New Website
+                        </option>
+
+                        <option value="Redesign my Website">
+                          Redesign my Website
+                        </option>
+
+                        <option value="Website Maintenance">
+                          Website Maintenance
+                        </option>
+
+                        <option value="Mobile App (Android/iOS)">
+                          Mobile App (Android/iOS)
+                        </option>
+
+                        <option value="Hybrid Mobile App">
+                          Hybrid Mobile App
+                        </option>
+
+                        <option value="SEO">
+                          SEO
+                        </option>
+
+                        <option value="SMO">
+                          SMO
+                        </option>
+
+                        <option value="PPC / Adwords">
+                          PPC / Adwords
+                        </option>
+
+                        <option value="E-commerce Solution">
+                          E-commerce Solution
+                        </option>
+
+                        <option value="Software Dev (CRM/MLM/PMS)">
+                          Software Dev (CRM/MLM/PMS)
+                        </option>
                       </select>
                     </div>
                   </div>
 
-                  {/* Message */}
+                  {/* MESSAGE */}
                   <div className="w-full px-4">
                     <div className="mb-8">
-                      <label className="mb-3 block text-sm font-medium text-dark dark:text-white">
+                      <label className="mb-3 block text-sm font-medium text-dark">
                         Your Message
                       </label>
 
                       <textarea
-                         name="message"
                         rows={5}
+                        name="message"
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Enter your Message"
-                        className="border-stroke w-full resize-none rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B]"
+                        className="border-stroke w-full resize-none rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden focus:border-primary"
                       ></textarea>
                     </div>
                   </div>
 
-                  {/* Captcha */}
+                  {/* RECAPTCHA */}
                   <div className="w-full px-4">
                     <div className="mb-8">
-                      <label className="mb-3 block text-sm font-medium text-dark dark:text-white">
-                        Verification Code
-                      </label>
-
-                      <div className="mb-4 flex items-center gap-3">
-                        <div className="rounded-md bg-gray-200 px-6 py-3 text-lg font-bold tracking-widest text-black">
-                          {captcha}
-                        </div>
-
-                        <button
-                          type="button"
-                          onClick={generateCaptcha}
-                          className="rounded-md bg-primary px-4 py-2 text-white cursor-pointer"
-                        >
-                          Refresh
-                        </button>
-                      </div>
-
-                      <input
-                        type="text"
-                        value={userCaptcha}
-                        onChange={(e) => setUserCaptcha(e.target.value)}
-                        placeholder="Enter Verification Code"
-                        required
-                        className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B]"
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey="6LekMQItAAAAABsp0xzraBkyd1Rz65X8cU7Po-BL"
+                        onChange={(token) => setCaptchaValue(token)}
                       />
+
+                      {/* {!captchaValue && (
+                        <p className="mt-2 text-sm text-red-500">
+                          Please verify reCAPTCHA
+                        </p>
+                      )} */}
                     </div>
                   </div>
 
-                  {/* Submit Button */}
+                  {/* SUBMIT BUTTON */}
                   <div className="w-full px-4">
-                    {/* <button
-                      type="submit"
-                      className="rounded-md bg-primary px-8 py-3 text-white transition hover:bg-primary/90 cursor-pointer"
-                    >
-                      Submit
-                    </button> */}
+                    <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
 
-                    <div className=" flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                                      
-                                      <div  className="inline-block group">
-                                      <button type="submit" className="relative flex items-center justify-center w-40 h-12 overflow-hidden rounded-md border border-primary text-sm font-semibold uppercase cursor-pointer">
-                                        <span className="absolute inset-0 bg-primary translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
-                                        <span className="relative z-10 flex items-center gap-2 text-primary group-hover:text-white transition-colors duration-300">
-                                          Submit
-                                        </span>
-                    
-                                      </button>
-                                    </div>
-                                      
-                                    </div>
+                      <div className="group inline-block">
+                        <button
+                          type="submit"
+                          className="relative flex h-12 w-40 items-center justify-center overflow-hidden rounded-md border border-primary text-sm font-semibold uppercase cursor-pointer"
+                        >
+                          <span className="absolute inset-0 translate-x-[-100%] bg-primary transition-transform duration-300 ease-in-out group-hover:translate-x-0"></span>
 
-                    
+                          <span className="relative z-10 flex items-center gap-2 text-primary transition-colors duration-300 group-hover:text-white">
+                            Submit
+                          </span>
+                        </button>
+                      </div>
+
+                    </div>
                   </div>
 
                 </div>
@@ -308,6 +347,7 @@ const Contact = () => {
             </div>
           </div>
 
+          {/* RIGHT SIDE */}
           <div className="w-full px-4 lg:w-5/12 xl:w-5/12">
             <NewsLatterBox />
           </div>
@@ -317,22 +357,9 @@ const Contact = () => {
   );
 };
 
-
-// Reusable Input Component
-const Input = ({ label, name, value, onChange, type = "text" }) => (
-  <div className="w-full px-4 md:w-1/2">
-    <div className="mb-8">
-      <label className="mb-3 block text-sm font-medium">{label}</label>
-      <input
-        type={type}
-        name={name}
-        value={value}
-        onChange={onChange}
-        className="w-full rounded-md border bg-[#f8f8f8] px-4 py-3"
-        required
-      />
-    </div>
-  </div>
-);
-
 export default Contact;
+
+
+
+
+

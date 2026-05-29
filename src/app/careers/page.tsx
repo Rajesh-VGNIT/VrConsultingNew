@@ -31,7 +31,7 @@ const Page = () => {
         description="Explore rewarding career opportunities, enhance your skills, grow professionally, and build a successful future with our dynamic team."
       />
 
-      <div className="max-w-6xl mx-auto py-12 space-y-16">
+      <div className="container w-full py-10  mx-auto py-12 space-y-16">
 
         <div>
           <h2 className="text-3xl font-semibold mb-8 text-center">

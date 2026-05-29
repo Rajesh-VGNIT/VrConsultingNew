@@ -27,7 +27,7 @@ const AboutPage = () => {
         description=""
       />
 
-      <div className="max-w-6xl mx-auto py-12 space-y-10">
+      <div className="container mx-auto py-12 space-y-10">
 
 
 

@@ -134,71 +134,71 @@
 
     "ProfessionalSEOServices": [
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/admin1.png",
         "button": "Admin Pannel"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/buttons1.png",
         "button": "Buttons Pannel"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/crms1.png",
         "button": "Crms"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/crms1 (1).png",
         "button": "Crms"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/email_integration1.png",
         "button": "Email Integrations"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/email_temp1.png",
         "button": "Email Template"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/email_temp1 (1).png",
         "button": "Email Template"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/expenses1.png",
         "button": "Expenses Crm"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/invoice1.png",
         "button": "Invoice Pannel"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/invoice1 (1).png",
         "button": "Invoice Pannel"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/leads1.png",
         "button": "Leads Pannel"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/setup_menu1.png",
         "button": "Setup Menu Pannel"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/staff1.png",
         "button": "Staff Pannel"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/switch_staff1.png",
         "button": "Switch staff Pannel"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/expenses1 (1).png",
         "button": "Expences Crms"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/crm2.png",
         "button": "Crm"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/crm/theme_style1.png",
         "button": "Theme Crms"
       }
       
@@ -213,43 +213,43 @@
 
     "ProfessionalSEOServices": [
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/mlm/mlm1.png",
         "button": "User Management"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/mlm/mlm21.png",
         "button": "Dashboard Pontrol Pannel"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/mlm/mlm3.png",
         "button": "MPIN Management"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/mlm/mlm4.png",
         "button": "Withdraw Requests"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/mlm/mlm5.png",
         "button": "Money Transfer"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/mlm/mlm6.png",
         "button": "Withdraw Report Management"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/mlm/mlm7.png",
         "button": "View Vallet"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/mlm/mlm8.png",
         "button": "Payment Dashboard"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/mlm/mlm9.png",
         "button": "Dashboard Overview & states"
       },
       {
-        "image": "/images/seo-image/admin1.png",
+        "image": "/images/mlm/mlm10.png",
         "button": "Generate A Referal Link"
       }
       

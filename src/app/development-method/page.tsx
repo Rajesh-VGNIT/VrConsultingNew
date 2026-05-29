@@ -114,7 +114,7 @@ const Page = () => {
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto py-12 space-y-16">
+      <div className="container mx-auto py-12 space-y-16">
 
         {/* UNIQUE CONTENT CARDS */}
         <div>
