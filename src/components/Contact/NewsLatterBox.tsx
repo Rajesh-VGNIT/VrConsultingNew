@@ -50,14 +50,14 @@ const NewsLatterBox = () => {
               <div>
                 <h4 className="font-semibold text-lg text-white">Office Address</h4>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  <a
+                  <Link
                     href="https://www.google.com/maps/place/VR+Consulting+-+Website+Design+%26+Development+service/@28.597351,77.348714,18z/data=!4m6!3m5!1s0x390ce5d2577eaaad:0xbf00ab8c1f61012f!8m2!3d28.5974309!4d77.348145!16s%2Fg%2F11h2hf410j?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition duration-300"
                   >
                     Sector-22, Noida, Uttar Pradesh 201301
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>

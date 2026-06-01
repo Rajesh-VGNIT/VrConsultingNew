@@ -134,7 +134,7 @@ const Page = () => {
             {section.ProfessionalSEOServices?.map((item: any, i: number) => (
               <div
                 key={i}
-                className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
+                className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
 
                 {/* Top Gradient Glow */}

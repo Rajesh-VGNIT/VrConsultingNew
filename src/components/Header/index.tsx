@@ -3,13 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 import menuData from "./menuData";
 
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
 
   // LEVEL 1
   const [openIndex, setOpenIndex] = useState(-1);
@@ -36,6 +37,31 @@ const Header = () => {
       window.removeEventListener("scroll", handleStickyNavbar);
     };
   }, []);
+
+
+  // DESKTOP OUTSIDE CLICK CLOSE DROPDOWN
+useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (window.innerWidth < 1024) return;
+
+    if (
+      navRef.current &&
+      !navRef.current.contains(event.target as Node)
+    ) {
+      setOpenIndex(-1);
+      setOpenSubIndex(-1);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener(
+      "mousedown",
+      handleClickOutside
+    );
+  };
+}, []);
 
   // LEVEL 1 TOGGLE
   const handleSubmenu = (index: number) => {
@@ -64,12 +90,13 @@ const Header = () => {
     <>
       <header
         className={`header top-0 left-0 z-40 flex w-full items-center ${sticky
-          ? "dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky fixed z-[9999] bg-white/80 backdrop-blur-md transition"
-          : "absolute bg-transparent"
+          ? "dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky fixed z-[9999] bg-white backdrop-blur-md transition"
+          : "absolute bg-white"
           }`}
       >
         <div className="container">
-          <div className="relative -mx-4 flex items-center justify-between">
+          <div ref={navRef} 
+          className="relative -mx-4 flex items-center justify-between">
             {/* LOGO */}
             <div className="w-70 max-w-full px-4 xl:mr-12">
               <Link

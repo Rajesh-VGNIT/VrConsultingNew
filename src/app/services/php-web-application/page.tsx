@@ -37,7 +37,7 @@ const Page = () => {
 
         {/* HERO */}
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
+          <div data-aos="fade-left">
             <h1 className="text-2xl font-semibold leading-relaxed mb-4">
               {section.title}
             </h1>
@@ -46,7 +46,7 @@ const Page = () => {
             </p>
           </div>
 
-          <div className="relative ml-auto w-full max-w-[500px]  h-110 rounded-xl overflow-hidden">
+          <div data-aos="fade-right" className="relative ml-auto w-full max-w-[500px]  h-110 rounded-xl overflow-hidden">
             <Image
               src={section.heroImage}
               alt="hero"
@@ -59,18 +59,18 @@ const Page = () => {
         {/* WHY CHOOSE PHP */}
         <div>
 
-          <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
+          <p data-aos="fade-left" className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
             What we provide
           </p>
-          <h2 className="text-xl font-semibold  mb-8 text-center">
+          <h2 data-aos="fade-right" className="text-xl font-semibold  mb-8 text-center">
             Why Choose PHP for Web Application Development?
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.whyChoosePHP.map((item: any, i: number) => (
-              <div
+              <div data-aos="fade-left"
                 key={i}
-                className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
+                className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
                 {/* Top Gradient Glow */}
                 <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
@@ -122,18 +122,18 @@ const Page = () => {
 
         {/*  SERVICES */}
         <div>
-          <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
+          <p data-aos="fade-left" className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
             What we provide
           </p>
-          <h2 className="text-xl font-semibold mb-8 text-center">
+          <h2 data-aos="fade-right" className="text-xl font-semibold mb-8 text-center">
             Our PHP Web Application Development Services:
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.services.map((item: any, i: number) => (
-              <div
+              <div data-aos="fade-left"
                 key={i}
-                className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
+                className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
                 {/* Top Gradient Glow */}
                 <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
@@ -190,7 +190,7 @@ const Page = () => {
 
         {data?.phpWebApplication?.legacyApplication?.map((legacy: any, index: number) => (
           <div key={index} className="w-full mx-auto">
-            <div className="p-8 flex flex-col md:flex-row items-center gap-6 group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
+            <div data-aos="fade-left" className="p-8 flex flex-col md:flex-row items-center gap-6 group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
 
               <div className="relative w-30 h-30 flex-shrink-0">
                 <Image
@@ -224,7 +224,7 @@ const Page = () => {
         <FAQ items={section?.whyChooseUs} />
 
         {/*  CTA */}
-        <div className="text-center">
+        <div data-aos="fade-right" className="text-center">
           <h2 className="font-semibold text-xl mb-3">
             {section.cta.title}
           </h2>

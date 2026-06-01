@@ -52,35 +52,51 @@ export default function PortfolioPage() {
             </div>
 
             {/* GRID */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-2 gap-10">
+            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+  {portfolio.map((item) => (
+    <a
+      key={item.id}
+      href={item.url}
+      className="group relative flex flex-col overflow-hidden rounded-[30px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-[1px]"
+    >
+      <div className="flex flex-col flex-1 rounded-[30px] bg-slate-950">
+        
+        {/* Image */}
+        <div className="overflow-hidden rounded-t-[30px]">
+          <img
+            src={item.image}
+            alt={item.title}
+            className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-110"
+          />
+        </div>
 
-              {portfolio.map((item) => (
-                <a
-                  key={item.id}
-                  href={item.url}
-                  className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition duration-300 group"
-                >
-                  <div className="overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="h-[220px] w-full object-cover group-hover:scale-105 transition duration-500"
-                    />
-                  </div>
+        {/* Content */}
+        <div className="flex flex-1 flex-col p-6">
+          
+          <span className="text-primary text-sm uppercase tracking-widest">
+            {item.category}
+          </span>
 
-                  <div className="p-6 text-center">
-                    <h3 className="text-2xl font-bold text-[#111] mb-3">
-                      {item.title}
-                    </h3>
+          <h3 className="mt-3 text-2xl font-bold text-white">
+            {item.title}
+          </h3>
 
-                    <p className="text-blue-500 uppercase tracking-wide text-sm font-medium">
-                      {item.category}
-                    </p>
-                  </div>
-                </a>
-              ))}
+          {/* Push bottom section down */}
+          <div className="mt-auto flex items-center justify-between pt-4">
+            <span className="text-gray-400">
+              View Website
+            </span>
 
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition-transform duration-300 group-hover:translate-x-2 rotate-[-30deg]">
+              →
             </div>
+          </div>
+
+        </div>
+      </div>
+    </a>
+  ))}
+</div>
 
           </div>
 

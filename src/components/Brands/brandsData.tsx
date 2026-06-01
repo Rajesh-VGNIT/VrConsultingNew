@@ -12,7 +12,7 @@ const brandsData: Brand[] = [
     id: 2,
     name: "Tailgrids",
     href: "",
-    image: "/images/brands/snapdeal.png",
+    image: "/images/brands/snapdeal1.png",
   },
   {
     id: 3,
@@ -139,6 +139,48 @@ const brandsData: Brand[] = [
     name: "tb",
     href: "",
     image: "/images/brands/tb.webp",
+  },
+  {
+    id: 24,
+    name: "Audio Technical",
+    href: "",
+    image: "/images/brands/audio-technical-1.png",
+  },
+  {
+    id: 25,
+    name: "Master-Craft",
+    href: "",
+    image: "/images/brands/master-craft.webp",
+  },
+  {
+    id: 26,
+    name: "Mrn",
+    href: "",
+    image: "/images/brands/mrn.png",
+  },
+  {
+    id: 27,
+    name: "The-Landon",
+    href: "",
+    image: "/images/brands/the-landon.webp",
+  },
+  {
+    id: 28,
+    name: "Suzlon",
+    href: "",
+    image: "/images/brands/suzlon.webp",
+  },
+  {
+    id: 29,
+    name: "Ciaoindiatour",
+    href: "",
+    image: "/images/brands/ciaoindiatour.png",
+  },
+  {
+    id: 30,
+    name: "Zomento",
+    href: "",
+    image: "/images/brands/zomento.webp",
   }
   
 ];

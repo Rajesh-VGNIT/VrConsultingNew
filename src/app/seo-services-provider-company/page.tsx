@@ -70,7 +70,7 @@ const Page = () => {
             {section.ProfessionalSEOServices?.map((item: any, i: number) => (
               <div
                 key={i}
-                className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
+                className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
 
                 {/* Top Gradient Glow */}
@@ -140,7 +140,7 @@ const Page = () => {
             {section["OurSEOServices"]?.map((item: any, i: number) => (
               <div
                 key={i}
-                className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
+                className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
                 {/* Top Gradient Glow */}
                 <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
@@ -197,7 +197,7 @@ const Page = () => {
         {/* Link Building */}
         {inventory && (
           <div className="w-full mx-auto">
-            <div className="  p-8 flex flex-col md:flex-row items-center gap-6  group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
+            <div className="  p-8 flex flex-col md:flex-row items-center gap-6  group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
               {/* Top Gradient Glow */}
               <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
               <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-fuchsia-100 rounded-full blur-3xl opacity-50"></div>
@@ -238,7 +238,7 @@ const Page = () => {
         {/* Local SEO */}
         {optimization && (
           <div className="w-full mx-auto">
-            <div className="p-8 flex flex-col md:flex-row items-center gap-6  group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
+            <div className="p-8 flex flex-col md:flex-row items-center gap-6  group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
               {/* Top Gradient Glow */}
               <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
               <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-fuchsia-100 rounded-full blur-3xl opacity-50"></div>

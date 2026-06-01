@@ -23,43 +23,9 @@ layer(base);
   transform: translateX(30px);
 } */
 
-/* Base fade */
-.fade {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
+body{
+  overflow-x: hidden;
 }
-
-/* When visible */
-.fade.show {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-/* Directions */
-.fade-top {
-  transform: translateY(-30px);
-}
-
-.fade-bottom {
-  transform: translateY(30px);
-}
-
-.fade-left {
-  transform: translateX(-30px);
-}
-
-.fade-right {
-  transform: translateX(30px);
-}
-
-/* Optional delays (for stagger effect) */
-.delay-100 { transition-delay: 0.1s; }
-.delay-200 { transition-delay: 0.2s; }
-.delay-300 { transition-delay: 0.3s; }
-.delay-400 { transition-delay: 0.4s; }
 
 @custom-variant dark (&:is(.dark *));
 
@@ -196,20 +162,40 @@ layer(base);
 
 #home {
     /* background-color: #1d1b1bfc; */
-    background-image: linear-gradient(#00000000, #0000002e), url(/images/hero/home.jpg);
+    /* background-image: linear-gradient(#00000000, #0000002e), url(/images/hero/hero.jpg); */
     background-position: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    background: linear-gradient(
+  to bottom,
+  rgba(0,0,0,0.8),
+  rgba(0,0,0,0.8)
+);
 }
 .faq-wrapper .faq-heading-par {
   display: none;
 }
-.services-bg{
+/* .services-bg{
   background-image: url(/images/services/services-bg.png);
   margin-top: 85px;
   padding-bottom: 20px;
   background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+} */
+.services-bg {
+  margin-top: 85px;
+  padding-bottom: 20px;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("/images/brands/premium1.jpeg");
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -237,9 +223,6 @@ h1, h2, h3, h4, h5, h6{
   height: 436px;
 }
 @media screen and (max-width: 768px) {
-  .container {
-    padding: 15px 15px;
-  }
   .pt-28 {
     padding-top: calc(var(--spacing) * 4);
   }
@@ -249,12 +232,20 @@ h1, h2, h3, h4, h5, h6{
   .h-110 {
       height: calc(var(--spacing) * 80);
   }
+  .services-bg {
+    margin-top: 100px;
+}
 }
 @media screen and (max-width: 1024px) {
   .container {
     padding: 15px 15px;
   }
+  .services-bg {
+    margin-top: 100px;
+}
   
 }
+
+
 
 

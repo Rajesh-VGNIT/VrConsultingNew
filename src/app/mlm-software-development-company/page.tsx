@@ -149,13 +149,22 @@ const Page = () => {
             {section.ProfessionalSEOServices?.map((item: any, i: number) => (
               <div
                 key={i}
-                className="bg-white rounded-xl shadow-lg border p-3 hover:shadow-xl transition"
+                className="group relative overflow-hidden rounded-[20px] bg-white border border-slate-200 p-3 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
+                 {/* Top Gradient Glow */}
+                <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
+                <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-fuchsia-100 rounded-full blur-3xl opacity-50"></div>
+
+                {/* Gradient Border Effect */}
+                <div className="absolute inset-0 rounded-[20px] border border-transparent group-hover:border-cyan-300 transition duration-500"></div>
+
                 <Popup item={item} type="service" />
 
                 <h3 className="text-lg font-semibold text-center mt-3">
                   {item.button}
                 </h3>
+                 <div className="absolute bottom-0 left-0 h-[4px] w-0 group-hover:w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 transition-all duration-500"></div>
+
               </div>
             ))}
           </div>

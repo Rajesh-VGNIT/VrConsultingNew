@@ -5,16 +5,28 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10 overflow-hidden  pb-16 pt-[120px]  md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
         <div className="container">
-          <div className="-mx-4 flex flex-wrap">
+           <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="absolute inset-0 h-full w-full object-cover opacity-60"
+  >
+    <source src="/images/hero/hero1.mp4" type="video/mp4" />
+  </video>
+
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/30 md:from-black/70 md:to-black/50"></div>
+          <div className="relative -mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                <h1 className="mb-5 text-3xl font-bold leading-tight text-gray-100  sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                   Let us help you transform your online presence and drive real, measurable growth.
                 </h1>
-                <p className=" mb-12 text-base leading-relaxed! text-black sm:text-lg md:text-xl">
+                <p className=" mb-12 text-base font-semibold leading-relaxed! text-gray-300 sm:text-lg md:text-xl">
                   VR Consulting is a Web Design and Development Company specialized in
                   high quality web design and development solutions, custom web development,
                   web based software application, SEO and web marketing services.
@@ -22,9 +34,9 @@ const Hero = () => {
                 <div className=" flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   
                   <Link href="/about" className="inline-block group">
-                  <span className="relative flex items-center justify-center w-40 h-12 overflow-hidden rounded-md border border-primary text-sm font-semibold uppercase cursor-pointer">
+                  <span className="relative flex items-center justify-center w-40 h-12 overflow-hidden rounded-md border border-white text-sm font-semibold uppercase cursor-pointer">
                     <span className="absolute inset-0 bg-primary translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
-                    <span className="relative z-10 flex items-center gap-2 text-primary group-hover:text-white transition-colors duration-300">
+                    <span className="relative z-10 flex items-center gap-2 text-white group-hover:text-white transition-colors duration-300">
                       About Us
                     </span>
 

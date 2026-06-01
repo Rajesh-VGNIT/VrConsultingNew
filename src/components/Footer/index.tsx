@@ -15,13 +15,13 @@ const Footer = () => {
   } = footerData;
 
   return (
-    <footer className="relative z-10 overflow-hidden bg-[#363d74] pt-16 text-white md:pt-20 lg:pt-24">
+    <footer className="relative z-10 overflow-hidden bg-[#363d74] pt-10 text-white md:pt-15 lg:pt-15">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
-          
+
           {/* Our Products */}
           <div className="w-full px-4 md:w-1/2 lg:w-3/12">
-            <div className="mb-12">
+            <div className="mb-7 lg:mb-12">
               <h2 className="mb-6 text-xl font-bold">
                 {ourProducts.heading}
               </h2>
@@ -82,7 +82,7 @@ const Footer = () => {
 
           {/* Company Profile */}
           <div className="w-full px-4 sm:w-1/2 lg:w-3/12">
-            <div className="mb-12">
+            <div className="mb-5 lg:mb-12">
               <h2 className="mb-6 text-xl font-bold">
                 {companyProfile.heading}
               </h2>
@@ -104,7 +104,7 @@ const Footer = () => {
 
           {/* Our Services */}
           <div className="w-full px-4 sm:w-1/2 lg:w-3/12">
-            <div className="mb-12">
+            <div className="mb-5 lg:mb-12">
               <h2 className="mb-6 text-xl font-bold">
                 {ourServices.heading}
               </h2>
@@ -126,65 +126,75 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="w-full px-4 lg:w-3/12">
-            <div className="mb-12">
+            <div className="mb-7 lg:mb-12">
               <h2 className="mb-6 text-xl font-bold">
                 {contactInfo.heading}
               </h2>
 
-              <ul>
+              <ul className="space-y-5 text-white">
+
                 {/* Phone */}
-                <li className="mb-4 flex items-start gap-3">
+                <li className="flex gap-4 items-start">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
                     fill="currentColor"
-                    className="mt-1 h-5 w-5"
+                    className="h-5 w-5 shrink-0 mt-1"
                   >
                     <path d="M391.1 351.1c-24.6 0-48.5-4-71-11.7-11.1-3.7-23.4-.9-31.9 7.5l-44.7 33.7c-51.8-27.6-94.4-70.2-122-122l33.7-44.7c8.4-8.5 11.2-20.8 7.5-31.9-7.7-22.5-11.7-46.4-11.7-71C151 93.1 137.9 80 121.9 80H48C21.5 80 0 101.5 0 128c0 212.1 171.9 384 384 384 26.5 0 48-21.5 48-48v-73.9c0-16-13.1-29.1-29.1-29.1z" />
                   </svg>
 
-                  <div>
-                    <Link href={`tel:${contactInfo.phone1}`}>
+                  <div className="leading-6">
+                    <Link href={`tel:${contactInfo.phone1}`} className="block hover:text-gray-200">
                       {contactInfo.phone1}
                     </Link>
 
-                    <br />
-
-                    <Link href={`tel:${contactInfo.phone2}`}>
+                    <Link href={`tel:${contactInfo.phone2}`} className="block hover:text-gray-200">
                       {contactInfo.phone2}
                     </Link>
                   </div>
                 </li>
 
                 {/* Email */}
-                <li className="mb-4 flex items-start gap-3">
+                <li className="flex gap-4 items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
                     fill="currentColor"
-                    className="mt-1 h-5 w-5"
+                    className="h-5 w-5 shrink-0"
                   >
                     <path d="M502.3 190.8 327.4 338c-15.4 12.9-37.5 12.9-52.9 0L9.7 190.8C3.9 186 0 178.9 0 171.2V112c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v59.2c0 7.7-3.9 14.8-9.7 19.6zM0 214.8v185.2c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V214.8L346.6 353.4c-27.7 23.2-67.5 23.2-95.2 0L0 214.8z" />
                   </svg>
 
-                  <Link href={`mailto:${contactInfo.email}`}>
+                  <Link
+                    href={`mailto:${contactInfo.email}`}
+                    className="hover:text-gray-200"
+                  >
                     {contactInfo.email}
                   </Link>
                 </li>
 
                 {/* Address */}
-                <li className="mb-4 flex items-start gap-3">
+                <li className="flex gap-4 items-start">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 384 512"
                     fill="currentColor"
-                    className="mt-1 h-5 w-5 ml-1"
+                    className="h-5 w-5 shrink-0 mt-1"
                   >
                     <path d="M172.3 501.7C26.97 291 0 269.4 0 192C0 85.96 85.96 0 192 0S384 85.96 384 192c0 77.4-26.97 99-172.3 309.7-9.5 13.8-29.9 13.8-39.4 0zM192 272c44.18 0 80-35.82 80-80S236.2 112 192 112s-80 35.82-80 80 35.82 80 80 80z" />
                   </svg>
 
-                  <p>{contactInfo.address}</p>
+                  <Link
+                    href="https://www.google.com/maps/place/VR+Consulting+-+Website+Design+%26+Development+service/@28.597351,77.348714,18z/data=!4m6!3m5!1s0x390ce5d2577eaaad:0xbf00ab8c1f61012f!8m2!3d28.5974309!4d77.348145!16s%2Fg%2F11h2hf410j?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="leading-6 hover:text-gray-200"
+                  >
+                    {contactInfo.address}
+                  </Link>
                 </li>
+
               </ul>
             </div>
           </div>

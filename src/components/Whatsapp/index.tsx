@@ -6,7 +6,7 @@ import { MessageCircle, Bot, X } from "lucide-react";
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false); // 👈 NEW
+  const [isVisible, setIsVisible] = useState(false); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,11 +24,11 @@ export default function ChatWidget() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-20 right-5 flex flex-col items-end gap-3 z-50">
+    <div className="fixed bottom-20 right-5 flex flex-col items-end gap-3 z-50 ">
 
       {/* Chatbot Panel */}
       {chatOpen && (
-        <div className="w-80 h-96 bg-white rounded-xl shadow-xl flex flex-col overflow-hidden">
+        <div className="w-80 h-96 bg-white rounded-xl shadow-xl flex flex-col overflow-hidden ">
           
           <div className="flex justify-between items-center p-3 border-b">
             <h2 className="font-semibold">Chatbot</h2>
@@ -90,7 +90,7 @@ export default function ChatWidget() {
       {/* Toggle Button */}
       <button
         onClick={() => setOpen(!open)}
-        className="bg-primary text-white p-4 rounded-full shadow-xl"
+        className="bg-primary text-white p-4 rounded-full shadow-xl cursor-pointer"
       >
         {open ? <X size={24} /> : <MessageCircle size={24} />}
       </button>

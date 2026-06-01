@@ -64,7 +64,7 @@ const Page = () => {
             {section.whyChooseSEOServices.map((item: any, i: number) => (
               <div
                 key={i}
-                className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
+                className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
                 {/* Top Gradient Glow */}
                 <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
@@ -127,7 +127,7 @@ const Page = () => {
             {section.OurSEOServices.map((item: any, i: number) => (
               <div
                 key={i}
-                className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
+                className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
                 {/* Top Gradient Glow */}
                 <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
@@ -184,7 +184,7 @@ const Page = () => {
 
         {data?.SEOServices?.LinkBuilding?.map((legacy: any, index: number) => (
           <div key={index} className="w-full mx-auto">
-            <div className="p-8 flex flex-col md:flex-row items-center gap-6 group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
+            <div className="p-8 flex flex-col md:flex-row items-center gap-6 group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
 
               <div className="relative w-30 h-30 flex-shrink-0">
                 <Image
@@ -216,7 +216,7 @@ const Page = () => {
 
         {data?.SEOServices?.LocalSEO?.map((legacy: any, index: number) => (
           <div key={index} className="w-full mx-auto">
-            <div className="p-8 flex flex-col md:flex-row items-center gap-6 group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
+            <div className="p-8 flex flex-col md:flex-row items-center gap-6 group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
 
               <div className="relative w-30 h-30 flex-shrink-0">
                 <Image

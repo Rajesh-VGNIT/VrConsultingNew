@@ -6,7 +6,8 @@ const Features = () => {
   return (
 
     <>
-      <section id="features" className="py-16 md:py-10 lg:py-10">
+      {/* <section id="features" className="py-5 md:py-10 lg:py-10"> */}
+      <section id="features" className="pt-5  md:py-10 lg:py-10" >
         <div className="container">
           <SectionTitle
             title="Expertise Area"

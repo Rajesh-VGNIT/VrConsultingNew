@@ -53,7 +53,7 @@ const AboutPage = () => {
             {/* Left Images */}
             <div className="relative flex justify-start">
 
-              <div className="relative h-96 w-72 overflow-hidden rounded-2xl shadow-xl">
+              <div data-aos="fade-left" className="relative h-96 w-72 overflow-hidden rounded-2xl shadow-xl">
                 <Image
                   src={whyVR.images?.[0]?.src}
                   alt={whyVR.images?.[0]?.alt || "about image"}
@@ -62,7 +62,7 @@ const AboutPage = () => {
                 />
               </div>
 
-              <div className="absolute -bottom-4 right-[60px] h-[260px] w-[200px] overflow-hidden rounded-2xl border-4 border-white shadow-lg">
+              <div data-aos="fade-right" className="absolute -bottom-4 right-[60px] h-[260px] w-[200px] overflow-hidden rounded-2xl border-4 border-white shadow-lg">
                 <Image
                   src={whyVR.images?.[1]?.src}
                   alt={whyVR.images?.[1]?.alt || "about image"}
@@ -74,7 +74,7 @@ const AboutPage = () => {
             </div>
 
             {/* Right Content */}
-            <div className="max-w-lg">
+            <div data-aos="fade-right" className="max-w-lg">
 
               <span className="text-sm font-semibold uppercase text-blue-600">
                 Why Choose Us
@@ -115,10 +115,10 @@ const AboutPage = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cards.map((item: any, i: number) => (
-            <div
+            <div data-aos="fade-left"
               key={i}
 
-              className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
+              className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
             >
               {/* Top Gradient Glow */}
               <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
@@ -199,7 +199,7 @@ const AboutPage = () => {
 
           {/* Mission */}
           {mission && (
-            <div className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
+            <div data-aos="fade-right" className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
               {/* Top Gradient Glow */}
               <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
               <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-fuchsia-100 rounded-full blur-3xl opacity-50"></div>
@@ -254,7 +254,7 @@ const AboutPage = () => {
 
           {/* Why We Succeed */}
           {whySuccess && (
-            <div className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
+            <div data-aos="fade-left" className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
 
               {/* Top Gradient Glow */}
               <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
@@ -265,7 +265,7 @@ const AboutPage = () => {
 
               {/* Icon */}
               <div className="mb-5">
-                <div className="flex items-center justify-center w-22 h-22 rounded-[22px] border-2 border-blue-300 shadow-xl group-hover:scale-105 transition duration-500">
+                <div className="flex items-center justify-center w-22 h-22 rounded-[22px] border-2 border-blue-300 shadow-xl group-hover:scale-105 transition duration-900">
 
                   <div className="flex items-center justify-center w-[62px] h-[62px] rounded-[18px] bg-white">
                     <div className="relative w-15 h-15">

@@ -94,23 +94,71 @@ import { Brand } from "@/types/brand";
 import Image from "next/image";
 import brandsData from "./brandsData";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+
 const Brands = () => {
   return (
-    <section id="sliderimage" className="py-10 md:py-10 lg:py-10">
+    <section
+      id="sliderimage"
+      className="pt-2 pb-4 md:py-10 lg:py-10"
+    >
       <div className="container">
-      
 
-        {/* Grid Wrapper */}
-        <div className= "w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 ">
+        {/* MOBILE SLIDER */}
+        <div className="relative md:hidden">
 
-          {brandsData.slice(0, 26).map((brand) => (
-            <SingleBrand key={brand.id} brand={brand} />
-          ))}
+          {/* Left Arrow */}
+          <button
+            className="brand-prev absolute left-0 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg"
+          >
+            <ChevronLeft size={18} />
+          </button>
+
+          {/* Right Arrow */}
+          <button
+            className="brand-next absolute right-0 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg"
+          >
+            <ChevronRight size={18} />
+          </button>
+
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            navigation={{
+              prevEl: ".brand-prev",
+              nextEl: ".brand-next",
+            }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            spaceBetween={12}
+            slidesPerView={2}
+          >
+            {brandsData.slice(0, 26).map((brand) => (
+              <SwiperSlide key={brand.id}>
+                <SingleBrand brand={brand} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
         </div>
 
-     
-    </div>
+        {/* DESKTOP GRID */}
+        <div className="hidden md:grid grid-cols-4 gap-6 lg:grid-cols-6">
+          {brandsData.slice(0, 30).map((brand) => (
+            <SingleBrand
+              key={brand.id}
+              brand={brand}
+            />
+          ))}
+        </div>
+
+      </div>
     </section>
   );
 };
@@ -119,17 +167,21 @@ export default Brands;
 
 /* ================= SINGLE BRAND CARD ================= */
 
-const SingleBrand = ({ brand }: { brand: Brand }) => {
+const SingleBrand = ({
+  brand,
+}: {
+  brand: Brand;
+}) => {
   const { href, image, name } = brand;
 
   return (
-    <div className="group flex items-center justify-center rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <div className="group flex h-20 items-center justify-center rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
       <a
         href={href}
         target="_blank"
         rel="nofollow noreferrer"
-        className="relative h-12 w-full flex items-center justify-center"
+        className="relative flex h-12 w-full items-center justify-center"
       >
         <Image
           src={image}
