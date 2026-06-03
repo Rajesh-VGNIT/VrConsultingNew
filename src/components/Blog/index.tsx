@@ -4,9 +4,9 @@ import blogData from "./blogData";
 
 const Blog = () => {
   return (
-    <section
+    <section data-aos="fade-up"
       id="blog"
-      className="bg-gray-light pt-3 pb-16 "
+      className="bg-gray-light pt-4 pb-10 "
     >
       <div className="container">
         <SectionTitle

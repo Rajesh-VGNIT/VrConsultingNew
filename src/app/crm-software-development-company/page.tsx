@@ -30,7 +30,7 @@ const Page = () => {
       />
 
       {/* HERO */}
-      <section className="relative mt-7 overflow-hidden bg-[#0B1120] flex items-center">
+      <section data-aos="fade-up" className="relative mt-7 overflow-hidden bg-[#0B1120] flex items-center">
 
         {/* Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B1120] via-[#111827] to-[#1E1B4B]"></div>
@@ -110,7 +110,7 @@ const Page = () => {
 
                 <Image
                   src={section?.heroImage || "/images/fallback.png"}
-                  alt="hero"
+                  alt="image"
                   fill
                   className="object-cover"
                 />
@@ -120,7 +120,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <div className="container mx-auto py-12 space-y-16">
+      <div data-aos="fade-up" className="container mx-auto py-12 space-y-16">
 
         {/*Why Choose Professional SEO Services? */}
         <div>
@@ -128,11 +128,9 @@ const Page = () => {
 
           </p>
 
-
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3  gap-6">
             {section.ProfessionalSEOServices?.map((item: any, i: number) => (
-              <div
+              <div data-aos="fade-up"
                 key={i}
                 className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >

@@ -104,7 +104,7 @@ const Contact = () => {
         <ToastContainer position="top-right" autoClose={2000} />
 
         <div className="container">
-          <div className="-mx-4 flex flex-wrap">
+          <div data-aos="fade-up" className="-mx-4 flex flex-wrap">
 
             <div className="mx-auto mt-[30px] w-full px-4 sm:mt-[40px] lg:mt-0 lg:w-7/12 xl:w-7/12">
               <div className="mb-12 rounded-xs bg-white px-8 py-11 shadow-three sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[25px]">

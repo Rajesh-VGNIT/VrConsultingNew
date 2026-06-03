@@ -3,6 +3,7 @@
 // import { Brand } from "@/types/brand";
 // import Image from "next/image";
 // import brandsData from "./brandsData";
+// import Link from "next/link";
 
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Autoplay, Navigation } from "swiper/modules";
@@ -68,7 +69,7 @@
 
 //   return (
 //     <div className="flex items-center bg-gray-100 justify-center p-[10px]  rounded-lg">
-//   <a
+//   <Link
 //     href={href}
 //     target="_blank"
 //     rel="nofollow noreferrer"
@@ -82,7 +83,7 @@
 //   priority
 //       className="object-contain  "
 //     />
-//   </a>
+//   </Link>
 // </div>
 //   );
 // };
@@ -98,11 +99,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 
 const Brands = () => {
   return (
-    <section
+    <section data-aos="fade-up"
       id="sliderimage"
       className="pt-2 pb-4 md:py-10 lg:py-10"
     >
@@ -177,7 +179,7 @@ const SingleBrand = ({
   return (
     <div className="group flex h-20 items-center justify-center rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
-      <a
+      <Link
         href={href}
         target="_blank"
         rel="nofollow noreferrer"
@@ -190,7 +192,7 @@ const SingleBrand = ({
           quality={100}
           className="object-contain transition-transform duration-300 group-hover:scale-105"
         />
-      </a>
+      </Link>
 
     </div>
   );

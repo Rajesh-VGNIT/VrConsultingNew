@@ -31,13 +31,13 @@ export default function SmoPage() {
           <div className="container mx-auto">
 
             {/* TITLE */}
-            <div className="text-center mb-14">
+            <div data-aos="fade-up" className="text-center mb-14">
               <h2 className="mb-5 text-2xl font-bold text-black text-center lg:text-4xl sm:text-2xl">
                 Social Media Optimization
               </h2>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4 mb-20">
+            <div data-aos="fade-up" className="flex flex-wrap justify-center gap-4 mb-20">
               <div className="flex flex-wrap justify-center gap-4">
                 {portfolioBtn.map((item, index) => (
                   <Link
@@ -53,50 +53,50 @@ export default function SmoPage() {
 
             {/* GRID */}
             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-  {smo.map((item) => (
-    <a
-      key={item.id}
-      href={item.url}
-      className="group overflow-hidden rounded-[30px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-[1px]"
-    >
-      <div className="flex h-full flex-col rounded-[30px] bg-slate-950">
-        
-        {/* Image */}
-        <div className="overflow-hidden rounded-t-[30px]">
-          <img
-            src={item.image}
-            alt={item.title}
-            className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-110"
-          />
-        </div>
+              {smo.map((item) => (
+                <Link data-aos="fade-up"
+                  key={item.id}
+                  href={item.url}
+                  className="group overflow-hidden rounded-[30px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-[1px]"
+                >
+                  <div className="flex h-full flex-col rounded-[30px] bg-slate-950">
 
-        {/* Fixed Bottom Section */}
-        <div className="flex h-[180px] flex-col justify-between p-6">
-          <div>
-            <span className="text-primary text-sm uppercase tracking-widest">
-              {item.category}
-            </span>
+                    {/* Image */}
+                    <div className="overflow-hidden rounded-t-[30px]">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-110"
+                      />
+                    </div>
 
-            <h3 className="mt-3 text-2xl font-bold text-white line-clamp-2">
-              {item.title}
-            </h3>
-          </div>
+                    {/* Fixed Bottom Section */}
+                    <div className="flex h-[180px] flex-col justify-between p-6">
+                      <div>
+                        <span className="text-primary text-sm uppercase tracking-widest">
+                          {item.category}
+                        </span>
 
-          <div className="flex items-center justify-between">
-            <span className="text-gray-400">
-             View Website
-            </span>
+                        <h3 className="mt-3 text-2xl font-bold text-white line-clamp-2">
+                          {item.title}
+                        </h3>
+                      </div>
 
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white rotate-[-40deg]">
-  →
-</div>
-          </div>
-        </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-400">
+                          View Website
+                        </span>
 
-      </div>
-    </a>
-  ))}
-</div>
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white rotate-[-40deg]">
+                          →
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </Link>
+              ))}
+            </div>
 
           </div>
 

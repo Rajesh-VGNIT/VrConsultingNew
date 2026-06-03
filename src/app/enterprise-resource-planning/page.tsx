@@ -11,9 +11,7 @@ export async function generateMetadata() {
       cache: "no-store",
     }
   );
-
   const pageMetadata = await response.json();
-
   return pageMetadata["enterprise-resource-planning"];
 }
 const Page = () => {
@@ -27,7 +25,7 @@ const Page = () => {
         description="Enterprise Resource Planning (ERP) streamlines business operations by integrating finance, inventory, HR, sales, and reporting into one system." />
 
       {/* HERO */}
-      <section className="relative mt-7 overflow-hidden bg-[#0B1120] flex items-center">
+      <section data-aos="fade-up" className="relative mt-7 overflow-hidden bg-[#0B1120] flex items-center">
 
         {/* Background Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B1120] via-[#111827] to-[#1E1B4B]"></div>
@@ -78,8 +76,6 @@ const Page = () => {
                 {section?.description}
               </p>
 
-
-
             </div>
 
             {/* Right Image */}
@@ -96,7 +92,7 @@ const Page = () => {
 
                 <Image
                   src={section?.heroImage || "/images/fallback.png"}
-                  alt="hero"
+                  alt="image"
                   fill
                   className="object-cover"
                 />
@@ -109,7 +105,7 @@ const Page = () => {
       <div className="container mx-auto  py-12 space-y-16">
 
         {/* Why Choose Flutter for Mobile */}
-        <div>
+        <div data-aos="fade-up">
 
           <p className="text-sm mb-3 text-center text-blue-600  uppercase">
             What we provide
@@ -120,7 +116,7 @@ const Page = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {section.whyChooseFlutter.map((item: any, i: number) => (
-              <div
+              <div data-aos="fade-up"
                 key={i}
 
                 className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
@@ -176,10 +172,8 @@ const Page = () => {
           </div>
         </div>
 
-
-
         {/*  CTA */}
-        <div className="text-center">
+        <div data-aos="fade-up" className="text-center">
           <h2 className="text-xl font-semibold mb-3">
             {section.cta.title}
           </h2>

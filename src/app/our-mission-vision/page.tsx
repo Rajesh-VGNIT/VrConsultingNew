@@ -10,17 +10,13 @@ export async function generateMetadata() {
       cache: "no-store",
     }
   );
-
   const pageMetadata = await response.json();
-
   return pageMetadata["our-mission-vision"];
 }
 
 const Page = () => {
   const section = data?.["OurMissionVision"];
-
   if (!section) return null;
-
 
 
   return (
@@ -34,7 +30,7 @@ const Page = () => {
       <div className="container mx-auto py-12 space-y-16">
 
         {/* HERO */}
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div data-aos="fade-up" className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-2xl font-semibold mb-4">
               {section.title}
@@ -47,7 +43,7 @@ const Page = () => {
           <div className="relative w-full max-w-[450px] h-110 ml-auto rounded-xl overflow-hidden">
             <Image
               src={section.heroImage}
-              alt="hero"
+              alt="image"
               fill
               className="object-cover"
             />
@@ -55,10 +51,8 @@ const Page = () => {
         </div>
 
 
-
-
         {/* SERVICES */}
-        <div>
+        <div data-aos="fade-up">
           <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
             What we provide
           </p>
@@ -69,7 +63,7 @@ const Page = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section["E-commerceWebsite"]?.map((item: any, i: number) => (
-              <div
+              <div data-aos="fade-up"
                 key={i}
                 className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >

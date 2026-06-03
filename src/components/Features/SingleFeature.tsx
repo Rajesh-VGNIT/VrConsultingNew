@@ -7,7 +7,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
   return (
 
 
-<div className="w-full h-full">
+<div data-aos="fade-up" className="w-full h-full">
   <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
 
     <div className="absolute -top-20 -right-20 h-56 w-56 rounded-full bg-blue-100/40 blur-3xl"></div>

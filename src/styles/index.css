@@ -160,9 +160,8 @@ body{
 }
 
 
+
 #home {
-    /* background-color: #1d1b1bfc; */
-    /* background-image: linear-gradient(#00000000, #0000002e), url(/images/hero/hero.jpg); */
     background-position: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -176,15 +175,7 @@ body{
 .faq-wrapper .faq-heading-par {
   display: none;
 }
-/* .services-bg{
-  background-image: url(/images/services/services-bg.png);
-  margin-top: 85px;
-  padding-bottom: 20px;
-  background-position: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-} */
+
 .services-bg {
   margin-top: 85px;
   padding-bottom: 20px;
@@ -237,11 +228,9 @@ h1, h2, h3, h4, h5, h6{
 }
 }
 @media screen and (max-width: 1024px) {
-  .container {
-    padding: 15px 15px;
-  }
+  
   .services-bg {
-    margin-top: 100px;
+    margin-top: 70px;
 }
   
 }

@@ -8,9 +8,6 @@ import SingleTestimonial from "./SingleTestimonial";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 
-import "swiper/css";
-import "swiper/css/navigation";
-
 const testimonialData: Testimonial[] = [
   {
     id: 1,
@@ -52,7 +49,7 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="bg-gray-light relative z-10 py-16 md:py-20 lg:py-10 ">
+    <section data-aos="fade-up" className="bg-gray-light relative z-10 py-16 md:py-20 lg:py-10 ">
       <div className="container">
         <SectionTitle
           title="What Say Our Customers"

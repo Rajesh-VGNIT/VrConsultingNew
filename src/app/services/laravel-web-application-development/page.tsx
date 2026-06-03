@@ -29,8 +29,8 @@ const Page = () => {
       <div className="container mx-auto py-12 space-y-16">
 
         {/* HERO */}
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
+        <div data-aos="fade-up" className="grid md:grid-cols-2 gap-10 items-center">
+          <div >
             <h1 className="text-2xl font-semibold mb-4">
               {section?.title}
             </h1>
@@ -43,17 +43,15 @@ const Page = () => {
           <div className="relative w-full max-w-[500px] h-110 ml-auto">
             <Image
               src={section?.heroImage || "/images/fallback.png"}
-              alt="hero"
+              alt="image"
               fill
               className="object-cover rounded-xl"
             />
           </div>
-        </div>
-
-       
+        </div>   
 
         {/* CTA */}
-        <div className="text-left">
+        <div data-aos="fade-up" className="text-left">
           <h2 className="text-xl font-semibold mb-3">
             {section?.cta2?.title}
           </h2>

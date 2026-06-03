@@ -7,7 +7,7 @@ const Features = () => {
 
     <>
       {/* <section id="features" className="py-5 md:py-10 lg:py-10"> */}
-      <section id="features" className="pt-5  md:py-10 lg:py-10" >
+      <section id="features" className="pt-5  md:py-10 lg:py-10" data-aos="fade-up">
         <div className="container">
           <SectionTitle
             title="Expertise Area"

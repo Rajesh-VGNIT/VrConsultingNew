@@ -97,7 +97,7 @@ export default function CounterDashboard() {
     <div className="flex w-full items-center justify-center bg-gray-100 py-16 md:py-10 lg:py-10">
   <div className="container px-4">
     
-    <div
+    <div data-aos="fade-up"
       ref={sectionRef}
       className="grid overflow-hidden rounded-2xl bg-white shadow-xl 
       grid-cols-2 divide-y divide-gray-200 

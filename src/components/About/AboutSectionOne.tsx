@@ -24,7 +24,7 @@ const AboutSectionOne = () => {
       className="bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-900 pt-16 md:pt-20 lg:pt-10"
     >
       <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-15">
+        <div data-aos="fade-up" className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-15">
           <div className="w-full -mx-4 flex flex-col items-center justify-center text-center text-white flex-wrap">
             <h3 className="mb-4 text-3xl font-bold leading-tight! text-white sm:text-4xl md:text-[35px]">
               Why VR Consulting?
@@ -45,7 +45,7 @@ const AboutSectionOne = () => {
               </p>
 
 
-              <div
+              <div data-aos="fade-up"
                 className="mb-12 max-w-[570px] lg:mb-0"
                 data-wow-delay=".15s"
               >
@@ -66,11 +66,7 @@ const AboutSectionOne = () => {
                 </div>
               </div>
 
-
-
-
-
-              <div className="mx-auto mt-3 mb-6 flex flex-col items-center justify-between gap-8 rounded-2xl border border-gray-200 bg-white px-6 py-6 shadow-lg hover:border-blue-400 hover:shadow-2xl md:mb-3 md:flex-row md:px-12">
+              <div data-aos="fade-up" className="mx-auto mt-3 mb-6 flex flex-col items-center justify-between gap-8 rounded-2xl border border-gray-200 bg-white px-6 py-6 shadow-lg hover:border-blue-400 hover:shadow-2xl md:mb-3 md:flex-row md:px-12">
 
                 {/* Left Content */}
                 <div className="flex items-center gap-4">
@@ -117,7 +113,7 @@ const AboutSectionOne = () => {
 
             </div>
 
-            <div className="w-full px-4 lg:w-1/2">
+            <div data-aos="fade-up" className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-25/24 max-w-[500px] lg:mr-0">
                 <Image
                   src="/images/about/about-image.jpg"

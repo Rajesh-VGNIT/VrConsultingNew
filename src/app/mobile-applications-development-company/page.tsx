@@ -10,19 +10,13 @@ export async function generateMetadata() {
       cache: "no-store",
     }
   );
-
   const pageMetadata = await response.json();
-
   return pageMetadata["mobile-applications-development-company"];
 }
 
-
 const Page = () => {
   const section = data?.["BestMobileApplicationDevelopment"];
-
   if (!section) return null;
-
-
 
   return (
     <>
@@ -35,7 +29,7 @@ const Page = () => {
       <div className="container mx-auto py-12 space-y-16">
 
         {/* HERO */}
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div data-aos="fade-up" className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-2xl font-semibold mb-4">
               {section.title}
@@ -52,7 +46,7 @@ const Page = () => {
           <div className="relative w-full max-w-[450px] h-110 ml-auto rounded-xl overflow-hidden">
             <Image
               src={section.heroImage}
-              alt="hero"
+              alt="image"
               fill
               className="object-cover"
             />

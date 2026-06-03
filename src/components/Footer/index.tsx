@@ -15,7 +15,7 @@ const Footer = () => {
   } = footerData;
 
   return (
-    <footer className="relative z-10 overflow-hidden bg-[#363d74] pt-10 text-white md:pt-15 lg:pt-15">
+    <footer className="relative z-10 overflow-hidden  pt-10 text-white md:pt-15 lg:pt-15  bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-900">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
 

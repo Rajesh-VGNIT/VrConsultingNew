@@ -30,7 +30,7 @@ const Page = () => {
       <div className="container mx-auto  py-12 space-y-16">
 
         {/* HERO */}
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div data-aos="fade-up" className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-2xl font-semibold mb-4">
               {section.title}
@@ -43,7 +43,7 @@ const Page = () => {
           <div className="relative ml-auto w-full max-w-[500px]  h-110 rounded-xl overflow-hidden">
             <Image
               src={section.heroImage}
-              alt="hero"
+              alt="image"
               fill
               className=" rounded-xl"
             />
@@ -51,7 +51,7 @@ const Page = () => {
         </div>
 
         {/* Why Choose Professional SEO Services? */}
-        <div>
+        <div data-aos="fade-up">
 
           <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
             What we provide
@@ -62,7 +62,7 @@ const Page = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.whyChooseSEOServices.map((item: any, i: number) => (
-              <div
+              <div data-aos="fade-up"
                 key={i}
                 className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
@@ -115,7 +115,7 @@ const Page = () => {
         </div>
 
         {/*  Our SEO Services */}
-        <div>
+        <div data-aos="fade-up">
           <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
             What we provide
           </p>
@@ -125,7 +125,7 @@ const Page = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section.OurSEOServices.map((item: any, i: number) => (
-              <div
+              <div data-aos="fade-up"
                 key={i}
                 className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
@@ -179,11 +179,10 @@ const Page = () => {
           </div>
         </div>
 
-
         {/* Link Building */}
 
         {data?.SEOServices?.LinkBuilding?.map((legacy: any, index: number) => (
-          <div key={index} className="w-full mx-auto">
+          <div data-aos="fade-up" key={index} className="w-full mx-auto">
             <div className="p-8 flex flex-col md:flex-row items-center gap-6 group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
 
               <div className="relative w-30 h-30 flex-shrink-0">
@@ -211,11 +210,10 @@ const Page = () => {
           </div>
         ))}
 
-
         {/* Local SEO */}
 
         {data?.SEOServices?.LocalSEO?.map((legacy: any, index: number) => (
-          <div key={index} className="w-full mx-auto">
+          <div data-aos="fade-up" key={index} className="w-full mx-auto">
             <div className="p-8 flex flex-col md:flex-row items-center gap-6 group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
 
               <div className="relative w-30 h-30 flex-shrink-0">
@@ -244,7 +242,7 @@ const Page = () => {
         ))}
         {/* WHY CHOOSE US */}
 
-        <div className="faq-wrapper">
+        <div data-aos="fade-up" className="faq-wrapper">
           <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
             What we provide
           </p>
@@ -255,7 +253,7 @@ const Page = () => {
         </div>
 
         {/*  CTA */}
-        <div className="text-center">
+        <div data-aos="fade-up" className="text-center">
           <h2 className="text-xl font-semibold mb-3">
             {section.cta.title}
           </h2>

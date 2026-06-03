@@ -30,10 +30,8 @@ const Page = () => {
       />
 
       <div className="container mx-auto py-12 space-y-16">
-
-
-        {/*Key Aspects of Our Functional Testing Services*/}
-        <div>
+       {/*Key Aspects of Our Functional Testing Services*/}
+        <div data-aos="fade-up">
           <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
             What we provide
           </p>
@@ -41,10 +39,9 @@ const Page = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">
             Products
           </h2>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section?.["OurProductcard"]?.map((item: any, i: number) => (
-              <div
+              <div data-aos="fade-up"
                 key={i}
                 className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-500  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >

@@ -46,37 +46,37 @@ const menuData: Menu[] = [
         {
           id: 9,
           title: "PHP Web Application Development",
-          path: "/services/php-web-application",
+          path: "/php-web-application",
           newTab: false,
         },
         {
           id: 10,
           title: "Codeigniter Framework",
-          path: "/services/codeigniter-framework",
+          path: "/codeigniter-framework",
           newTab: false,
         },
         {
           id: 11,
           title: "Laravel Development",
-          path: "/services/laravel-web-application-development",
+          path: "/laravel-web-application-development",
           newTab: false,
         },
         {
           id: 12,
           title: "E-Commerce Website Development",
-          path: "/services/e-commerce-website-development",
+          path: "/e-commerce-website-development",
           newTab: false,
         },
         {
           id: 13,
           title: "Node Js Development",
-          path: "/services/node-js-development-company",
+          path: "/node-js-development-company",
           newTab: false,
         },
         {
           id: 14,
           title: "Dot Net Development",
-          path: "/services/dot-net-development-company",
+          path: "/dot-net-development-company",
           newTab: false,
         }
       ]
@@ -90,19 +90,19 @@ const menuData: Menu[] = [
         {
           id: 16,
           title: "IOS Application Development",
-          path: "/services/ios-application-development",
+          path: "/ios-application-development",
           newTab: false,
         },
         {
           id: 17,
           title: "Flutter Application Development",
-          path: "/services/flutter-application-development",
+          path: "/flutter-application-development",
           newTab: false,
         },
         {
           id: 18,
           title: "Android Application Development",
-          path: "/services/android-app-development-company",
+          path: "/android-app-development-company",
           newTab: false,
         },
       ]
@@ -116,19 +116,19 @@ const menuData: Menu[] = [
         {
           id: 20,
           title: "Magento CMS Development Services",
-          path: "/services/magento-development",
+          path: "/magento-development",
           newTab: false,
         },
         {
           id: 21,
           title: "WordPress Development Services",
-          path: "/services/wordpress-development-services",
+          path: "/wordpress-development-services",
           newTab: false,
         },
         {
           id: 22,
           title: "Drupal CMS Development Services",
-          path: "/services/drupal-development",
+          path: "/drupal-development",
           newTab: false,
         },
       ]
@@ -141,19 +141,19 @@ const menuData: Menu[] = [
         {
           id: 24,
           title: "Custom Web Design",
-          path: "/services/custom-web-design",
+          path: "/custom-web-design",
           newTab: false,
         },
         {
           id: 25,
           title: "Responsive Web Design",
-          path: "/services/responsive-website-designing-development",
+          path: "/responsive-website-designing-development",
           newTab: false,
         },
         {
           id: 26,
           title: "User Interface Design-UI",
-          path: "/services/user-interface-design-ux",
+          path: "/user-interface-design-ux",
           newTab: false,
         },
       ]
@@ -166,19 +166,19 @@ const menuData: Menu[] = [
         {
           id: 28,
           title: "Custom Web Application Development",
-          path: "/services/custom-website-development-company",
+          path: "/custom-website-development-company",
           newTab: false,
         },
         {
           id: 29,
           title: "Custom Mobile Application Development",
-          path: "/services/mobile-applications-development-company",
+          path: "/mobile-applications-development-company",
           newTab: false,
         },
         {
           id: 30,
           title: "React Native Application Development",
-          path: "/services/react-native-application-development",
+          path: "/react-native-application-development",
           newTab: false,
         },
       ]
@@ -191,25 +191,25 @@ const menuData: Menu[] = [
         {
           id: 32,
           title: "SEO Service",
-          path: "/services/seo-services-provider-company",
+          path: "/seo-services-provider-company",
           newTab: false,
         },
         {
           id: 33,
           title: "PPC Management",
-          path: "/services/ppc",
+          path: "/ppc",
           newTab: false,
         },
         {
           id: 34,
           title: "Social Networking",
-          path: "/services/social-networking",
+          path: "/social-networking",
           newTab: false,
         },
         {
           id: 35,
           title: "Social media Marketing",
-          path: "/services/social-media-marketing",
+          path: "/social-media-marketing",
           newTab: false,
         },
       ]
@@ -222,13 +222,13 @@ const menuData: Menu[] = [
         {
           id: 37,
           title: "Functional Testing",
-          path: "/services/functional-testing",
+          path: "/functional-testing",
           newTab: false,
         },
         {
           id: 38,
           title: "Performance Testing",
-          path: "/services/performance-testing",
+          path: "/performance-testing",
           newTab: false,
         }
       ]
@@ -241,13 +241,13 @@ const menuData: Menu[] = [
         {
           id: 40,
           title: "Domain Hosting",
-          path: "/services/domain-hosting",
+          path: "/domain-hosting",
           newTab: false,
         },
         {
           id: 41,
           title: "AWS /Azure/Docker Server",
-          path: "/services/aws-server",
+          path: "/aws-server",
           newTab: false,
         }
       ]

@@ -10,7 +10,7 @@ const FAQEcommerce = ({ items }: any) => {
   };
 
   return (
-    <div>
+    <div data-aos="fade-up">
       <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
         What we provide
       </p>

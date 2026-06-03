@@ -10,7 +10,7 @@ const FAQ = ({ items }: any) => {
   };
 
   return (
-    <div>
+    <div data-aos="fade-up">
       {/* Heading */}
       <div className="faq-heading-par">
         <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">

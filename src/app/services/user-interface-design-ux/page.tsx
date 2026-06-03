@@ -30,7 +30,7 @@ const Page = () => {
       <div className="container mx-auto py-12 space-y-16">
 
         {/* HERO */}
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div data-aos="fade-up" className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-2xl font-semibold mb-4">
               {section?.title}
@@ -44,7 +44,7 @@ const Page = () => {
           <div className="relative w-full max-w-[500px] h-110 ml-auto">
             <Image
               src={section?.heroImage || "/images/fallback.png"}
-              alt="hero"
+              alt="image"
               fill
               className="object-cover rounded-xl"
             />
@@ -52,7 +52,7 @@ const Page = () => {
         </div>
 
         {/* node js content cards */}
-        <div>
+        <div data-aos="fade-up">
           <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
             What we provide
           </p>
@@ -63,7 +63,7 @@ const Page = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section?.["UIUXDevelopmentcard"]?.map((item: any, i: number) => (
-              <div
+              <div data-aos="fade-up"
                 key={i}
                 className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
@@ -115,11 +115,8 @@ const Page = () => {
           </div>
         </div>
 
-
-
-
         {/* CTA */}
-        <div className="text-center">
+        <div data-aos="fade-up" className="text-center">
           <h2 className="text-xl font-semibold mb-3">
             {section?.cta?.title}
           </h2>

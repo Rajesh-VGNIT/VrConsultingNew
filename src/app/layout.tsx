@@ -1,5 +1,5 @@
 "use client";
-
+import { useEffect } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -8,12 +8,14 @@ import "../styles/index.css";
 import { Providers } from "./providers";
 import Whatsapp from "@/components/Whatsapp";
 import "react-toastify/dist/ReactToastify.css";
+import "swiper/css";
+import "swiper/css/navigation";
 
 /* AOS */
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { useEffect } from "react";
+
 
 const varela = Varela({
   subsets: ["latin"],
@@ -28,21 +30,21 @@ export default function RootLayout({
 
   /* ================= AOS INIT ================= */
 
-  useEffect(() => {
+   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 800,
       once: true,
-      easing: "ease-in-out",
     });
   }, []);
 
   return (
+ 
     <html suppressHydrationWarning lang="en">
 
       <head />
 
       <body className={`${varela?.className ?? ""}`}>
-
+  
         <Providers>
           <div className="isolate">
 
@@ -59,6 +61,7 @@ export default function RootLayout({
           <ScrollToTop />
 
         </Providers>
+        
 
       </body>
     </html>

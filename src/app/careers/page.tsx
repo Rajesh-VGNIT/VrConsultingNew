@@ -5,6 +5,7 @@ import data from "@/data/footer.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
 import PopupCarrer from "@/components/PopupCarrer";
 import pageMetadata from "@/data/metadata.json";
+import Link from "next/link";
 
 export const metadata = pageMetadata["careers"];
 
@@ -33,7 +34,7 @@ const Page = () => {
 
       <div className="container w-full py-10  mx-auto py-12 space-y-16">
 
-        <div>
+        <div data-aos="fade-up">
           <h2 className="text-3xl font-semibold mb-8 text-center">
             Get Hired,
             <br />
@@ -113,21 +114,21 @@ const Page = () => {
                     <p className="text-sm font-semibold text-gray-600 break-words">
                       If Interested contact us @{" "}
 
-                      <a
+                      <Link
                         href="tel:+917982616770"
                         className="hover:underline"
                       >
                         +91 7982616770
-                      </a>
+                      </Link>
 
                       {" "}or email us @{" "}
 
-                      <a
+                      <Link
                         href={`mailto:${item.email}`}
                         className="hover:underline"
                       >
                         {item.email}
-                      </a>
+                      </Link>
                     </p>
                   )}
                 </div>

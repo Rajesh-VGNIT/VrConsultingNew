@@ -2,12 +2,12 @@ import Image from "next/image";
 
 const AboutSectionTwo = () => {
   return (
-    <section className="py-16 md:py-20 lg:py-10">
+    <section data-aos="fade-up" className="py-16 md:py-20 lg:py-10">
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
           
           
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-up" className="w-full px-4 lg:w-1/2">
             <div className="relative mx-auto mb-12 aspect-[25/24] max-w-[500px] lg:m-0">
               <Image
                 src="/images/about/about-image2.jpg"
@@ -25,7 +25,7 @@ const AboutSectionTwo = () => {
           </div>
 
        
-          <div className="w-full px-4 lg:w-1/2">
+          <div data-aos="fade-up" className="w-full px-4 lg:w-1/2">
             <div className="max-w-[570px]">
 
              

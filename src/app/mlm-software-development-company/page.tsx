@@ -28,7 +28,7 @@ const Page = () => {
         pageName="Multi Level Marketing"
         description="India’s leading MLM software development company delivering secure, scalable, and feature-rich direct selling business solutions."
       />
-      <section className="relative overflow-hidden py-24 bg-gradient-to-br from-slate-50 via-white to-cyan-50">
+      <section data-aos="fade-up" className="relative overflow-hidden py-12 bg-gradient-to-br from-slate-50 via-white to-cyan-50">
 
         {/* Background Glow */}
         <div className="absolute top-0 left-0 w-72 h-72 bg-cyan-200/40 rounded-full blur-3xl"></div>
@@ -106,21 +106,15 @@ const Page = () => {
               {/* Gradient Glow */}
               <div className="absolute inset-0 rounded-[35px] blur-2xl opacity-25 scale-95"></div>
 
-
-
               {/* Inner Media */}
               <div className="relative flex justify-center lg:justify-end">
-
-
 
                 {/* Image Card */}
                 <div className="relative w-full max-w-[450px] h-110 rounded-[40px] overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
 
-
-
                   <Image
                     src={section?.heroImage || "/images/fallback.png"}
-                    alt="hero"
+                    alt="image"
                     fill
                     className="object-cover"
                   />
@@ -138,16 +132,15 @@ const Page = () => {
 
         {/* HERO */}
 
-
         {/* SERVICES */}
-        <div>
+        <div data-aos="fade-up">
           <h2 className="text-xl font-semibold mb-8 text-center">
             Best MLM Software Development Services Company in India
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 gap-6">
             {section.ProfessionalSEOServices?.map((item: any, i: number) => (
-              <div
+              <div data-aos="fade-up"
                 key={i}
                 className="group relative overflow-hidden rounded-[20px] bg-white border border-slate-200 p-3 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >

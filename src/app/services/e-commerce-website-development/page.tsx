@@ -34,7 +34,7 @@ const Page = () => {
       <div className="container mx-auto py-12 space-y-16">
 
         {/* HERO */}
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div data-aos="fade-up" className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-2xl font-semibold mb-4">
               {section.title}
@@ -47,7 +47,7 @@ const Page = () => {
           <div className="relative w-full max-w-[450px] h-110 ml-auto rounded-xl overflow-hidden">
             <Image
               src={section.heroImage}
-              alt="hero"
+              alt="image"
               fill
               className="object-cover"
             />
@@ -55,7 +55,7 @@ const Page = () => {
         </div>
 
         {/* PROFESSIONAL ECOMMERCE */}
-        <div>
+        <div data-aos="fade-up">
           <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
             What we provide
           </p>
@@ -66,7 +66,7 @@ const Page = () => {
 
           <div className="grid md:grid-cols-3  gap-6">
             {section.professionalEcommerce?.map((item: any, i: number) => (
-              <div
+              <div data-aos="fade-up"
                 key={i}
                 className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
@@ -120,7 +120,7 @@ const Page = () => {
 
 
         {/* SERVICES */}
-        <div>
+        <div data-aos="fade-up">
           <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
             What we provide
           </p>
@@ -131,7 +131,7 @@ const Page = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {section["E-commerceWebsite"]?.map((item: any, i: number) => (
-              <div
+              <div data-aos="fade-up"
                 key={i}
                 className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
               >
@@ -187,7 +187,7 @@ const Page = () => {
 
         {/* INVENTORY */}
         {inventory && (
-          <div className="w-full mx-auto">
+          <div data-aos="fade-up" className="w-full mx-auto">
             <div className="p-8 flex flex-col md:flex-row items-center gap-6 group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
 
               <div className="relative w-30 h-30 flex-shrink-0">
@@ -217,7 +217,7 @@ const Page = () => {
 
         {/* Search Engine Optimization */}
         {optimization && (
-          <div className="w-full mx-auto">
+          <div data-aos="fade-up" className="w-full mx-auto">
             <div className="p-8 flex flex-col md:flex-row items-center gap-6 group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
 
               <div className="relative w-30 h-30 flex-shrink-0">
@@ -249,7 +249,7 @@ const Page = () => {
         <FAQEcommerce items={section?.whyChooseUs} />
 
         {/* CTA */}
-        <div className="text-left ">
+        <div data-aos="fade-up" className="text-left ">
           <h2 className="text-xl text-center font-semibold mb-3">
             {section.cta3.title}
           </h2>

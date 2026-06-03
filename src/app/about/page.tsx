@@ -32,7 +32,7 @@ const AboutPage = () => {
 
 
         {/* PROFESSIONAL ECOMMERCE */}
-        <div>
+        <div data-aos="fade-up">
           <p className="text-sm mb-3 text-center text-blue-600 font-semibold uppercase">
             What we provide
           </p>
@@ -43,7 +43,7 @@ const AboutPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {section.professionalEcommerce?.map((item: any, i: number) => (
-              <div
+              <div data-aos="fade-up"
                 key={i}
 
                 className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]"
@@ -104,7 +104,7 @@ const AboutPage = () => {
 
         {/* INVENTORY */}
         {inventory && (
-          <div className="w-full mx-auto">
+          <div data-aos="fade-up" className="w-full mx-auto">
             <div className="p-8 flex flex-col md:flex-row items-center gap-6 group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
 
               <div className="relative w-30 h-30 flex-shrink-0">
@@ -134,7 +134,7 @@ const AboutPage = () => {
 
         {/* Search Engine Optimization */}
         {optimization && (
-          <div className="w-full mx-auto">
+          <div data-aos="fade-up" className="w-full mx-auto">
             <div className="p-8 flex flex-col md:flex-row items-center gap-6 group relative overflow-hidden rounded-[32px] bg-white border border-slate-200 p-8 transition-all duration-900  hover:shadow-[0_20px_60px_rgba(99,102,241,0.18)]">
 
               <div className="relative w-30 h-30 flex-shrink-0">
@@ -164,7 +164,7 @@ const AboutPage = () => {
 
 
         {/* CTA */}
-        <div className=" ">
+        <div data-aos="fade-up">
           <h2 className="text-xl font-semibold mb-3">
             {section.cta.title}
           </h2>

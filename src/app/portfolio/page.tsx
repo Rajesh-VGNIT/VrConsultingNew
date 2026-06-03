@@ -13,8 +13,8 @@ export async function generateMetadata() {
 }
 
 export default function PortfolioPage() {
- const portfolio = portfolioData.portfolio;
- const portfolioBtn = portfolioData.portfolioBtn;
+  const portfolio = portfolioData.portfolio;
+  const portfolioBtn = portfolioData.portfolioBtn;
   return (
     <>
       <Breadcrumb
@@ -24,20 +24,19 @@ export default function PortfolioPage() {
 
         {/* HERO SECTION */}
 
-
         {/* PORTFOLIO SECTION */}
         <section className="py-12 px-6">
 
           <div className="container mx-auto">
 
             {/* TITLE */}
-            <div className="text-center mb-14">
+            <div data-aos="fade-up" className="text-center mb-14">
               <h2 className="mb-5 text-2xl font-bold text-black text-center lg:text-4xl sm:text-2xl">
                 Portfolio
               </h2>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4 mb-20">
+            <div data-aos="fade-up" className="flex flex-wrap justify-center gap-4 mb-20">
               <div className="flex flex-wrap justify-center gap-4">
                 {portfolioBtn.map((item, index) => (
                   <Link
@@ -52,51 +51,51 @@ export default function PortfolioPage() {
             </div>
 
             {/* GRID */}
-            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-  {portfolio.map((item) => (
-    <a
-      key={item.id}
-      href={item.url}
-      className="group relative flex flex-col overflow-hidden rounded-[30px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-[1px]"
-    >
-      <div className="flex flex-col flex-1 rounded-[30px] bg-slate-950">
-        
-        {/* Image */}
-        <div className="overflow-hidden rounded-t-[30px]">
-          <img
-            src={item.image}
-            alt={item.title}
-            className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-110"
-          />
-        </div>
+            <div  className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+              {portfolio.map((item) => (
+                <Link data-aos="fade-up"
+                  key={item.id}
+                  href={item.url}
+                  className="group relative flex flex-col overflow-hidden rounded-[30px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-[1px]"
+                >
+                  <div  className="flex flex-col flex-1 rounded-[30px] bg-slate-950">
 
-        {/* Content */}
-        <div className="flex flex-1 flex-col p-6">
-          
-          <span className="text-primary text-sm uppercase tracking-widest">
-            {item.category}
-          </span>
+                    {/* Image */}
+                    <div className="overflow-hidden rounded-t-[30px]">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="h-[260px] w-full object-cover transition duration-700 group-hover:scale-110"
+                      />
+                    </div>
 
-          <h3 className="mt-3 text-2xl font-bold text-white">
-            {item.title}
-          </h3>
+                    {/* Content */}
+                    <div className="flex flex-1 flex-col p-6">
 
-          {/* Push bottom section down */}
-          <div className="mt-auto flex items-center justify-between pt-4">
-            <span className="text-gray-400">
-              View Website
-            </span>
+                      <span className="text-primary text-sm uppercase tracking-widest">
+                        {item.category}
+                      </span>
 
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition-transform duration-300 group-hover:translate-x-2 rotate-[-30deg]">
-              →
+                      <h3 className="mt-3 text-2xl font-bold text-white">
+                        {item.title}
+                      </h3>
+
+                      {/* Push bottom section down */}
+                      <div className="mt-auto flex items-center justify-between pt-4">
+                        <span className="text-gray-400">
+                          View Website
+                        </span>
+
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white transition-transform duration-300 group-hover:translate-x-2 rotate-[-30deg]">
+                          →
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </Link>
+              ))}
             </div>
-          </div>
-
-        </div>
-      </div>
-    </a>
-  ))}
-</div>
 
           </div>
 

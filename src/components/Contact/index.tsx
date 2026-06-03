@@ -107,7 +107,7 @@ const Contact = () => {
   };
 
   return (
-    <section
+    <section data-aos="fade-up"
       id="contact"
       className="overflow-hidden md:py-10 lg:py-18"
     >

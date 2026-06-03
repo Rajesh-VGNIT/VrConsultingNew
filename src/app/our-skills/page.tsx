@@ -11,9 +11,7 @@ export async function generateMetadata() {
       cache: "no-store",
     }
   );
-
   const pageMetadata = await response.json();
-
   return pageMetadata["our-skills"];
 }
 
@@ -34,7 +32,7 @@ const OurSkills = () => {
   return (
     <>
       <Breadcrumb1 pageName="Our Skills" description="" />
-      <div className="container mx-auto py-12 text-center">
+      <div data-aos="fade-up" className="container mx-auto py-12 text-center">
 
         <p className="text-sm text-blue-600 font-semibold uppercase tracking-wide">
           {caseStudies?.label}
@@ -57,28 +55,27 @@ const OurSkills = () => {
         )}
 
         <div className="mt-10 w-full">
-  {categories.map((category: any) => (
-    <div
-      key={category.id}
-      className="mb-5 rounded-2xl  transition overflow-hidden"
-    >
-     
-      <p className="text-lg sm:text-xl md:text-2xl mb-7 font-bold uppercase text-center py-1">
-        {category.title}
-      </p>
+          {categories.map((category: any) => (
+            <div data-aos="fade-up"
+              key={category.id}
+              className="mb-5 rounded-2xl  transition overflow-hidden"
+            >
 
-     
-      <div className="relative mt-4 development-section"> 
-        <Image
-          src={category.image}
-          alt={category.title}
-          fill
-          className=""
-        />
-      </div>
-    </div>
-  ))}
-</div>
+              <p className="text-lg sm:text-xl md:text-2xl mb-7 font-bold uppercase text-center py-1">
+                {category.title}
+              </p>
+
+              <div className="relative mt-4 development-section">
+                <Image
+                  src={category.image}
+                  alt={category.title}
+                  fill
+                  className=""
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

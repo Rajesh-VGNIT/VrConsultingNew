@@ -3,31 +3,31 @@ import Image from "next/image";
 import Link from "next/link";
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
- const {
-  title,
-  image,
-  paragraph,
-  author,
-  tags,
-  publishDate,
-  link,
-  button,
-} = blog;
+  const {
+    title,
+    image,
+    paragraph,
+    author,
+    tags,
+    publishDate,
+    link,
+    button,
+  } = blog;
 
   return (
     <div className="group relative overflow-hidden rounded-[32px] p-[1px] ">
-      
-      {/* Top Gradient Glow */}
-              <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
-              <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-fuchsia-100 rounded-full blur-3xl opacity-50"></div>
 
-              {/* Gradient Border Effect */}
-              <div className="absolute inset-0 rounded-[32px] border border-transparent group-hover:border-cyan-300 transition duration-500"></div>
+      {/* Top Gradient Glow */}
+      <div className="absolute -top-16 -right-16 w-40 h-40 bg-cyan-100 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute -bottom-16 -left-16 w-40 h-40 bg-fuchsia-100 rounded-full blur-3xl opacity-50"></div>
+
+      {/* Gradient Border Effect */}
+      <div className="absolute inset-0 rounded-[32px] border border-transparent group-hover:border-cyan-300 transition duration-500"></div>
 
 
       {/* Main Card */}
-      <div className="relative z-10 overflow-hidden rounded-[32px] bg-white shadow-xl">
-        
+      <div data-aos="fade-up" className="relative z-10 overflow-hidden rounded-[32px] bg-white shadow-xl">
+
         {/* Image Section */}
         <Link
           href={link}
@@ -59,20 +59,18 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
               {publishDate}
             </p>
 
-            <h3>
-              <Link
-                href="/"
-                className="block text-2xl font-semibold leading-tight text-white transition-all duration-300 group-hover:text-blue-500"
+            <h3
+                className="block text-2xl font-semibold leading-tight text-white transition-colors duration-300 group-hover:text-blue-500"
               >
                 {title}
-              </Link>
+             
             </h3>
           </div>
         </Link>
 
         {/* Bottom Content */}
         <div className="relative p-6">
-          
+
           {/* Paragraph */}
           <p className="mb-6 line-clamp-3 text-base leading-relaxed text-gray-600">
             {paragraph}
@@ -83,15 +81,15 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
 
           {/* Footer */}
           <div className="flex items-center justify-between">
-            
-            
+
+
 
             {/* Button */}
             <Link
               href={link}
               className="inline-flex items-center gap-2 rounded-md bg-primary  px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-blue-500/40"
             >
-             {button}
+              {button}
 
               <span className="transition-transform duration-300 group-hover:translate-x-1">
                 →
