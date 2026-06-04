@@ -1,32 +1,30 @@
 
+"user client"
 import Image from "next/image";
-import data from "@/data/footer.json";
-import Breadcrumb1 from "@/components/Common/Breadcrumb1";
+import data from "@/data/services.json";
+import Breadcrumb from "@/components/Common/Breadcrumb";
 
 export async function generateMetadata() {
   const response = await fetch(
     "https://vrwebconsulting.com/metadata.json",
     {
-      cache: "no-store",
+      cache: "force-cache",
     }
   );
   const pageMetadata = await response.json();
   return pageMetadata["mobile-applications-development-company"];
 }
-
 const Page = () => {
-  const section = data?.["BestMobileApplicationDevelopment"];
-  if (!section) return null;
+  const section = data.MobileApplicationDevelopment;
 
   return (
     <>
       {/* Breadcrumb */}
-      <Breadcrumb1
+      <Breadcrumb
         pageName="Best Mobile Application Development"
-        description="Building high-performance mobile applications with intuitive design, seamless functionality, and exceptional user experience."
-      />
+        description="" />
 
-      <div className="container mx-auto py-12 space-y-16">
+      <div className="container mx-auto  py-12 space-y-16">
 
         {/* HERO */}
         <div data-aos="fade-up" className="grid md:grid-cols-2 gap-10 items-center">
@@ -37,23 +35,22 @@ const Page = () => {
             <p className="text-gray-600 text-sm leading-6">
               {section.description}
             </p>
-            <p className="text-gray-600 mt-4 text-sm leading-6">
+             <p className="text-gray-600 mt-2 text-sm leading-6">
               {section.description1}
             </p>
-           
           </div>
 
-          <div className="relative w-full max-w-[450px] h-110 ml-auto rounded-xl overflow-hidden">
+          <div className="relative ml-auto w-full max-w-[500px]  h-110 rounded-xl overflow-hidden">
             <Image
               src={section.heroImage}
               alt="image"
               fill
-              className="object-cover"
+              className=" rounded-xl"
             />
           </div>
         </div>
 
-       
+
       </div>
     </>
   );

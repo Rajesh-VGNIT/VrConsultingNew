@@ -3,11 +3,21 @@ import Image from "next/image";
 
 import data from "@/data/footer.json";
 import Breadcrumb1 from "@/components/Common/Breadcrumb1";
-import PopupCarrer from "@/components/PopupCarrer";
-import pageMetadata from "@/data/metadata.json";
+import PopupCarrer from "@/components/PopupCarrer"
+import portfolioData from "@/data/portfolio.json";;
+
 import Link from "next/link";
 
-export const metadata = pageMetadata["careers"];
+export async function generateMetadata() {
+  const response = await fetch(
+    "https://vrwebconsulting.com/metadata.json",
+    {
+      cache: "force-cache",
+    }
+  );
+  const pageMetadata = await response.json();
+  return pageMetadata["careers"];
+}
 
 
 const Page = () => {

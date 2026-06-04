@@ -1,27 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+  trailingSlash: true,
+ 
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.sanity.io",
-        port: "",
-      },
-    ],
-    qualities: [75, 100],
+    unoptimized: true,
   },
 };
 
 module.exports = nextConfig;
-
-
-module.exports = {
-  async rewrites() {
-    return [
-      {
-        source: "/:slug",
-        destination: "/services/:slug",
-      },
-    ];
-  },
-};

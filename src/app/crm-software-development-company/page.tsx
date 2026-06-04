@@ -6,7 +6,7 @@ export async function generateMetadata() {
   const response = await fetch(
     "https://vrwebconsulting.com/metadata.json",
     {
-      cache: "no-store",
+      cache: "force-cache",
     }
   );
 

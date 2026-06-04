@@ -68,7 +68,7 @@ const footerData = {
       },
       {
         title: "Social Media Marketing",
-        link: "/services/social-media-marketing",
+        link: "/social-media-marketing",
       },
     ],
   },

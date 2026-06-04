@@ -107,12 +107,18 @@ const Contact = () => {
   };
 
   return (
+    <>
+     <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        closeOnClick
+        pauseOnHover
+      />
     <section data-aos="fade-up"
       id="contact"
       className="overflow-hidden md:py-10 lg:py-18"
     >
       {/* Toast container */}
-      <ToastContainer position="top-right" autoClose={2000} />
 
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
@@ -354,6 +360,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
